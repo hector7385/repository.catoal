@@ -1,0 +1,8 @@
+Version 2.0
+
+Primera version del plugin Catoal. Todas las listas incluidas son propiedad de sus creadores,Catoal no se hace responsable de su contenido.
+
+Version 3.0
+
+Mejoras en la estabilidad.
+Cambio del fondo

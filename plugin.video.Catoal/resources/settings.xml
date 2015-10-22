@@ -1,0 +1,12 @@
+﻿<settings>
+ <category label="Catoal">
+    <setting id="Updatecommonresolvers" label="Update Commonresolver from Genesis" type="bool" default="true" visible="false"/>
+	<setting type="action" label="Versión del Addon actualizado 22/10/2015 Catoal" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
+        <setting type="action" label="[B]https://www.facebook.com/catoal.kodi[/B]" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
+        <setting id="ask_playlist_items" type="bool" label="Ask playlist items to choose from dialog  (Activar Elegir Fuente de Video)" default="true" />
+        <setting id="add_playlist" type="bool" label="Add items with multiple links as play lists (Activar Multilink)" default="true"/>
+        <setting id="genesisorpulsar" type="enum" values="Genesis|Pulsar" label="Play IMDBid with:" default="Genesis"/>
+        <setting id="save_location" type="folder"  label="Select a download location." default=""/>
+        </category>
+
+</settings>
