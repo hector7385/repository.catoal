@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.Catoal"
-       name="[COLOR red]Catoal[/COLOR] 4.1"
-	   version="4.1"
-       provider-name="Andromeda">
+       name="[COLOR red]Catoal[/COLOR] 5.0"
+	   version="5.0"
+       provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
