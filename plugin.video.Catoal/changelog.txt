@@ -4,5 +4,13 @@ Primera version del plugin Catoal. Todas las listas incluidas son propiedad de s
 
 Version 3.0
 
-Mejoras en la estabilidad.
-Cambio del fondo
+Mejoras en la estabilidad. Cambio del fondo
+
+Version 4.0
+Mejeras en el rendimiento
+
+Version 5.0
+Version estable
+
+Version 5.0.1
+Basado en el liveStreamsPro 1.9.3 de Shani
