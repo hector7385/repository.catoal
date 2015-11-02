@@ -1,16 +1,17 @@
-Version 2.0
-
+Versión 2.0
 Primera version del plugin Catoal. Todas las listas incluidas son propiedad de sus creadores,Catoal no se hace responsable de su contenido.
 
-Version 3.0
-
+Versión 3.0
 Mejoras en la estabilidad. Cambio del fondo
 
-Version 4.0
+Versión 4.0
 Mejeras en el rendimiento
 
-Version 5.0
+Versión 5.0
 Version estable
 
-Version 5.0.1
+Versión 5.0.1
 Basado en el liveStreamsPro 1.9.3 de Shani
+
+Versión 5.2
+Añadido Control Parental
