@@ -61,7 +61,7 @@ if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
 
-SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/TFtu64K.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/BbRH4b6.png"}]
+SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/TFtu64K.jpg", "genre": "Tv Live", "date": "05.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/BbRH4b6.png"}]
 
 # http://i.imgur.com/TFtu64K.jpg
 # http://i.imgur.com/BbRH4b6.png
@@ -98,13 +98,15 @@ def makeRequest(url, headers=None):
                 xbmc.executebuiltin("XBMC.Notification(Catoal,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
 
 
+
+
 def getSources():
         if os.path.exists(favorites) == True:
             FAV = open(favorites).read()
             if FAV == "[]":
                 os.remove(favorites)
             else:
-                addDir('[COLOR cyan][B]- MIS CANALES FAVORITOS Catoal [/COLOR][/B][/B]','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
+                addDir('[COLOR cyan][B]- FAVORITES CHANNEL Catoal [/COLOR][/B][/B]','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
                 addDir('','',100,'',FANART,'','','','')
 
         sources = SOURCES
@@ -2044,9 +2046,9 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
             print 'parentalblockedpin',parentalblockedpin
             if len(parentalblockedpin)>0:
                 if parentalblock:
-                    contextMenu.append(('Desactivar Bloqueo Parental','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                    contextMenu.append(('Disable Parental Block','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
                 else:
-                    contextMenu.append(('Activar Bloqueo Parental','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                    contextMenu.append(('Enable Parental Block','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
                     
             if showcontext == 'source':
             
@@ -2067,7 +2069,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                     )
                 contextMenu.append(('[COLOR yellow]!!update[/COLOR]','XBMC.RunPlugin(%s)' %fav_params2))
             if not name in FAV:
-                contextMenu.append(('Añadir A Catoal Favoritos','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                contextMenu.append(('Add to Catoal Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
                          %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
             liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -2163,9 +2165,9 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
         print 'parentalblockedpin',parentalblockedpin
         if len(parentalblockedpin)>0:
             if parentalblock:
-                contextMenu.append(('Desactivar Bloqueo Parental','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                contextMenu.append(('Disable Parental Block','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
             else:
-                contextMenu.append(('Activar Bloqueo Parental','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                contextMenu.append(('Enable Parental Block','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
                     
         try:
             name = name.encode('utf-8')
@@ -2247,7 +2249,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             #contextMenu = []
             if showcontext == 'fav':
                 contextMenu.append(
-                    ('Eliminar De Catoal Favoritos','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                    ('Remove from Catoal Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
@@ -2259,7 +2261,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
                     fav_params += "&regexs="+regexs
-                contextMenu.append(('Añadir a Catoal Favoritos','XBMC.RunPlugin(%s)' %fav_params))
+                contextMenu.append(('Add to Catoal Favorites','XBMC.RunPlugin(%s)' %fav_params))
             liz.addContextMenuItems(contextMenu)
         if not playlist is None:
             if addon.getSetting('add_playlist') == "false":
@@ -2615,14 +2617,14 @@ elif mode==55:
         newStr = keyboard.getText()
         if newStr==parentalblockedpin:
             addon.setSetting('parentalblocked', "false")
-            xbmc.executebuiltin("XBMC.Notification(Catoal,Control Parental Desactivado,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(Catoal,Parental Block Disabled,5000,"+icon+")")
         else:
-            xbmc.executebuiltin("XBMC.Notification(Catoal,Pin Error,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(Catoal,Wrong Pin??,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode==56:
     addon_log("disable lock")
     addon.setSetting('parentalblocked', "true")
-    xbmc.executebuiltin("XBMC.Notification(Catoal,Control Parental Activado,5000,"+icon+")")
+    xbmc.executebuiltin("XBMC.Notification(Catoal,Parental block enabled,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==53:
