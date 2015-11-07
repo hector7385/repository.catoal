@@ -61,7 +61,7 @@ if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
 
-SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/TFtu64K.jpg", "genre": "Tv Live", "date": "05.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/BbRH4b6.png"}]
+SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/TFtu64K.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/BbRH4b6.png"}]
 
 # http://i.imgur.com/TFtu64K.jpg
 # http://i.imgur.com/BbRH4b6.png
@@ -98,20 +98,29 @@ def makeRequest(url, headers=None):
                 xbmc.executebuiltin("XBMC.Notification(Catoal,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
 
 
-
-
 def getSources():
         if os.path.exists(favorites) == True:
             FAV = open(favorites).read()
             if FAV == "[]":
                 os.remove(favorites)
             else:
-                addDir('[COLOR cyan][B]- FAVORITES CHANNEL Catoal [/COLOR][/B][/B]','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
+                addDir('[COLOR cyan][B]- MIS CANALES FAVORITOS Catoal [/COLOR][/B][/B]','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
                 addDir('','',100,'',FANART,'','','','')
 
         sources = SOURCES
         #print 'sources',sources
         getData(sources[0]['url'], sources[0]['fanart'])
+
+
+
+
+
+
+
+
+
+
+
 
 def rmSource(name):
         sources = json.loads(open(source_file,"r").read())
@@ -396,12 +405,13 @@ def getItems(items,fanart):
             isXMLSource=False
             isJsonrpc = False
             
-            applyblock='False'
+            applyblock='false'
             try:
                 applyblock = item('parentalblock')[0].string
             except:
                 addon_log('parentalblock Error')
-                name = ''
+                
+                applyblock = ''
             if applyblock=='true' and parentalblock: continue
                 
             try:
@@ -2043,12 +2053,12 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
             parentalblock =addon.getSetting('parentalblocked')
             parentalblock= parentalblock=="true"
             parentalblockedpin =addon.getSetting('parentalblockedpin')
-            print 'parentalblockedpin',parentalblockedpin
+#            print 'parentalblockedpin',parentalblockedpin
             if len(parentalblockedpin)>0:
                 if parentalblock:
-                    contextMenu.append(('Disable Parental Block','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                    contextMenu.append(('Desactivar Bloqueo Parental','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
                 else:
-                    contextMenu.append(('Enable Parental Block','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                    contextMenu.append(('Activar Bloqueo Parental','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
                     
             if showcontext == 'source':
             
@@ -2069,7 +2079,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                     )
                 contextMenu.append(('[COLOR yellow]!!update[/COLOR]','XBMC.RunPlugin(%s)' %fav_params2))
             if not name in FAV:
-                contextMenu.append(('Add to Catoal Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                contextMenu.append(('Añadir A Catoal Favoritos','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
                          %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
             liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -2162,12 +2172,12 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
         parentalblock =addon.getSetting('parentalblocked')
         parentalblock= parentalblock=="true"
         parentalblockedpin =addon.getSetting('parentalblockedpin')
-        print 'parentalblockedpin',parentalblockedpin
+#        print 'parentalblockedpin',parentalblockedpin
         if len(parentalblockedpin)>0:
             if parentalblock:
-                contextMenu.append(('Disable Parental Block','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                contextMenu.append(('Desactivar Bloqueo Parental','XBMC.RunPlugin(%s?mode=55&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
             else:
-                contextMenu.append(('Enable Parental Block','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+                contextMenu.append(('Activar Bloqueo Parental','XBMC.RunPlugin(%s?mode=56&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
                     
         try:
             name = name.encode('utf-8')
@@ -2249,7 +2259,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             #contextMenu = []
             if showcontext == 'fav':
                 contextMenu.append(
-                    ('Remove from Catoal Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                    ('Eliminar De Catoal Favoritos','XBMC.RunPlugin(%s?mode=6&name=%s)'
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
@@ -2261,7 +2271,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
                     fav_params += "&regexs="+regexs
-                contextMenu.append(('Add to Catoal Favorites','XBMC.RunPlugin(%s)' %fav_params))
+                contextMenu.append(('Añadir a Catoal Favoritos','XBMC.RunPlugin(%s)' %fav_params))
             liz.addContextMenuItems(contextMenu)
         if not playlist is None:
             if addon.getSetting('add_playlist') == "false":
@@ -2533,37 +2543,39 @@ elif mode==17:
         import copy
         ln=''
         for obj in ret:
-            newcopy=copy.deepcopy(regexs)
-#            print 'newcopy',newcopy, len(newcopy)
-            listrepeatT=listrepeat
-            i=0
-            for i in range(len(obj)):
-#                print 'i is ',i, len(obj), len(newcopy)
+            try:
+                newcopy=copy.deepcopy(regexs)
+    #            print 'newcopy',newcopy, len(newcopy)
+                listrepeatT=listrepeat
+                i=0
+                for i in range(len(obj)):
+    #                print 'i is ',i, len(obj), len(newcopy)
+                    if len(newcopy)>0:
+                        for the_keyO, the_valueO in newcopy.iteritems():
+                            if the_valueO is not None:
+                                for the_key, the_value in the_valueO.iteritems():
+                                    if the_value is not None:                                
+        #                                print  'key and val',the_key, the_value
+        #                                print 'aa'
+        #                                print '[' + regexname+'.param'+str(i+1) + ']'
+        #                                print repr(obj[i])
+                                        if type(the_value) is dict:
+                                            for the_keyl, the_valuel in the_value.iteritems():
+                                                if the_valuel is not None:
+                                                    the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )                                            
+                                        else:
+                                            the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )
+                    listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj[i].decode('utf-8')) 
+                #newcopy = urllib.quote(repr(newcopy))
+    #            print 'new regex list', repr(newcopy), repr(listrepeatT)
+    #            addLink(listlinkT,listtitleT.encode('utf-8', 'ignore'),listthumbnailT,'','','','',True,None,newcopy, len(ret))
+                regex_xml=''
                 if len(newcopy)>0:
-                    for the_keyO, the_valueO in newcopy.iteritems():
-                        if the_valueO is not None:
-                            for the_key, the_value in the_valueO.iteritems():
-                                if the_value is not None:                                
-    #                                print  'key and val',the_key, the_value
-    #                                print 'aa'
-    #                                print '[' + regexname+'.param'+str(i+1) + ']'
-    #                                print repr(obj[i])
-                                    if type(the_value) is dict:
-                                        for the_keyl, the_valuel in the_value.iteritems():
-                                            if the_valuel is not None:
-                                                the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )                                            
-                                    else:
-                                        the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )
-                listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj[i].decode('utf-8')) 
-            #newcopy = urllib.quote(repr(newcopy))
-#            print 'new regex list', repr(newcopy), repr(listrepeatT)
-#            addLink(listlinkT,listtitleT.encode('utf-8', 'ignore'),listthumbnailT,'','','','',True,None,newcopy, len(ret))
-            regex_xml=''
-            if len(newcopy)>0:
-                regex_xml=d2x(newcopy,'lsproroot')
-                regex_xml=regex_xml.split('<lsproroot>')[1].split('</lsproroot')[0]
-          
-            ln+='\n<item>%s\n%s</item>'%(listrepeatT,regex_xml)   
+                    regex_xml=d2x(newcopy,'lsproroot')
+                    regex_xml=regex_xml.split('<lsproroot>')[1].split('</lsproroot')[0]
+              
+                ln+='\n<item>%s\n%s</item>'%(listrepeatT,regex_xml)   
+            except: traceback.print_exc(file=sys.stdout)
 #            print repr(ln)
 #            print newcopy
                 
@@ -2617,14 +2629,14 @@ elif mode==55:
         newStr = keyboard.getText()
         if newStr==parentalblockedpin:
             addon.setSetting('parentalblocked', "false")
-            xbmc.executebuiltin("XBMC.Notification(Catoal,Parental Block Disabled,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(Catoal,Control Parental Desactivado,5000,"+icon+")")
         else:
-            xbmc.executebuiltin("XBMC.Notification(Catoal,Wrong Pin??,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(Catoal,Pin Error,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode==56:
     addon_log("disable lock")
     addon.setSetting('parentalblocked', "true")
-    xbmc.executebuiltin("XBMC.Notification(Catoal,Parental block enabled,5000,"+icon+")")
+    xbmc.executebuiltin("XBMC.Notification(Catoal,Control Parental Activado,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==53:
