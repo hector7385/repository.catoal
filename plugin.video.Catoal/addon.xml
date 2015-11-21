@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.Catoal"
-       name="[COLOR red]Catoal[/COLOR] 5.2.2"
-       version="5.2.2"
+       name="Catoal[COLOR blue] 5[/COLOR].[COLOR yellow]2[/COLOR].[COLOR red]3[/COLOR]"
+       version="5.2.3"
        provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -19,7 +19,7 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>basedo en livestreamspro 1.9.9</summary>
+    <summary>basedo en livestreamspro 2.0.0</summary>
     <description>Lista de canales de catoal.</description>
     <platform>all</platform>
   </extension>

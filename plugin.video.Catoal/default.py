@@ -61,9 +61,9 @@ if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
 
-SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/TFtu64K.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/BbRH4b6.png"}]
+SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/q6MCUrl.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/BbRH4b6.png"}]
 
-# http://i.imgur.com/TFtu64K.jpg
+# http://i.imgur.com/q6MCUrl.jpg
 # http://i.imgur.com/BbRH4b6.png
     
 """
@@ -110,6 +110,8 @@ def getSources():
         sources = SOURCES
         #print 'sources',sources
         getData(sources[0]['url'], sources[0]['fanart'])
+
+
 
 
 
@@ -1445,6 +1447,10 @@ def unpack(sJavascript,iteration=1, totaliterations=2  ):
         #aa=1/0
     else:
 
+        if "rn p}('" in sJavascript:
+            aSplit = sJavascript.split("rn p}('")
+        else:
+            aSplit = sJavascript.split("rn A}('")
         aSplit = sJavascript.split("rn p}('")
         print aSplit
 

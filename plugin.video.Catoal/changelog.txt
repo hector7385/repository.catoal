@@ -1,23 +1,27 @@
-﻿Versión 2.0
-Primera version del plugin Catoal. Todas las listas incluidas son propiedad de sus creadores,Catoal no se hace responsable de su contenido.
+﻿Versión 5.2.3
+Actualizada la función desempacado de dividir la cadena ABC, así como empaquetado.
+Actualizado el fondo de pantalla.
 
-Versión 3.0
-Mejoras en la estabilidad. Cambio del fondo
-
-Versión 4.0
-Mejeras en el rendimiento
-
-Versión 5.0
-Version estable
-
-Versión 5.0.1
-Basado en el liveStreamsPro 1.9.3 de Shani
-
-Versión 5.2
-Añadido Control Parental
+Versión 5.2.2
+Ignorar error en creacion de listas
 
 Versión 5.2.1
 Varios ajustes
 
-Versión 5.2.2
-Ignorar error en creacion de listas
+Versión 5.2
+Añadido Control Parental
+
+Versión 5.0.1
+Basado en el liveStreamsPro 1.9.3 de Shani
+
+Versión 5.0
+Version estable
+
+Versión 4.0
+Mejeras en el rendimiento
+
+Versión 3.0
+Mejoras en la estabilidad. Cambio del fondo
+
+Versión 2.0
+Primera version del plugin Catoal. Todas las listas incluidas son propiedad de sus creadores,Catoal no se hace responsable de su contenido.
