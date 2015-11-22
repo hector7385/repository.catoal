@@ -1,4 +1,7 @@
-﻿Versión 5.2.3
+﻿Versión 5.2.4
+Arreglo fallo en la configuracion
+
+Versión 5.2.3
 Actualizada la función desempacado de dividir la cadena ABC, así como empaquetado.
 Actualizado el fondo de pantalla.
 
