@@ -124,6 +124,11 @@ def getSources():
 
 
 
+
+
+
+
+
 def rmSource(name):
         sources = json.loads(open(source_file,"r").read())
         for index in range(len(sources)):
@@ -1451,7 +1456,6 @@ def unpack(sJavascript,iteration=1, totaliterations=2  ):
             aSplit = sJavascript.split("rn p}('")
         else:
             aSplit = sJavascript.split("rn A}('")
-        aSplit = sJavascript.split("rn p}('")
         print aSplit
 
         p1,a1,c1,k1=('','0','0','')
@@ -2548,8 +2552,10 @@ elif mode==17:
         url=''
         import copy
         ln=''
+        rnumber=0
         for obj in ret:
             try:
+                rnumber+=1
                 newcopy=copy.deepcopy(regexs)
     #            print 'newcopy',newcopy, len(newcopy)
                 listrepeatT=listrepeat
@@ -2571,7 +2577,11 @@ elif mode==17:
                                                     the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )                                            
                                         else:
                                             the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )
-                    listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj[i].decode('utf-8')) 
+                    if isinstance(obj,tuple):
+                        listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj[i].decode('utf-8')) 
+                    else:
+                        listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj.decode('utf-8')) 
+                listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(0) + ']',str(rnumber)) 
                 #newcopy = urllib.quote(repr(newcopy))
     #            print 'new regex list', repr(newcopy), repr(listrepeatT)
     #            addLink(listlinkT,listtitleT.encode('utf-8', 'ignore'),listthumbnailT,'','','','',True,None,newcopy, len(ret))

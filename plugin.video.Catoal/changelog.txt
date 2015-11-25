@@ -1,4 +1,8 @@
-﻿Versión 5.2.4
+﻿Version 5.2.5
+Corrección de errores en listrepeat por artículos individuales. También ahora param0 está disponible, que será el número de fila.
+Desactivada la opcion parental por no funcionar bien en Android
+
+Versión 5.2.4
 Arreglo fallo en la configuracion
 
 Versión 5.2.3
