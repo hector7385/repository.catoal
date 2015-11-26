@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.Catoal"
        name="Catoal[COLOR blue] 5[/COLOR].[COLOR yellow]2[/COLOR].[COLOR red]5[/COLOR]"
-       version="5.2.5"
+       version="5.2.5."
        provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
