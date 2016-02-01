@@ -1,4 +1,7 @@
-﻿Version 5.2.6
+﻿Version 5.2.7
+Revision y modificacion del Addon
+
+Version 5.2.6
 Actualizacion de los fondos 
 
 Version 5.2.5
