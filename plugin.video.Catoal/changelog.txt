@@ -1,4 +1,7 @@
-﻿Version 5.2.7
+﻿Version 5.2.8
+Mejorada las funciones básicas y recopilación de códigos para su visionado.
+
+Version 5.2.7
 Revision y modificacion del Addon
 
 Version 5.2.6
