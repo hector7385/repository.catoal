@@ -1,7 +1,7 @@
 ﻿<settings>
   <category label="Catoal">
        <setting id="Updatecommonresolvers" label="Update Commonresolver from Genesis" type="bool" default="true" visible="false"/>
-    	<setting type="lsep" label="Versión del Addon Actualizado 12/02/2016" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
+    	<setting type="lsep" label="Versión del Addon Actualizado 16/02/2016" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
         <setting type="lsep" label="Facebook: www.facebook.com/catoal.kodi" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
         <setting type="lsep" label="Twitter: Catoal.Kodi" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
 		<setting type="lsep" label="Email: catoal.kodi@gmail.com" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
