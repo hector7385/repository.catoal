@@ -102,6 +102,10 @@ def makeRequest(url, headers=None):
 def getSources():
 
 
+
+
+
+
         if os.path.exists(favorites) == True:
 
 
@@ -1452,10 +1456,11 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
     progress.update( 10, "", "setting proxy..", "" )
     proxyset=False
     existing_proxy=''
+    #print 'playmediawithproxy'
     try:
         
         existing_proxy=getConfiguredProxy()
-#        print 'existing_proxy',existing_proxy
+        print 'existing_proxy',existing_proxy
         #read and set here
         #jairox
         if not proxyuser == None:
@@ -1463,7 +1468,7 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
         else:
             setKodiProxy( proxyip + ':' + port + ':0')
 
-#        print 'proxy setting complete', getConfiguredProxy()
+        #print 'proxy setting complete', getConfiguredProxy()
         proxyset=True
         progress.update( 80, "", "setting proxy complete, now playing", "" )
         progress.close()
@@ -2255,6 +2260,7 @@ def urlsolver(url):
             resolver = resolved
     else:
         xbmc.executebuiltin("XBMC.Notification(Catoal,Urlresolver donot support this domain. - ,5000)")
+        resolver=url
     return resolver
 def play_playlist(name, mu_playlist,queueVideo=None):
         playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
@@ -2913,35 +2919,35 @@ elif mode==17 or mode==117:
                                                 if the_valuel is not None:
                                                     if isinstance(obj,tuple):
                                                         try:
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )
+                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']',escape( obj[i].decode('utf-8') ))
                                                         except: 
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i] )
+                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj[i] ))
                                                     else:
                                                         try:
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj.decode('utf-8') )
+                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj.decode('utf-8') ))
                                                         except:
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', obj)
+                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj))
                                         else:
                                             if isinstance(obj,tuple):
                                                 try:
-                                                     the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i].decode('utf-8') )
+                                                     the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj[i].decode('utf-8') ))
                                                 except:
-                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj[i] )
+                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj[i] ))
                                             else:
                                                 try:
-                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj.decode('utf-8') )
+                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']',escape( obj.decode('utf-8') ))
                                                 except:
-                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', obj)
+                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj))
                     if isinstance(obj,tuple):
                         try:
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj[i].decode('utf-8')) 
+                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj[i].decode('utf-8')) )
                         except:
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj[i]) 
+                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj[i]) )
                     else:
                         try:
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj.decode('utf-8'))
+                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj.decode('utf-8')))
                         except: 
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',obj)
+                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj))
 #                    print listrepeatT
                 listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(0) + ']',str(rnumber)) 
                 
@@ -2949,6 +2955,7 @@ elif mode==17 or mode==117:
     #            print 'new regex list', repr(newcopy), repr(listrepeatT)
     #            addLink(listlinkT,listtitleT.encode('utf-8', 'ignore'),listthumbnailT,'','','','',True,None,newcopy, len(ret))
                 regex_xml=''
+#                print 'newcopy',newcopy
                 if len(newcopy)>0:
                     regex_xml=d2x(newcopy,'lsproroot')
                     regex_xml=regex_xml.split('<lsproroot>')[1].split('</lsproroot')[0]
@@ -2962,7 +2969,7 @@ elif mode==17 or mode==117:
 #            print newcopy
                 
 #            ln+='</item>'
-        #print 'ln',repr(ln)
+        #print 'ln',ln
         addon_log(repr(ln))
         getData('','',ln)
         xbmcplugin.endOfDirectory(int(sys.argv[1]))
@@ -2972,7 +2979,7 @@ elif mode==17 or mode==117:
         if url:
             if '$PLAYERPROXY$=' in url:
                 url,proxy=url.split('$PLAYERPROXY$=')
-#                print 'proxy',proxy
+                print 'proxy',proxy
                 #Jairox mod for proxy auth
                 proxyuser = None
                 proxypass = None
