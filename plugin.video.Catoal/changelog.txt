@@ -1,4 +1,7 @@
-﻿Version 5.2.9 
+﻿Version 5.3.0
+proxy username/pwd , Gracias a jairox@tva
+
+Version 5.2.9 
 Rectificación de AADecoder
 
 Version 5.2.8
