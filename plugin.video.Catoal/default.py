@@ -8,7 +8,7 @@ import xbmcgui
 import xbmcaddon
 import xbmcvfs
 import traceback
-import cookielib
+import cookielib,base64
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 viewmode=None
 try:
@@ -21,7 +21,7 @@ except:
 import SimpleDownloader as downloader
 import time
 tsdownloader=False
-resolve_url=['180upload.com', 'allmyvideos.net', 'bestreams.net', 'clicknupload.com', 'cloudzilla.to', 'movshare.net', 'novamov.com', 'nowvideo.sx', 'videoweed.es', 'daclips.in', 'datemule.com', 'fastvideo.in', 'faststream.in', 'filehoot.com', 'filenuke.com', 'sharesix.com', 'docs.google.com', 'plus.google.com', 'picasaweb.google.com', 'gorillavid.com', 'gorillavid.in', 'grifthost.com', 'hugefiles.net', 'ipithos.to', 'ishared.eu', 'kingfiles.net', 'mail.ru', 'my.mail.ru', 'videoapi.my.mail.ru', 'mightyupload.com', 'mooshare.biz', 'movdivx.com', 'movpod.net', 'movpod.in', 'movreel.com', 'mrfile.me', 'nosvideo.com', 'openload.io', 'played.to', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'uploaded.net', 'primeshare.tv', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'uploaded.net', 'sharerepo.com', 'stagevu.com', 'streamcloud.eu', 'streamin.to', 'thefile.me', 'thevideo.me', 'tusfiles.net', 'uploadc.com', 'zalaa.com', 'uploadrocket.net', 'uptobox.com', 'v-vids.com', 'veehd.com', 'vidbull.com', 'videomega.tv', 'vidplay.net', 'vidspot.net', 'vidto.me', 'vidzi.tv', 'vimeo.com', 'vk.com', 'vodlocker.com', 'xfileload.com', 'xvidstage.com', 'zettahost.tv']
+resolve_url=['180upload.com', 'allmyvideos.net', 'bestreams.net', 'clicknupload.com', 'cloudzilla.to', 'movshare.net', 'novamov.com', 'nowvideo.sx', 'videoweed.es', 'daclips.in', 'datemule.com', 'fastvideo.in', 'faststream.in', 'filehoot.com', 'filenuke.com', 'sharesix.com',  'plus.google.com', 'picasaweb.google.com', 'gorillavid.com', 'gorillavid.in', 'grifthost.com', 'hugefiles.net', 'ipithos.to', 'ishared.eu', 'kingfiles.net', 'mail.ru', 'my.mail.ru', 'videoapi.my.mail.ru', 'mightyupload.com', 'mooshare.biz', 'movdivx.com', 'movpod.net', 'movpod.in', 'movreel.com', 'mrfile.me', 'nosvideo.com', 'openload.io', 'played.to', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'uploaded.net', 'primeshare.tv', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'uploaded.net', 'sharerepo.com', 'stagevu.com', 'streamcloud.eu', 'streamin.to', 'thefile.me', 'thevideo.me', 'tusfiles.net', 'uploadc.com', 'zalaa.com', 'uploadrocket.net', 'uptobox.com', 'v-vids.com', 'veehd.com', 'vidbull.com', 'videomega.tv', 'vidplay.net', 'vidspot.net', 'vidto.me', 'vidzi.tv', 'vimeo.com', 'vk.com', 'vodlocker.com', 'xfileload.com', 'xvidstage.com', 'zettahost.tv']
 g_ignoreSetResolved=['plugin.video.dramasonline','plugin.video.f4mTester','plugin.video.shahidmbcnet','plugin.video.SportsDevil','plugin.stream.vaughnlive.tv','plugin.video.ZemTV-shani']
 
 class NoRedirection(urllib2.HTTPErrorProcessor):
@@ -43,7 +43,7 @@ if REMOTE_DBG:
         sys.exit(1)
 
 
-addon = xbmcaddon.Addon('plugin.video.Catoal')
+addon = xbmcaddon.Addon('plugin.video.live.streamspro')
 addon_version = addon.getAddonInfo('version')
 profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
 home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
@@ -76,7 +76,7 @@ else: SOURCES = []
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.Catoal-%s]: %s" %(addon_version, string))
+        xbmc.log("[addon.live.streamspro-%s]: %s" %(addon_version, string))
 
 
 def makeRequest(url, headers=None):
@@ -97,7 +97,6 @@ def makeRequest(url, headers=None):
                 addon_log('We failed to reach a server.')
                 addon_log('Reason: %s' %e.reason)
                 xbmc.executebuiltin("XBMC.Notification(Catoal,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
-
 
 def getSources():
 
@@ -431,11 +430,27 @@ def getSoup(url,data=None):
         global viewmode,tsdownloader
         tsdownloader=False
         if url.startswith('http://') or url.startswith('https://'):
-
+            enckey=False
             if '$$TSDOWNLOADER$$' in url:
                 tsdownloader=True
                 url=url.replace("$$TSDOWNLOADER$$","")
-            data = makeRequest(url)
+            if '$$LSProEncKey=' in url:
+                enckey=url.split('$$LSProEncKey=')[1].split('$$')[0]
+                rp='$$LSProEncKey=%s$$'%enckey
+                url=url.replace(rp,"")
+                
+            data =makeRequest(url)
+            if enckey:
+                    import pyaes
+                    enckey=enckey.encode("ascii")
+                    print enckey
+                    missingbytes=16-len(enckey)
+                    enckey=enckey+(chr(0)*(missingbytes))
+                    print repr(enckey)
+                    data=base64.b64decode(data)
+                    decryptor = pyaes.new(enckey , pyaes.MODE_ECB, IV=None)
+                    data=decryptor.decrypt(data).split('\0')[0]
+                    #print repr(data)
             if re.search("#EXTM3U",data) or 'm3u' in url:
 #                print 'found m3u data'
                 return data
@@ -800,6 +815,7 @@ def getItems(items,fanart,dontLink=False):
                             ftv = 'plugin://plugin.video.F.T.V/?name='+urllib.quote(name) +'&url=' +i.string +'&mode=125&ch_fanart=na'
                         url.append(ftv)
                 elif len(item('urlsolve')) >0:
+                    
                     for i in item('urlsolve'):
                         if not i.string == None:
                             resolver = i.string +'&mode=19'
@@ -875,6 +891,7 @@ def getItems(items,fanart,dontLink=False):
                 except:
                     pass
             try:
+                
                 if len(url) > 1:
                     alt = 0
                     playlist = []
@@ -894,6 +911,7 @@ def getItems(items,fanart,dontLink=False):
                     if len(playlist) > 1:
                         addLink('', name,thumbnail,fanArt,desc,genre,date,True,playlist,regexs,total)
                 else:
+                    
                     if dontLink:
                         return name,url[0],regexs
                     if isXMLSource:
@@ -907,6 +925,7 @@ def getItems(items,fanart,dontLink=False):
                         addDir(name.encode('utf-8'),ext_url[0],53,thumbnail,fanart,desc,genre,date,None,'source')
                         #xbmc.executebuiltin("Container.SetViewMode(500)")
                     else:
+                        
                         addLink(url[0],name.encode('utf-8', 'ignore'),thumbnail,fanArt,desc,genre,date,True,None,regexs,total)
                     #print 'success'
             except:
@@ -1471,6 +1490,7 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
         #print 'proxy setting complete', getConfiguredProxy()
         proxyset=True
         progress.update( 80, "", "setting proxy complete, now playing", "" )
+        
         progress.close()
         progress=None
         import  CustomPlayer
@@ -2275,7 +2295,7 @@ def play_playlist(name, mu_playlist,queueVideo=None):
                 else:
                     names.append(d_name)
             dialog = xbmcgui.Dialog()
-            index = dialog.select('Elegir una opción', names)
+            index = dialog.select('Elegir una Opción', names)
             if index >= 0:
                 if "&mode=19" in mu_playlist[index]:
                     #playsetresolved (urlsolver(mu_playlist[index].replace('&mode=19','')),name,iconimage,True)
@@ -2350,7 +2370,7 @@ def _search(url,name):
     names = ['Gensis TV','Genesis Movie','Salt movie','salt TV','Muchmovies','viooz','ORoroTV',\
              'Yifymovies','cartoonHD','Youtube','DailyMotion','Vimeo']
     dialog = xbmcgui.Dialog()
-    index = dialog.select('Elegir una opción', names)
+    index = dialog.select('Elegir una Opción', names)
 
     if index >= 0:
         url = pluginsearchurls[index]
@@ -2885,7 +2905,7 @@ elif mode==17 or mode==117:
     data=None
     if regexs and 'listrepeat' in urllib.unquote_plus(regexs):
         listrepeat,ret,m,regexs =getRegexParsed(regexs, url)
-        #print listrepeat,ret,m,regexs
+#        print listrepeat,ret,m,regexs
         d=''
 #        print 'm is' , m
 #        print 'regexs',regexs
@@ -2917,37 +2937,56 @@ elif mode==17 or mode==117:
                                         if type(the_value) is dict:
                                             for the_keyl, the_valuel in the_value.iteritems():
                                                 if the_valuel is not None:
-                                                    if isinstance(obj,tuple):
+                                                    val=None
+                                                    if isinstance(obj,tuple):                                                    
                                                         try:
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']',escape( obj[i].decode('utf-8') ))
+                                                           val= obj[i].decode('utf-8') 
                                                         except: 
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj[i] ))
+                                                            val= obj[i] 
                                                     else:
                                                         try:
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj.decode('utf-8') ))
+                                                            val= obj.decode('utf-8') 
                                                         except:
-                                                            the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj))
+                                                            val= obj
+                                                    
+                                                    if '[' + regexname+'.param'+str(i+1) + '][DE]' in the_valuel:
+                                                        the_valuel=the_valuel.replace('[' + regexname+'.param'+str(i+1) + '][DE]', unescape(val))
+                                                    the_value[the_keyl]=the_valuel.replace('[' + regexname+'.param'+str(i+1) + ']', val)
+                                                    #print 'first sec',the_value[the_keyl]
+                                                    
                                         else:
+                                            val=None
                                             if isinstance(obj,tuple):
                                                 try:
-                                                     the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj[i].decode('utf-8') ))
+                                                     val=obj[i].decode('utf-8') 
                                                 except:
-                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj[i] ))
+                                                    val=obj[i] 
                                             else:
                                                 try:
-                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']',escape( obj.decode('utf-8') ))
+                                                    val= obj.decode('utf-8') 
                                                 except:
-                                                    the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', escape(obj))
+                                                    val= obj
+                                            if '[' + regexname+'.param'+str(i+1) + '][DE]' in the_value:
+                                                #print 'found DE',the_value.replace('[' + regexname+'.param'+str(i+1) + '][DE]', unescape(val))
+                                                the_value=the_value.replace('[' + regexname+'.param'+str(i+1) + '][DE]', unescape(val))
+
+                                            the_valueO[the_key]=the_value.replace('[' + regexname+'.param'+str(i+1) + ']', val)
+                                            #print 'second sec val',the_valueO[the_key]
+
+                    val=None
                     if isinstance(obj,tuple):
                         try:
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj[i].decode('utf-8')) )
+                            val=obj[i].decode('utf-8')
                         except:
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj[i]) )
+                            val=obj[i]
                     else:
                         try:
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj.decode('utf-8')))
+                            val=obj.decode('utf-8')
                         except: 
-                            listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(obj))
+                            val=obj
+                    if '[' + regexname+'.param'+str(i+1) + '][DE]' in listrepeatT:
+                        listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + '][DE]',val)
+                    listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(i+1) + ']',escape(val))
 #                    print listrepeatT
                 listrepeatT=listrepeatT.replace('[' + regexname+'.param'+str(0) + ']',str(rnumber)) 
                 
