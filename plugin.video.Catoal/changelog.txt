@@ -1,24 +1,19 @@
-﻿Versión 5.3.1
-Añadido livestreams script addons
-Juegos de comandos
-Soporte para cifrado XML / M3U8
-
-Versión 5.3.0
+﻿Version 5.3.0
 proxy username/pwd , Gracias a jairox@tva
 
-Versión 5.2.9 
+Version 5.2.9 
 Rectificación de AADecoder
 
-Versión 5.2.8
+Version 5.2.8
 Mejorada las funciones básicas y recopilación de códigos para su visionado.
 
-Versión 5.2.7
+Version 5.2.7
 Revision y modificacion del Addon
 
-Versión 5.2.6
+Version 5.2.6
 Actualizacion de los fondos 
 
-Versión 5.2.5
+Version 5.2.5
 Corrección de errores en listrepeat por artículos individuales. También ahora param0 está disponible, que será el número de fila.
 Desactivada la opcion parental por no funcionar bien en Android
 
