@@ -62,7 +62,7 @@ if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
 
-SOURCES = [{"title": "Catoal ", "url": "http://googledrive.com/host/0B7s3iHobrWwGZlplM3czbXBiQWs/catoal.xml", "fanart": "http://i.imgur.com/4EwPUOD.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/dxTLePG.png"}]
+SOURCES = [{"title": "Catoal ", "url": "http://www.catoalkodi.info", "fanart": "http://i.imgur.com/4EwPUOD.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/dxTLePG.png"}]
 
 # http://i.imgur.com/4EwPUOD.jpg
 # http://i.imgur.com/dxTLePG.png
@@ -2038,7 +2038,7 @@ def play_playlist(name, mu_playlist,queueVideo=None):
                 else:
                     names.append(d_name)
             dialog = xbmcgui.Dialog()
-            index = dialog.select('Elegir una Opción', names)
+            index = dialog.select('Choose a video source', names)
             if index >= 0:
                 if "&mode=19" in mu_playlist[index]:
                     #playsetresolved (urlsolver(mu_playlist[index].replace('&mode=19','')),name,iconimage,True)
@@ -2113,7 +2113,7 @@ def _search(url,name):
     names = ['Gensis TV','Genesis Movie','Salt movie','salt TV','Muchmovies','viooz','ORoroTV',\
              'Yifymovies','cartoonHD','Youtube','DailyMotion','Vimeo']
     dialog = xbmcgui.Dialog()
-    index = dialog.select('Elegir una Opción', names)
+    index = dialog.select('Choose a video source', names)
 
     if index >= 0:
         url = pluginsearchurls[index]
@@ -2349,10 +2349,16 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
-                fav_params = (
-                    '%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=0'
-                    %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart))
-                    )
+                try:
+                    fav_params = (
+                        '%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=0'
+                        %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart))
+                        )
+                except:
+                    fav_params = (
+                        '%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=0'
+                        %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage.encode("utf-8")), urllib.quote_plus(fanart.encode("utf-8")))
+                        )
                 if playlist:
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
