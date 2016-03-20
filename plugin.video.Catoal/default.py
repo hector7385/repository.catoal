@@ -62,7 +62,7 @@ if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
 
-SOURCES = [{"title": "Catoal ", "url": "http://www.catoalkodi.info", "fanart": "http://i.imgur.com/4EwPUOD.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/dxTLePG.png"}]
+SOURCES = [{"title": "Catoal ", "url": "http://www.catoalkodi.info/", "fanart": "http://i.imgur.com/4EwPUOD.jpg", "genre": "Tv Live", "date": "01.11.2015", "credits": "Catoal", "thumbnail": "http://i.imgur.com/dxTLePG.png"}]
 
 # http://i.imgur.com/4EwPUOD.jpg
 # http://i.imgur.com/dxTLePG.png
