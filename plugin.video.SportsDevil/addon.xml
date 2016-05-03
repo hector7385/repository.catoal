@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.SportsDevil"
-  version="04.05.2016-1.8.8.0.Catoal"
+  version="1.8.8.0.Catoal"
   name="SportsDevil"
   provider-name="MaxMustermann">
   <requires>
