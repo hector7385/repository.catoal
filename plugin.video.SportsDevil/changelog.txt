@@ -1,3 +1,19 @@
+v 2016.05.03
+------------------------------
+-news modules in section España (by Quequeq)
+   *09Stream
+   *latelete.tv
+   *smart-tv-online.blogspot.com.es
+   *televisiondirectamex
+   *verlatelegratis
+   *zimblektv02
+   
+ -Fix Dinozap (si, otra vez)   (Goldonx)  
+
+
+
+
+
 v 2016.04.29 (29-Abr-16)
 ------------------------------
 - Fix: Dinozap (by Goldonx)
