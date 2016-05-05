@@ -70,7 +70,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="STD.Catoal"
+  version="STD.1.Catoal"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
