@@ -1,4 +1,7 @@
-﻿Versión 5.3.2
+﻿Versión 5.3.3
+Actualizado decodificadores imagenes de fondo actualizada y compatibilidad con appel tv4
+
+Versión 5.3.2
 Actualización de codes.
 
 Versión 5.3.1
