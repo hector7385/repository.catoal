@@ -13,28 +13,28 @@ artfolder = addonfolder + '/resources/img/'
 dialog = xbmcgui.Dialog()
 xbmc_version = int(xbmc.getInfoLabel("System.BuildVersion" )[0:2])
 
-md5_ios 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/ios.xml.md5"
-md5_mac86 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/macos_x86.xml.md5"
-md5_mac64 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/macos_x64.xml.md5"
-md5_win 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/windows.xml.md5"
-md5_android = "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/android.xml.md5"
-md5_rasp 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/raspberry.xml.md5"
-md5_lin86 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/linux_x86.xml.md5"
-md5_lin64 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/md5/linux_x64.xml.md5"
+md5_ios 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/ios.xml.md5"
+md5_mac86 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/macos_x86.xml.md5"
+md5_mac64 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/macos_x64.xml.md5"
+md5_win 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/windows.xml.md5"
+md5_android = "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/android.xml.md5"
+md5_rasp 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/raspberry.xml.md5"
+md5_lin86 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/linux_x86.xml.md5"
+md5_lin64 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/md5/linux_x64.xml.md5"
 
-lib_rasp 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/RaspberryPI/librtmp.so.0"
-lib_lin86 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/Linux/x86&ATV1/librtmp.so.0"
-lib_lin64 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/Linux/x64/librtmp.so.0"
-lib_android = "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/Android/librtmp.so"
-lib_win 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/Windows/librtmp.dll"
-lib_ios 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/iOS/librtmp.0.dylib"
-lib_mac86 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/macOS/x86/librtmp.0.dylib"
-lib_mac64 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/librtmp/macOS/x64/librtmp.0.dylib"
+lib_rasp 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/RaspberryPI/librtmp.so.0"
+lib_lin86 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/Linux/x86/librtmp.so.0"
+lib_lin64 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/Linux/x64/librtmp.so.0"
+lib_android = "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/Android/librtmp.so"
+lib_win 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/Windows/librtmp.dll"
+lib_ios 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/iOS/librtmp.0.dylib"
+lib_mac86 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/macOS/x86/librtmp.0.dylib"
+lib_mac64 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/macOS/x64/librtmp.0.dylib"
 
-qwerty_xml 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/keyboard/qwerty/DialogKeyboard.xml"
-abcde_xml 	= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/keyboard/abcd/DialogKeyboard.xml"
+qwerty_xml 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/keyboard/qwerty/DialogKeyboard.xml"
+abcde_xml 	= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/keyboard/abcd/DialogKeyboard.xml"
 
-apk_url		= "http://anonymous-repo.googlecode.com/svn/trunk/xbmc-tools/apk/url.txt"
+apk_url		= "http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/apk/url.txt"
 
 def traducao(texto):
 	return selfAddon.getLocalizedString(texto).encode('utf-8')
@@ -206,11 +206,11 @@ class librtmp:
 		mensagemprogresso.create('XBMC Tools', traducao(2012),traducao(2013))
 		subprocess.call("mkdir -p /storage/lib", shell=True)
 		mensagemprogresso.update(13)
-		subprocess.call("curl -L http://is.gd/kBaTzY -o /storage/.config/autostart.sh", shell=True)
+		subprocess.call("curl -L http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/autostart.sh -o /storage/.config/autostart.sh", shell=True)
 		mensagemprogresso.update(26)
-		subprocess.call("curl -L http://is.gd/yQUqNm -o /storage/.config/hacklib", shell=True)
+		subprocess.call("curl -L http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/hacklib -o /storage/.config/hacklib", shell=True)
 		mensagemprogresso.update(39)
-		subprocess.call("curl -L http://is.gd/GJdaEY -o /storage/.config/mktmplib", shell=True)
+		subprocess.call("curl -L http://proyectoluzdigital.info/tvguia/download/repo-tools/PLD-tools/librtmp/mktmplib -o /storage/.config/mktmplib", shell=True)
 		mensagemprogresso.update(52)
 		subprocess.call("cp " + my_tmp + " /storage/lib/" + lib_name, shell=True)
 		mensagemprogresso.update(65)

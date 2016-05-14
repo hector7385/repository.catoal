@@ -1,4 +1,7 @@
-﻿Versão 1.1.6:
+﻿Versão 1.1.7:
+Correção no addon
+
+Versão 1.1.6:
 Adicionado 'Forçar openelec' em PC
 Nome do addon alterado para "K0di Tools"
 Adicionado suporte para OSx (Kodi)

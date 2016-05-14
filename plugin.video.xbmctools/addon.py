@@ -23,7 +23,6 @@ from resources.lib.lib import librtmp
 librtmp = librtmp()
 h = HTMLParser.HTMLParser()
 
-versao = '1.1.6'
 addon_id = 'plugin.video.xbmctools'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -32,6 +31,7 @@ artfolder = addonfolder + '/resources/img/'
 dialog = xbmcgui.Dialog()
 xbmc_version = int(xbmc.getInfoLabel("System.BuildVersion" )[0:2])
 traducaoma= selfAddon.getLocalizedString
+versao = selfAddon.getAddonInfo('version')
 
 def traducao(texto):
 	return traducaoma(texto).encode('utf-8')
@@ -130,7 +130,7 @@ def CATEGORIES():
 		mensagem_os("Android",True)
 		if xbmc_version < 14: addDir(traducao(2002),"android",1,artfolder + "keyboard.png")
 		addDir("Download APK","-",11,artfolder + "apk.png",False)
-		addDir(traducao(2003)+" [COLOR blue](XBMC Gotham 13)[/COLOR]","-",5,artfolder + "dll.png",False)
+		addDir(traducao(2003),"-",5,artfolder + "dll.png",False)
 		if librtmp.android_hack_checker(): addDir(traducao(2059)+" [COLOR blue](On)[/COLOR]","-",12,artfolder + "hack.png",False)
 		else: addDir(traducao(2059)+" [COLOR red](Off)[/COLOR]","-",13,artfolder + "hack.png",False)
 		addDir(traducao(2004),"android",9,artfolder + "backup.png")
@@ -152,7 +152,7 @@ def CATEGORIES():
 	if disponivel==versao: addLink('[B][COLOR white]'+traducao(2005)+' (' + versao + ')[/COLOR][/B]','',artfolder + 'versao.png')
 	elif disponivel=='Erro ao verificar a versão!': addLink('[B][COLOR white]' + traducao(2006) + '[/COLOR][/B]','',artfolder + 'versao.png')
 	else: addLink('[B][COLOR white]'+traducao(2007)+' ('+ disponivel + '). '+traducao(2008)+'[/COLOR][/B]','',artfolder + 'versao.png')
-	print "--------- XBMC Tools ---------"
+	print "--------- PLD Tools ---------"
 
 ###################################################################################
 def mensagem_os(so_name,on_first_run = False):
@@ -169,7 +169,7 @@ def erro_os():
 
 def versao_disponivel():
 	try:
-		codigo_fonte=abrir_url('http://anonymous-repo.googlecode.com/svn/trunk/anonymous-repo/plugin.video.xbmctools/addon.xml')
+		codigo_fonte=abrir_url('https://anonymousrepo.svn.codeplex.com/svn/anonymous-repo/plugin.video.xbmctools/addon.xml')
 		match=re.compile('<addon id="plugin.video.xbmctools" name="K0di Tools" version="(.+?)"').findall(codigo_fonte)[0]
 	except:
 		match='Erro ao verificar a versão!'
