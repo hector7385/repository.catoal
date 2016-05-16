@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.SportsDevil"
-  version="STD.3.Catoal"
+  version="2 Build"
   name="SportsDevil"
-  provider-name="MaxMustermann">
+  provider-name="SportsDevil">
   <requires>
    <import addon="xbmc.python" version="2.1.0"/>
    <import addon="script.module.simplejson" />
@@ -16,9 +16,11 @@
     point="xbmc.python.pluginsource"
     library="default.py">
    <provides>video</provides>
-  </extension>  <extension point="xbmc.addon.metadata">
+  </extension>
+  <extension point="xbmc.addon.metadata">
     <summary>Play videos of different sports streaming sites</summary>
-    <description>Play videos of different Channels streaming sites Updated 07/05/2016 (from HUBBA3´s Version 03/05/2016)... +Info in Change Log</description>
+    <description>Play videos of different sports streaming sites</description>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
   </extension>
 </addon>

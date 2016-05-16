@@ -21,6 +21,7 @@ import customConversions as cc
 from utils import decryptionUtils as crypt
 from utils import datetimeUtils as dt
 from utils import rowbalance as rb
+from utils import wasteg as getsaw
 
 from utils.fileUtils import findInSubdirectory, getFileContent, getFileExtension
 from utils.scrapingUtils import findVideoFrameLink, findContentRefreshLink, findRTMP, findJS, findPHP, getHostName, findEmbedPHPLink
@@ -437,7 +438,7 @@ class Parser(object):
 
     def __parseHtml(self, url, data, rules, skills, definedIn, lItem):          
 
-        #common.log('_parseHtml called' + url)
+        common.log('_parseHtml called' + url)
         items = []
 
         for item_rule in rules:
@@ -541,6 +542,7 @@ class Parser(object):
                 if not referer:
                     referer = ''
                 params = params.replace('@REFERER@', referer)
+                #common.log('PARAMS: ' + str(params))
 
             if command == 'convDate':
                 src = cc.convDate(params, src)
@@ -659,8 +661,13 @@ class Parser(object):
                 src = dt.getUnixTimestamp()
                 
             elif command == 'rowbalance':
-                src = rb.get()
-
+                src = rb.get(src)
+			
+	    elif command == 'wasteg': #JairoX's sawlive grabber
+                paramArr = params.split(',')
+                ref = str(paramArr[1])
+                src = getsaw.compose(ref, src)
+			
             elif command == 'urlMerge':
                 src = cc.urlMerge(params, src)
 
