@@ -1,6 +1,6 @@
 item_info_name=title
 item_info_from=@PARAM1@
-item_info_build=Canal - %s
+item_info_build=iGuide - %s
      
 item_info_name=pageUrl
 item_info_from=@PARAM1@
