@@ -53,6 +53,24 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.CatoalHD" version="2.2.4" name="[COLOR Red]Catoal.HD[/COLOR]" provider-name="[COLOR blue]Catoal[/COLOR]">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.2.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Esto Es Una ModificaciÃ³n del Addon de Shani</summary>
+    <description lang="es">lista hd catoal</description>
+   <description>
+
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.f4mTester" version="2.2.4" name="f4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
