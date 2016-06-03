@@ -14,7 +14,7 @@ item_info_build=%s
 
 item_info_name=r1
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*?var\s*\w+\s*=\s*\"(:\d+)\".*?srp=\d+&srp=(\d+).*','@REFERER@','p1|srp')
+item_info_convert=getInfo('%s','.*?var\s*\w+\s*=\s*\"(:\d+)\".*?\bsrp=(\d+)','@REFERER@','p1|srp')
 item_info_build=%s
 
 item_info_name=s1
