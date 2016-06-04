@@ -181,7 +181,7 @@ def getInfo(item, params, src, xml=False, mobile=False):
     except: 
         pass
 
-    common.log('Get Info from: "'+ paramPage + '" from "' + referer + '" regex "' + paramRegex + '"')
+    common.log('Get Info from: "'+ paramPage + '" from "' + referer + '"')
     data = common.getHTML(paramPage, form_data, referer, xml, mobile, ignoreCache=False,demystify=True)
     return reg.parseText(data, paramRegex, variables)
 
