@@ -1,0 +1,116 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="RaiUno.it" group-title="Italiano" tvg-logo="0605.png",[COLOR orange]Rai 1[/COLOR]
+http://b2everyrai-lh.akamaihd.net/i/rai1_1@398068/master.m3u8
+#EXTINF:-1 tvg-id="RaiDue.it" group-title="Italiano" tvg-logo="0606.png",[COLOR orange]Rai 2[/COLOR]
+http://b2everyrai-lh.akamaihd.net/i/rai2_1@66477/master.m3u8
+#EXTINF:-1 tvg-id="RaiTre.it" group-title="Italiano" tvg-logo="0607.png",[COLOR orange]Rai 3[/COLOR]
+http://b2everyrai-lh.akamaihd.net/i/rai3_1@91501/master.m3u8
+#EXTINF:-1 tvg-id="Rai4.it" group-title="Italiano" tvg-logo="0623.png",[COLOR orange]Rai 4[/COLOR]
+mmsh://212.162.68.163/Rai4
+#EXTINF:-1 tvg-id="Rai5.it" group-title="Italiano" tvg-logo="0624.png",[COLOR orange]Rai 5[/COLOR]
+http://b2.stream12.rai.it/live/rai5.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="RaisatCinema.it" group-title="Italiano" tvg-logo="0621.png",[COLOR orange]Rai Movie[/COLOR]
+http://b2everyrai-lh.akamaihd.net/i/raimovie_1@67348/master.m3u8
+#EXTINF:-1 tvg-id="ParamountChannel.it" group-title="Italiano" tvg-logo="pmc.png",[COLOR orange]Paramount Channel[/COLOR]
+http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
+#EXTINF:-1 tvg-id="Canale5.it" group-title="Italiano" tvg-logo="0614.png",[COLOR orange]Canale 5[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=canale5
+#EXTINF:-1 tvg-id="Rete4.it" group-title="Italiano" tvg-logo="0619.png",[COLOR orange]Rete 4[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=rete4
+#EXTINF:-1 tvg-id="Italia1.it" group-title="Italiano" tvg-logo="0615.png",[COLOR orange]Italia 1[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=italia1
+#EXTINF:-1 tvg-id="LA5.it" group-title="Italiano" tvg-logo="la5.png",[COLOR orange]La5[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=la5
+#EXTINF:-1 tvg-id="TopCrime.it" group-title="Italiano" tvg-logo="topcrime.png",[COLOR orange]Top Crime[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=topcrime
+#EXTINF:-1 tvg-id="Italia2.it" group-title="Italiano" tvg-logo="italia2.png",[COLOR orange]Italia 2[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=italia2
+#EXTINF:-1 tvg-id="Iris.it" group-title="Italiano" tvg-logo="iris.png",[COLOR orange]Iris[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=iris
+#EXTINF:-1 tvg-id="MediasetExtra.it" group-title="Italiano" tvg-logo="extra.png",[COLOR orange]Mediaset Extra[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=extra
+#EXTINF:-1 tvg-id="La7.it" group-title="Italiano" tvg-logo="0617.png",[COLOR orange]LA7[/COLOR]
+http://la7live-lh.akamaihd.net/i/test_1@143593/index_1_av-b.m3u8
+#EXTINF:-1 tvg-id="La7d.it" group-title="Italiano" tvg-logo="la7d.png",[COLOR orange]LA7d[/COLOR]
+http://se-mi1-5.se.itvmscvas.alice.cdn.interbusiness.it/liveas/cubovision/la7d/v7.m3u8
+#EXTINF:-1 tvg-id="RaiNews.it" group-title="Italiano" tvg-logo="0613.png",[COLOR orange]Rai News 24[/COLOR]
+http://b2everyrai-lh.akamaihd.net/i/rainews_1@179616/master.m3u8
+#EXTINF:-1 tvg-id="RaiGulp.it" group-title="Italiano" tvg-logo="0608.png",[COLOR orange]Rai Gulp[/COLOR]
+mmsh://212.162.68.163/Rai_gulp
+#EXTINF:-1 tvg-id="RaiScuola.it" group-title="Italiano" tvg-logo="0609.png",[COLOR orange]Rai Scuola[/COLOR]
+http://originstream6.rai.it/italy/smil:raiscuola.smil/master.m3u8
+#EXTINF:-1 tvg-id="RaiStoria.it" group-title="Italiano" tvg-logo="0610.png",[COLOR orange]Rai Storia[/COLOR]
+http://originstream6.rai.it/italy/raistoria.smil/master.m3u8
+#EXTINF:-1 tvg-id="RaiYoyo.it" group-title="Italiano" tvg-logo="yoyo.png",[COLOR orange]Rai Yoyo[/COLOR]
+http://b2everyrai-lh.akamaihd.net/i/raiyoyo_1@191405/master.m3u8|X-Forwarded-For=2.112.0.1
+#EXTINF:-1 tvg-id="RaisatPremium.it" group-title="Italiano" tvg-logo="0622.png",[COLOR orange]Rai Premium[/COLOR]
+http://originstream7.rai.it/italy/smil:raipremium.smil/master.m3u8 
+#EXTINF:-1 tvg-id="RaiSport1.it" group-title="Italiano" tvg-logo="0611.png",[COLOR orangered]Rai Sport 1 HD[/COLOR]
+http://httpstream1.rai.it/Italy/raisport1.isml/QualityLevels(1896000)/manifest(format=m3u8-aapl).m3u8|X-Forwarded-For=2.112.0.1
+#EXTINF:-1 tvg-id="RaiSport2.it" group-title="Italiano" tvg-logo="0612.png",[COLOR orange]Rai Sport 2[/COLOR]
+http://httpstream1.rai.it/Italy/raisport2.isml/QualityLevels(1896000)/manifest(format=m3u8-aapl).m3u8|X-Forwarded-For=2.112.0.1
+#EXTINF:-1 tvg-id="Automototv.it" group-title="Italiano" tvg-logo="automoto.png",[COLOR orange]Automoto TV[/COLOR]
+rtmp://178.22.187.142:1935/automoto/_definst_/mp4:myStream3
+#EXTINF:-1 tvg-id="CompanyTV.it" group-title="Italiano" tvg-logo="company.png",[COLOR orangered]Company TV[/COLOR]
+rtmp://wma10.fluidstream.net/CompanyTV/_definst_/mp4:livestream_720p
+#EXTINF:-1 tvg-id="Radio105TV.it" group-title="Italiano" tvg-logo="r105.png",[COLOR orange]Radio 105 TV[/COLOR]
+http://fms.105.net:1935/live/105Test1/playlist.m3u8
+#EXTINF:-1 tvg-id="CapitalTV.it" group-title="Italiano" tvg-logo="capital.png",[COLOR orange]Capital TV[/COLOR]
+http://capital_tv-lh.akamaihd.net/i/CapitalTv_1@183098/master.m3u8
+#EXTINF:-1 tvg-id="CapitalTV.it" group-title="Italiano" tvg-logo="virgin.png",[COLOR orange]Virgin TV[/COLOR]
+http://fms.105.net:1935/live/virgin1/playlist.m3u8
+#EXTINF:-1 tvg-id="Radionumberone.it" group-title="Italiano" tvg-logo="rn1.png",[COLOR orange]Radio Number One TV[/COLOR]
+http://wma02.fluidstream.net/RN1TV/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="SkyTG24DTT.it" group-title="Italiano" tvg-logo="0625.png",[COLOR orange]Sky TG24[/COLOR]
+http://skyianywhere2-i.akamaihd.net/hls/live/200275/tg24/playlist.m3u8
+#EXTINF:-1 tvg-id="Tgcom24.it" group-title="Italiano" tvg-logo="tgcom.png",[COLOR orangered]TGCOM 24 HD[/COLOR]
+https://stream.firstonetv.eu/ms.m3u8?c=tgcom24
+#EXTINF:-1 tvg-id="Tgcom24.it" group-title="Italiano" tvg-logo="tgcom.png",[COLOR orange]TGCOM 24[/COLOR]
+http://hlslive.msf.ticdn.it/hls/CH08/live_Layer2.m3u8|X-Forwarded-For=2.112.0.1
+#EXTINF:-1 tvg-id="Marcopolo.it" group-title="Italiano" tvg-logo="marco.png",[COLOR orange]Marco Polo[/COLOR]
+http://ltlive01.cloudapp.net/LT_CH_2mkw471qp.isml/QualityLevels(1264000)/manifest(format=m3u8-aapl).m3u8
+#EXTINF:-1 tvg-id="La3.it" group-title="Italiano" tvg-logo="la3.png",[COLOR orange]La 3[/COLOR]
+http://h3ghdchan102-i.akamaihd.net/hls/live/217154/Virtual_Channel102/master.m3u8
+#EXTINF:-1 tvg-id="TV2000.it" group-title="Italiano" tvg-logo="tv2000.png",[COLOR orange]Tv2000[/COLOR]
+http://mi1.wz.tv2000.it/tv2000_alfa.m3u8
+#EXTINF:-1 tvg-id="Alice.it" group-title="Italiano" tvg-logo="alice.png",[COLOR orange]Alice[/COLOR]
+http://ltlive01.cloudapp.net/LT_CH_4plat296w.isml/QualityLevels(1264000)/manifest(format=m3u8-aapl).m3u8
+#EXTINF:-1 tvg-id="SMtv.it" group-title="Italiano" tvg-logo="smarino.png",[COLOR orange]RTV San Marino[/COLOR]
+http://194.116.72.186:1935/webtv_live4/0QBXFQ2L0I5P/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioMontecarlo.it" group-title="Italiano" tvg-logo="rmc.png",[COLOR orange]Radio Montecarlo TV[/COLOR]
+http://fms.105.net:1935/live/rmc1/playlist.m3u8
+#EXTINF:-1 tvg-id="SkyMusic.it" group-title="Italiano" tvg-logo="m2o.png",[COLOR orange]M2o Tv[/COLOR]
+http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/master.m3u8
+#EXTINF:-1 tvg-id="ForMusic.it" group-title="Italiano" tvg-logo="formusic.png",[COLOR orange]For MUSIC TV[/COLOR]
+http://wowzamobile.top-ix.org/quartaretetv1/formusicweb/playlist.m3u8
+#EXTINF:-1 tvg-id="Repubblica.it" group-title="Italiano" tvg-logo="reptv.png",[COLOR orangered]Repubblica TV[/COLOR]
+http://repvideo_1-lh.akamaihd.net/i/Studio1_1@183089/master.m3u8
+#EXTINF:-1 tvg-id="Teleoltre.it" group-title="Italiano" tvg-logo="teleoltre.png",[COLOR orange]Tele Oltre[/COLOR]
+http://94.198.100.199:80/np_teleoltre/channel1_np_teleoltre/playlist.m3u8
+#EXTINF:-1 tvg-id="RaiNettuno.it" group-title="Italiano" tvg-logo="rainet.png",[COLOR orange]Rai Nettuno[/COLOR]
+http://stream6.rai.it/live/smil:uninettuno.smil/chunklist_b900000.m3u8
+#EXTINF:-1 tvg-id="RadioRadicale.it" group-title="Italiano" tvg-logo="radicale.png",[COLOR orange]Radio Radicale TV[/COLOR]
+http://video-4.radioradicale.it:1935/diretta/padtv1/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioRadicaleCamera.it" group-title="Italiano" tvg-logo="radicale.png",[COLOR orange]Radio Radicale Camera[/COLOR]
+http://video-4.radioradicale.it:1935/diretta/camera1/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioRadicaleSenato.it" group-title="Italiano" tvg-logo="radicale.png",[COLOR orange]Radio Radicale Senato[/COLOR]
+http://video-4.radioradicale.it:1935/diretta/senato1/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioItalia.it" group-title="Italiano" tvg-logo="ritalia.png",[COLOR orange]Radio Italia TV[/COLOR]
+http://radioitaliatv-lh.akamaihd.net/i/radioitaliatv_1@329645/index_720x576_av-p.m3u8
+#EXTINF:-1 tvg-id="Ondalatina.it" group-title="Italiano" tvg-logo="ondalatina.png",[COLOR orange]Onda Italiana[/COLOR]
+http://ondalatina_tv-lh.akamaihd.net/i/OndaLatinaTv_1@42007/master.m3u8
+#EXTINF:-1 tvg-id="Adachannel.it" group-title="Italiano" tvg-logo="ada.png",[COLOR orange]ADA CHANNEL[/COLOR]
+rtsp://live.cdn2.streamago.tv/streamago/34674/44870/?idcanale=44870
+#EXTINF:-1 tvg-id="Qvcitalia.it" group-title="Italiano" tvg-logo="qvcit.png",[COLOR orangered]QVC Italia[/COLOR]
+http://qvcitalia.mmdlive.lldns.net/qvcitalia/66f8359ae9c046bb8aa92144511b450a/manifest.m3u8
+#EXTINF:-1 tvg-id="Class-Cnbc.it" group-title="Italiano" tvg-logo="cnbc.png",[COLOR orange]Class-Cnbc[/COLOR]
+http://liveclass.edgesuite.net/i/classcnbc_1@199799/master.m3u8
+#EXTINF:-1 tvg-id="Canale7.it" group-title="Italiano" tvg-logo="canale7.png",[COLOR orange]Canale 7[/COLOR]
+http://wms.shared.streamshow.it/canale7/canale7/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Italiano" tvg-logo="meteo.png",[COLOR cyan]Meteo oggi[/COLOR]
+http://media.ilmeteo.it/video/iphone/oggi.m4v
+#EXTINF:-1 tvg-id="" group-title="Italiano" tvg-logo="meteo.png",[COLOR cyan]Meteo domani[/COLOR]
+http://media.ilmeteo.it/video/iphone/domani.m4v
+#EXTINF:-1 tvg-id="" group-title="Italiano" tvg-logo="meteo.png",[COLOR cyan]Meteo dopodomani[/COLOR]
+http://media.ilmeteo.it/video/iphone/dopodomani.m4v
+#EXT-X-ENDLIST

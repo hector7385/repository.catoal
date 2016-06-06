@@ -1,0 +1,24 @@
+#EXTINF:-1 tvg-id="RAIUno.it" group-title="Italiano" tvg-logo="0605.png",[COLOR FFDC54D3]Rai 1[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/rai1_1@97382/master.m3u8
+#EXTINF:-1 tvg-id="RAIDue.it" group-title="Italiano" tvg-logo="0606.png",[COLOR FFDC54D3]Rai 2[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/rai2_1@137763/master.m3u8
+#EXTINF:-1 tvg-id="RAITre.it" group-title="Italiano" tvg-logo="0607.png",[COLOR FFDC54D3]Rai 3[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/rai3_1@137764/master.m3u8
+#EXTINF:-1 tvg-id="RAIGulp.it" group-title="Italiano" tvg-logo="0608.png",[COLOR FFDC54D3]Rai Gulp[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/raigulp_1@137765/master.m3u8
+#EXTINF:-1 tvg-id="RaiStoria.it" group-title="Italiano" tvg-logo="0610.png",[COLOR FFDC54D3]Rai Storia[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/raistoria_1@97389/master.m3u8
+#EXTINF:-1 tvg-id="RaiNews.it" group-title="Italiano" tvg-logo="0613.png",[COLOR FFDC54D3]Rai News 24[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/rainews_1@137767/master.m3u8
+#EXTINF:-1 tvg-id="RSILa1.ch" group-title="Italiano" tvg-logo="0602.png",[COLOR FFFF00FF]RSI LA 1 HD[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/rsila1hd_1@97410/master.m3u8
+#EXTINF:-1 tvg-id="RSILa2.ch" group-title="Italiano" tvg-logo="0604.png",[COLOR FFFF00FF]RSI LA 2 HD[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/rsila2hd_1@97411/master.m3u8
+#EXTINF:-1 tvg-id="Canale5.it" group-title="Italiano" tvg-logo="0614.png",[COLOR FFDC54D3]Canale 5[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/canale5_1@137760/master.m3u8
+#EXTINF:-1 tvg-id="Italia1.it" group-title="Italiano" tvg-logo="0615.png",[COLOR FFDC54D3]Italia 1[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/italia1_1@97381/master.m3u8
+#EXTINF:-1 tvg-id="La7.it" group-title="Italiano" tvg-logo="0617.png",[COLOR FFDC54D3]LA7[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/la7_1@137762/master.m3u8 
+#EXTINF:-1 tvg-id="RaiScuola.it" group-title="Italiano" tvg-logo="0609.png",[COLOR FFDC54D3]Rai Scuola[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/raiscuola_1@137768/master.m3u8

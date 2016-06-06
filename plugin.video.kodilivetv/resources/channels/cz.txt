@@ -1,0 +1,40 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="ct1.cz" group-title="Czech" tvg-logo="ct_1.png",[COLOR orange]CT1[/COLOR]
+http://81.201.52.159:8001
+#EXTINF:-1 tvg-id="ct2.cz" group-title="Czech" tvg-logo="ct_2.png",[COLOR orange]CT2[/COLOR]
+http://81.201.52.159:8002
+#EXTINF:-1 tvg-id="ct24.cz" group-title="Czech" tvg-logo="ct_24.png",[COLOR orange]CT 24[/COLOR]
+http://81.201.52.159:8015
+#EXTINF:-1 tvg-id="ctart.cz" group-title="Czech" tvg-logo="ct_art.png",[COLOR orange]CT Art[/COLOR]
+http://81.201.52.159:8005
+#EXTINF:-1 tvg-id="stv1.cz" group-title="Czech" tvg-logo="1.png",[COLOR orange]STV 1[/COLOR]
+http://88.212.10.27:81/streams/stv1.m3u8
+#EXTINF:-1 tvg-id="stv2.cz" group-title="Czech" tvg-logo="2.png",[COLOR orange]STV 2[/COLOR]
+http://88.212.10.27:81/streams/stv2.m3u8
+#EXTINF:-1 tvg-id="nova.cz" group-title="Czech" tvg-logo="nova_hd.png",[COLOR orange]Nova[/COLOR]
+http://81.201.52.159:8003
+#EXTINF:-1 tvg-id="novacinema.cz" group-title="Czech" tvg-logo="nova_cinema.png",[COLOR orange]Nova Cinema[/COLOR]
+http://gogo.jksw.cz:8020
+#EXTINF:-1 tvg-id="prima.cz" group-title="Czech" tvg-logo="prima.png",[COLOR orange]Prima[/COLOR]
+http://81.201.52.159:8004
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="kino.png",[COLOR orange]TV Kino Barrandov[/COLOR]
+http://81.201.52.159:8009
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="slagr_tv.png",[COLOR orange]Šlágr TV[/COLOR]
+http://81.201.52.159:8013
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="noe.png",[COLOR orange]Noe[/COLOR]
+http://81.201.52.159:8017
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="retro.png",[COLOR orange]Retro[/COLOR]
+http://81.201.52.159:8018
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="prima_love.png",[COLOR orange]Prima Love[/COLOR]
+http://81.201.52.159:8019
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="prima_cool.png",[COLOR orange]Prima Cool[/COLOR]
+http://81.201.52.159:8021
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="tv_barrandov.png",[COLOR orange]TV Barrandov[/COLOR]
+http://81.201.52.159:8022
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="vh1_classic.png",[COLOR orange]VH1 Classic[/COLOR]
+http://81.201.52.159:8024
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="plus_barrandov.png",[COLOR orange]Plus Barrandov[/COLOR]
+http://81.201.52.159:8028
+#EXTINF:-1 tvg-id="" group-title="Czech" tvg-logo="ocko.png",[COLOR orange]Óčko hity[/COLOR]
+http://81.201.52.159:8016
+#EXT-X-ENDLIST

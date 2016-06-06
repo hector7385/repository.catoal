@@ -1,0 +1,114 @@
+#EXTINF:-1 tvg-id="ARD.de" group-title="Deutsch" tvg-logo="0002.png",[COLOR FFFF00FF]ARD HD[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/daserstehd_1@97395/master.m3u8
+#EXTINF:-1 tvg-id="ARD.de" group-title="Deutsch" tvg-logo="0001.png",[COLOR FFDC54D3]ARD[/COLOR] 
+http://c001.p112.edgesuite.net/i/c001/daserste_1@97481/master.m3u8
+#EXTINF:-1 tvg-id="ZDF.de" group-title="Deutsch" tvg-logo="0004.png",[COLOR FFFF00FF]ZDF HD[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/zdfhd_1@97431/master.m3u8
+#EXTINF:-1 tvg-id="ZDF.de" group-title="Deutsch" tvg-logo="0003.png",[COLOR FFDC54D3]ZDF[/COLOR]
+http://c001.p112.edgesuite.net/i/c001/zdf_1@97483/master.m3u8
+#EXTINF:-1 tvg-id="ZDFneo.de" group-title="Deutsch" tvg-logo="0054.png",[COLOR FFFF00FF]ZDFneo HD[/COLOR]
+http://c001.p109.edgesuite.net/i/c001/zdfneohd_1@97434/master.m3u8
+#EXTINF:-1 tvg-id="ZDFneo.de" group-title="Deutsch" tvg-logo="0053.png",[COLOR FFDC54D3]ZDFneo[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/zdfneo_1@97479/master.m3u8
+#EXTINF:-1 tvg-id="ZDFkultur.de" group-title="Deutsch" tvg-logo="0056.png",[COLOR FFFF00FF]ZDFkultur HD[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/zdfkulturhd_1@97433/master.m3u8
+#EXTINF:-1 tvg-id="ZDFkultur.de" group-title="Deutsch" tvg-logo="0055.png",[COLOR FFDC54D3]ZDFkultur[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/zdfkultur_1@97478/master.m3u8
+#EXTINF:-1 tvg-id="ZDFinfo.de" group-title="Deutsch" tvg-logo="0058.png",[COLOR FFFF00FF]ZDFinfo HD[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/zdfinfohd_1@97432/master.m3u8
+#EXTINF:-1 tvg-id="ZDFinfo.de" group-title="Deutsch" tvg-logo="0057.png",[COLOR FFDC54D3]ZDFinfo[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/zdfinfo_1@97477/master.m3u8
+#EXTINF:-1 tvg-id="3sat.de" group-title="Deutsch" tvg-logo="0014.png",[COLOR FFFF00FF]3sat HD[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/3sathd_1@97393/master.m3u8
+#EXTINF:-1 tvg-id="3sat.de" group-title="Deutsch" tvg-logo="0013.png",[COLOR FFDC54D3]3sat[/COLOR]
+http://c001.p112.edgesuite.net/i/c001/3sat_1@97480/master.m3u8
+#EXTINF:-1 tvg-id="3plus.ch" group-title="Deutsch" tvg-logo="0080.png",[COLOR FFDC54D3]3+[/COLOR]
+http://c001.p114.edgesuite.net/i/c001/3plus_1@97489/master.m3u8
+#EXTINF:-1 tvg-id="ARTE.de" group-title="Deutsch" tvg-logo="0012.png",[COLOR FFFF00FF]Arte HD[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/artedehd_1@97394/master.m3u8
+#EXTINF:-1 tvg-id="ARTE.de" group-title="Deutsch" tvg-logo="0011.png",[COLOR FFDC54D3]Arte[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/artede_1@97463/master.m3u8
+#EXTINF:-1 tvg-id="disneychannel.de" group-title="Deutsch" tvg-logo="0036.png",[COLOR FFDC54D3]Disney Channel[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/disney_channel_de_1@97396/master.m3u8
+#EXTINF:-1 tvg-id="Kika.de" group-title="Deutsch" tvg-logo="0047.png",[COLOR FFFF00FF]KiKa HD[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/kikahd_1@97423/master.m3u8
+#EXTINF:-1 tvg-id="Kika.de" group-title="Deutsch" tvg-logo="0046.png",[COLOR FFDC54D3]KiKa[/COLOR]
+http://c001.p113.edgesuite.net/i/c001/kika_1@97487/master.m3u8
+#EXTINF:-1 tvg-id="SRF1.ch" group-title="Deutsch" tvg-logo="0076.png",[COLOR FFFF00FF]SRF 1 HD[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/sf1hd_1@97426/master.m3u8
+#EXTINF:-1 tvg-id="SRF2.ch" group-title="Deutsch" tvg-logo="0078.png",[COLOR FFFF00FF]SRF zwei HD[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/sf2hd_1@97427/master.m3u8
+#EXTINF:-1 tvg-id="SRFinfo.ch" group-title="Deutsch" tvg-logo="0079.png",[COLOR FFDC54D3]SRF info[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/sfinfo_1@97408/master.m3u8
+#EXTINF:-1 tvg-id="ORF1.at" group-title="Deutsch" tvg-logo="0071.png",[COLOR FFFF00FF]ORF1 HD[/COLOR]
+http://c001.p101.edgesuite.net/i/c001/orf1hd_1@97416/master.m3u8
+#EXTINF:-1 tvg-id="ORF1.at" group-title="Deutsch" tvg-logo="0070.png",[COLOR FFDC54D3]ORF1[/COLOR]
+http://c001.p113.edgesuite.net/i/c001/orf1_1@97573/master.m3u8
+#EXTINF:-1 tvg-id="ORF2.at" group-title="Deutsch" tvg-logo="0073.png",[COLOR FFFF00FF]ORF2 HD[/COLOR]
+http://c001.p101.edgesuite.net/i/c001/orf2hd_1@97417/master.m3u8
+#EXTINF:-1 tvg-id="ORF2.at" group-title="Deutsch" tvg-logo="0072.png",[COLOR FFDC54D3]ORF2[/COLOR]
+http://c001.p113.edgesuite.net/i/c001/orf2_1@97574/master.m3u8
+#EXTINF:-1 tvg-id="Atv.at" group-title="Deutsch" tvg-logo="0074.png",[COLOR FFDC54D3]ATV[/COLOR]
+http://c001.p114.edgesuite.net/i/c001/atv_1@97491/master.m3u8
+#EXTINF:-1 tvg-id="RTL.de" group-title="Deutsch" tvg-logo="0005.png",[COLOR FFDC54D3]RTL[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/rtl_1@97459/master.m3u8
+#EXTINF:-1 tvg-id="RTL2.de" group-title="Deutsch" tvg-logo="0009.png",[COLOR FFDC54D3]RTL 2[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/rtl2_1@97460/master.m3u8
+#EXTINF:-1 tvg-id="RTLNitro.de" group-title="Deutsch" tvg-logo="0040.png",[COLOR FFDC54D3]RTL Nitro[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/rtlnitro_1@97458/master.m3u8
+#EXTINF:-1 tvg-id="SRTL.de" group-title="Deutsch" tvg-logo="0045.png",[COLOR FFDC54D3]Super RTL[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/superrtl_1@97463/master.m3u8
+#EXTINF:-1 tvg-id="RTL.ch" group-title="Deutsch" tvg-logo="0005.png",[COLOR FFDC54D3]RTL CH[/COLOR]
+http://c001.p118.edgesuite.net/i/c001/rtlchhd_1@135257/master.m3u8
+#EXTINF:-1 tvg-id="phoenix.de" group-title="Deutsch" tvg-logo="0030.png",[COLOR FFFF00FF]PHOENIX HD[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/phoenixhd_1@97428/master.m3u8
+#EXTINF:-1 tvg-id="phoenix.de" group-title="Deutsch" tvg-logo="0029.png",[COLOR FFDC54D3]PHOENIX[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/phoenix_1@97476/master.m3u8
+#EXTINF:-1 tvg-id="Pro7.de" group-title="Deutsch" tvg-logo="0007.png",[COLOR FFFF00FF]Pro7 HD[/COLOR]
+http://c001.p119.edgesuite.net/i/c001/pro7chhd_1@135262/master.m3u8
+#EXTINF:-1 tvg-id="Pro7.de" group-title="Deutsch" tvg-logo="0007.png",[COLOR FFDC54D3]Pro7[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/prosieben_1@97456/master.m3u8
+#EXTINF:-1 tvg-id="Vox.ch" group-title="Deutsch" tvg-logo="0010.png",[COLOR FFDC54D3]VOX[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/vox_1@97466/master.m3u8
+#EXTINF:-1 tvg-id="Kabel.de" group-title="Deutsch" tvg-logo="0008.png",[COLOR FFDC54D3]Kabel 1[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/kabeleins_1@97453/master.m3u8
+#EXTINF:-1 tvg-id="DMax.de" group-title="Deutsch" tvg-logo="0052.png",[COLOR FFDC54D3]DMAX[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/dmax_1@97398/master.m3u8
+#EXTINF:-1 tvg-id="Sixx.de" group-title="Deutsch" tvg-logo="0037.png",[COLOR FFDC54D3]Sixx[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/sixx_1@97462/master.m3u8
+#EXTINF:-1 tvg-id="Eurosport.de" group-title="Deutsch" tvg-logo="0049.png",[COLOR FFDC54D3]EuroSport[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/eurosportde_1@97452/master.m3u8
+#EXTINF:-1 tvg-id="Joiz.ch" group-title="Deutsch" tvg-logo="0042.png",[COLOR FFFF00FF]Joiz[/COLOR]
+http://c001.p118.edgesuite.net/i/c001/joiz_1@135266/master.m3u8
+#EXTINF:-1 tvg-id="WDR.de" group-title="Deutsch" tvg-logo="0018.png",[COLOR FFFF00FF]WDR HD[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/wdrhd_1@97430/master.m3u8
+#EXTINF:-1 tvg-id="WDR.de" group-title="Deutsch" tvg-logo="0017.png",[COLOR FFDC54D3]WDR[/COLOR]
+http://c001.p114.edgesuite.net/i/c001/wdr_1@97490/master.m3u8
+#EXTINF:-1 tvg-id="Sat1.de" group-title="Deutsch" tvg-logo="0006.png",[COLOR FFDC54D3]Sat.1[/COLOR]
+http://c001.p107.edgesuite.net/i/c001/sat1_1@97461/master.m3u8
+#EXTINF:-1 tvg-id="Nick.de" group-title="Deutsch" tvg-logo="0043.png",[COLOR FFDC54D3]Nickelodeon[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/nickcc_1@97455/master.m3u8
+#EXTINF:-1 tvg-id="ntv.de" group-title="Deutsch" tvg-logo="0034.png",[COLOR FFDC54D3]n-tv[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/nickcc_1@97455/master.m3u8
+#EXTINF:-1 tvg-id="Telezueri.ch" group-title="Deutsch" tvg-logo="0083.png",[COLOR FFDC54D3]Tele Züri[/COLOR]
+http://c001.p119.edgesuite.net/i/c001/tzurich_1@135275/master.m3u8
+#EXTINF:-1 tvg-id="Tele5.de" group-title="Deutsch" tvg-logo="0041.png",[COLOR FFDC54D3]Tele 5[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/tele5_1@97465/master.m3u8
+#EXTINF:-1 tvg-id="Einsfestival.de" group-title="Deutsch" tvg-logo="0062.png",[COLOR FFFF00FF]Einsfestival HD[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/einsfestivalhd_1@97422/master.m3u8
+#EXTINF:-1 tvg-id="Einsfestival.de" group-title="Deutsch" tvg-logo="0061.png",[COLOR FFDC54D3]Einsfestival[/COLOR]
+http://c001.p112.edgesuite.net/i/c001/einsfestival_1@97482/master.m3u8
+#EXTINF:-1 tvg-id="Tv24.ch" group-title="Deutsch" tvg-logo="0082.png",[COLOR FFFF00FF]TV24 HD[/COLOR]
+http://c001.p128.edgesuite.net/i/c001/tv24_hd_1@180322/master.m3u8
+#EXTINF:-1 tvg-id="Tv24.ch" group-title="Deutsch" tvg-logo="0082.png",[COLOR FFDC54D3]TV24[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/tv24_1@97562/master.m3u8
+#EXTINF:-1 tvg-id="AnixeHD.de" group-title="Deutsch" tvg-logo="0066.png",[COLOR FFFF00FF]Anixe HD[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/anixehd_1@97440/master.m3u8
+#EXTINF:-1 tvg-id="AnixeHD.de" group-title="Deutsch" tvg-logo="0066.png",[COLOR FFDC54D3]Anixe[/COLOR]
+http://c001.p113.edgesuite.net/i/c001/anixe_1@97486/master.m3u8
+#EXTINF:-1 tvg-id="S1.ch" group-title="Deutsch" tvg-logo="0081.png",[COLOR FFFF00FF]S1 HD[/COLOR]
+http://c001.p117.edgesuite.net/i/c001/s1tvhd_1@135250/master.m3u8
+#EXTINF:-1 tvg-id="Deutschewelle.de" group-title="Deutsch" tvg-logo="0068.png",[COLOR FFDC54D3]Deutsche Welle[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/dwtv_1@97397/master.m3u8
+#EXTINF:-1 tvg-id="ktv.de" group-title="Deutsch" tvg-logo="0069.png",[COLOR FFDC54D3]k-tv[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/ktv_1@97400/master.m3u8

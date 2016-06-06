@@ -1,0 +1,88 @@
+#EXTINF:-1 tvg-id="TF1.fr" group-title="French" tvg-logo="0202.png",[COLOR FFFF00FF]TF1HD[/COLOR]
+http://c001.p102.edgesuite.net/i/c001/tf1hd_1@97413/master.m3u8
+#EXTINF:-1 tvg-id="TF1.fr" group-title="French" tvg-logo="0202.png",[COLOR FFDC54D3]TF1[/COLOR]
+http://c001.p109.edgesuite.net/i/c001/tf1_1@97468/master.m3u8
+#EXTINF:-1 tvg-id="France2.fr" group-title="French" tvg-logo="0204.png",[COLOR FFFF00FF]France 2 HD[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/france2hd_1@97420/master.m3u8 
+#EXTINF:-1 tvg-id="France2.fr" group-title="French" tvg-logo="0204.png",[COLOR FFDC54D3]France 2[/COLOR]
+http://c001.p101.edgesuite.net/i/c001/france2_1@97347/master.m3u8
+#EXTINF:-1 tvg-id="France3.fr" group-title="French" tvg-logo="0205.png",[COLOR FFDC54D3]France 3[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/france3_1@97329/master.m3u8
+#EXTINF:-1 tvg-id="France4.fr" group-title="French" tvg-logo="0221.png",[COLOR FFDC54D3]France 4[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/france4_1@97330/master.m3u8
+#EXTINF:-1 tvg-id="France5.fr" group-title="French" tvg-logo="0237.png",[COLOR FFDC54D3]France 5[/COLOR]
+http://c001.p102.edgesuite.net/i/c001/france5_1@97351/master.m3u8
+#EXTINF:-1 tvg-id="France24fr.fr" group-title="French" tvg-logo="0236.png",[COLOR FFDC54D3]France 24[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/france24_1@137754/master.m3u8
+#EXTINF:-1 tvg-id="FranceO.fr" group-title="French" tvg-logo="0226.png",[COLOR FFDC54D3]France Ô[/COLOR]
+http://c001.p122.edgesuite.net/i/c001/franceo_1@137770/master.m3u8
+#EXTINF:-1 tvg-id="ARTE.fr" group-title="French" tvg-logo="0215.png",[COLOR FFFF00FF]Arte HD FR[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/artefrhd_1@97419/master.m3u8
+#EXTINF:-1 tvg-id="ARTE.fr" group-title="French" tvg-logo="0214.png",[COLOR FFDC54D3]Arte FR[/COLOR]
+http://c001.p101.edgesuite.net/i/c001/artefr_1@97346/master.m3u8
+#EXTINF:-1 tvg-id="D8.fr" group-title="French" tvg-logo="0216.png",[COLOR FFDC54D3]D8[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/d8_1@97328/master.m3u8
+#EXTINF:-1 tvg-id="Euronews.nws" group-title="French" tvg-logo="0035.png",[COLOR FFDC54D3]EuroNews French[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/euronews_1@137752/master.m3u8
+#EXTINF:-1 tvg-id="Gulli.fr" group-title="French" tvg-logo="0225.png",[COLOR FFDC54D3]Gulli[/COLOR]
+http://c001.p102.edgesuite.net/i/c001/gulli_1@97352/master.m3u8
+#EXTINF:-1 tvg-id="latele.fr" group-title="French" tvg-logo="0244.png",[COLOR FFDC54D3]la télé[/COLOR]
+http://c001.p109.edgesuite.net/i/c001/latele_1@97539/master.m3u8
+#EXTINF:-1 tvg-id="lemanbleu.fr" group-title="French" tvg-logo="0245.png",[COLOR FFDC54D3]léman bleu[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/lemanbleu_1@137757/master.m3u8
+#EXTINF:-1 tvg-id="M6.fr" group-title="French" tvg-logo="0209.png",[COLOR FFFF00FF]M6 HD[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/m6hd_1@97421/master.m3u8
+#EXTINF:-1 tvg-id="M6.fr" group-title="French" tvg-logo="0208.png",[COLOR FFDC54D3]M6[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/m6_1@97467/master.m3u8
+#EXTINF:-1 tvg-id="Cartoonnetwork.fr" group-title="French" tvg-logo="0239.png",[COLOR FFDC54D3]Cartoon Network[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/cn_1@137751/master.m3u8
+#EXTINF:-1 tvg-id="TSR1.ch" group-title="French" tvg-logo="0211.png",[COLOR FFFF00FF]RTS 1 HD[/COLOR]
+http://c001.p126.edgesuite.net/i/c001/rts1hd_1@114347/master.m3u8
+#EXTINF:-1 tvg-id="TSR2.ch" group-title="French" tvg-logo="0213.png",[COLOR FFFF00FF]RTS 2 HD[/COLOR]
+http://c001.p102.edgesuite.net/i/c001/rts2hd_1@97415/master.m3u8
+#EXTINF:-1 tvg-id="TV5Monde.fr" group-title="French" tvg-logo="tv5.png",[COLOR FFDC54D3]TV5 Monde[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/tv5monde_1@97380/master.m3u8
+#EXTINF:-1 tvg-id="W9.fr" group-title="French" tvg-logo="0217.png",[COLOR FFDC54D3]W9[/COLOR]
+http://c001.p101.edgesuite.net/i/c001/w9_1@97344/master.m3u8
+#EXTINF:-1 tvg-id="D17.fr" group-title="French" tvg-logo="d17.png",[COLOR FFFF00FF]D17[/COLOR]
+http://c001.p100.edgesuite.net/i/c001/d17_1@97327/master.m3u8
+#EXTINF:-1 tvg-id="RMCDecouverte.fr" group-title="French" tvg-logo="0231.png",[COLOR FFFF00FF]RMC Decouverte HD[/COLOR]
+http://c001.p112.edgesuite.net/i/c001/rmchd_1@97445/master.m3u8
+#EXTINF:-1 tvg-id="RougeTV.fr" group-title="French" tvg-logo="0241.png",[COLOR FFDC54D3]Rouge TV[/COLOR]
+http://c001.p102.edgesuite.net/i/c001/rouge_1@97359/master.m3u8
+#EXTINF:-1 tvg-id="Njr12tv.fr" group-title="French" tvg-logo="0220.png",[COLOR FFDC54D3]NRJ 12 TV[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/nrj12_1@137759/master.m3u8
+#EXTINF:-1 tvg-id="Itele.fr" group-title="French" tvg-logo="0223.png",[COLOR FFDC54D3]I Télé[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/itele_1@137755/master.m3u8
+#EXTINF:-1 tvg-id="Rtl9.fr" group-title="French" tvg-logo="0233.png",[COLOR FFDC54D3]RTL 9[/COLOR]
+http://c001.p102.edgesuite.net/i/c001/rtl9_1@97354/master.m3u8
+#EXTINF:-1 tvg-id="Canal9.fr" group-title="French" tvg-logo="0242.png",[COLOR FFDC54D3]Canal 9[/COLOR]
+http://c001.p117.edgesuite.net/i/c001/c9_1@135252/master.m3u8
+#EXTINF:-1 tvg-id="Tmc.fr" group-title="French" tvg-logo="0218.png",[COLOR FFDC54D3]TMC[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/tmc_1@97379/master.m3u8
+#EXTINF:-1 tvg-id="Nt1.fr" group-title="French" tvg-logo="0219.png",[COLOR FFDC54D3]NT1[/COLOR]
+http://c001.p108.edgesuite.net/i/c001/nt1_1@97528/master.m3u8
+#EXTINF:-1 tvg-id="Hd1.fr" group-title="French" tvg-logo="0227.png",[COLOR FFFF00FF]HD1[/COLOR]
+http://c001.p110.edgesuite.net/i/c001/hd1hd_1@97437/master.m3u8
+#EXTINF:-1 tvg-id="equipe21.fr" group-title="French" tvg-logo="0228.png",[COLOR FFFF00FF]L'equipe 21[/COLOR]
+http://c001.p110.edgesuite.net/i/c001/equipetvhd_1@97439/master.m3u8
+#EXTINF:-1 tvg-id="Sixter.fr" group-title="French" tvg-logo="0229.png",[COLOR FFFF00FF]6TER[/COLOR]
+http://c001.p112.edgesuite.net/i/c001/6terhd_1@97443/master.m3u8
+#EXTINF:-1 tvg-id="Cherie.fr" group-title="French" tvg-logo="0232.png",[COLOR FFFF00FF]Chérie HD[/COLOR]
+http://c001.p110.edgesuite.net/i/c001/cheriehd_1@97438/master.m3u8
+#EXTINF:-1 tvg-id="n23.fr" group-title="French" tvg-logo="0230.png",[COLOR FFFF00FF]N23[/COLOR]
+http://c001.p112.edgesuite.net/i/c001/n23hd_1@97444/master.m3u8
+#EXTINF:-1 tvg-id="Bfm.fr" group-title="French" tvg-logo="0222.png",[COLOR FFDC54D3]BFM[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/bfmtv_1@137750/master.m3u8
+#EXTINF:-1 tvg-id="Bfmbusiness.fr" group-title="French" tvg-logo="0235.png",[COLOR FFDC54D3]BFM Business[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/bfmb_1@137749/master.m3u8
+#EXTINF:-1 tvg-id="Montagne.fr" group-title="French" tvg-logo="0238.png",[COLOR FFDC54D3]Montagne TV[/COLOR]
+http://c001.p121.edgesuite.net/i/c001/montagne_1@137758/master.m3u8
+#EXTINF:-1 tvg-id="TVm3.fr" group-title="French" tvg-logo="0240.png",[COLOR FFDC54D3]TVM 3[/COLOR]
+http://c001.p104.edgesuite.net/i/c001/tvm3_1@97401/master.m3u8
+#EXTINF:-1 tvg-id="Kto.fr" group-title="French" tvg-logo="0243.png",[COLOR FFDC54D3]kto[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/kto_1@97495/master.m3u8
+#EXTINF:-1 tvg-id="canalalphajura.ch" group-title="French" tvg-logo="0246.png",[COLOR FFDC54D3]Canal Alpha Jura[/COLOR]
+http://c001.p117.edgesuite.net/i/c001/caju_1@135253/master.m3u8
+#EXTINF:-1 tvg-id="canalalphaneuchatel.ch" group-title="French" tvg-logo="0246.png",[COLOR FFDC54D3]Canal Alpha Neuchâtel[/COLOR]
+http://c001.p117.edgesuite.net/i/c001/cane_1@135254/master.m3u8

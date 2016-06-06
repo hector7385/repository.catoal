@@ -1,0 +1,47 @@
+[
+    {
+        "url": "it.txt",
+        "image": "tv.png",        
+        "name": 10052
+    },
+    {
+        "url": "regionali.txt",
+        "image": "tv.png",
+        "name":10050
+    }, 
+    {
+        "url": "radioit.txt",
+        "image": "radio.png",
+        "name":10070
+    },
+    {
+        "url": "vpnit.txt",
+        "image": "tv.png",      
+        "name":10051
+    },
+    {
+        "url": "http://kodilive.eu/iptv/raw4.php?l=chit",
+        "image": "tb.png",        
+        "name": 10054
+    },
+    {
+        "url": "w_it.txt",
+        "image": "wi.png",        
+        "name": 10054
+    },
+    {
+        "url": "http://kodilive.eu/iptv/res/f4m_it.txt",
+        "image": "http://kodilive.eu/flag/f4m.png",      
+        "name":10047
+    },   
+    {
+        "url": "http://kodilive.eu/iptv/replay/replay.m3u",
+        "image": "replay.png",        
+        "name": 10048
+    },
+    {
+        "url": "http://kodilive.eu/iptv/replay/replay_doc.m3u",
+        "image": "replay.png",        
+        "name": 10049
+    }
+]

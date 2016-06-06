@@ -1,0 +1,82 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tv.png",[COLOR orange]TVR 1[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:tvr1/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tv.png",[COLOR orange]TVR 2[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:tvr2/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tvr.png",[COLOR orangered]TVR Moldova[/COLOR]
+http://87.248.160.8/edge/smil:tvr/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="mbc_ro.png",[COLOR orangered]MBC[/COLOR]
+http://87.248.160.8/edge/smil:mbc/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="telem.png",[COLOR orange]TeleM Iasi[/COLOR]  
+http://webmobile.xdev.ro:81/tv16/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="telem.png",[COLOR orange]TeleM Botosani[/COLOR]  
+http://webmobile.xdev.ro:81/tv11/playlist.m3u8 
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="trinity.png",[COLOR orangered]Trinity Tv[/COLOR] 
+http://m1.bisericilive.com/video/trinitytvro/live/trinitytvro.m3u8 
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="telemoldova.png",[COLOR orange]TeleMoldovaPlus[/COLOR]  
+http://webmobile.xdev.ro:81/tv5/playlist.m3u8 
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="actualitatea.png",[COLOR orange]Actualitatea TV[/COLOR]  
+http://188.210.224.6:81/tv4/playlist.m3u8  
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="buzau.png",[COLOR orange]TV Buzau[/COLOR]  
+http://95.77.16.72:81/tv20/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="nsat.png",[COLOR orange]n-sat TV[/COLOR] 
+http://188.173.24.5:8081/emisie.flv?time=20140309181333&ahv=9c4747b2ecf0be09d3f0ff2f83985f69&cv=2644a09fb238556136bbc2d213731a67&ref=http://www.nortel-sat.ro/live/
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="salejeanul.png",[COLOR orange]Salajeanul TV[/COLOR] 
+http://94.52.213.67:8084/stream.flv
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="speranta.png",[COLOR orange]Speranta TV[/COLOR] 
+rtmp://amsix3.streamkit.tv:80/edge/_definst_/sperantatv_500
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tvse.png",[COLOR orange]Tv Sud Est[/COLOR]  
+http://iptv.tvsatrm.ro/livestream/tvse.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="digi_24.png",[COLOR orange]Digi 24[/COLOR] 
+http://82.76.249.77:80/digi24edge/digi24hdhqhls/index.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="digi_24.png",[COLOR orange]Digi 24 Brasov[/COLOR] 
+http://82.76.249.77/digi24edge/digi24brasovlive/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="digi_24.png",[COLOR orange]Digi 24 Constanta[/COLOR] 
+http://82.76.249.77/digi24edge/digi24constantalivehls/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="digi_24.png",[COLOR orange]Digi 24 Craiova[/COLOR] 
+http://82.76.249.77/digi24edge/digi24craiovalive/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="digi_24.png",[COLOR orange]Digi 24 Oradea[/COLOR] 
+http://82.76.249.77/digi24edge/digi24oradealivehls/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="digi_24.png",[COLOR orange]Digi 24 Timisoara[/COLOR] 
+http://82.76.249.77/digi24edge/digi24timislivehls/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="moldova1.png",[COLOR orangered]Moldova 1[/COLOR] 
+http://87.248.160.8/edge/smil:m1/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="moldova_sport.png",[COLOR orangered]Moldova Sport[/COLOR]
+http://87.248.160.8/edge/smil:boet/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="publika.png",[COLOR orangered]Publika TV[/COLOR]
+http://87.248.160.8/edge/smil:publica/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="realitatea.png",[COLOR orangered]Realitatea TV[/COLOR]
+http://87.248.160.8/edge/smil:realitate/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="pro_tv.png",[COLOR orangered]Pro TV[/COLOR]
+http://87.248.160.8/edge/smil:protv/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tht_bravo.png",[COLOR orange]THT Bravo[/COLOR]
+http://87.248.160.8/edge/smil:tnt/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="rtr_moldova.png",[COLOR orangered]RTR Moldova[/COLOR]
+http://87.248.160.8/edge/smil:rtrp/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="national4.png",[COLOR orangered]National 4[/COLOR]
+http://87.248.160.8/edge/smil:n4/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="ctc.png",[COLOR orangered]CTC Mega[/COLOR]
+http://87.248.160.8/edge/smil:sts/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="super_tv.png",[COLOR orangered]Super TV[/COLOR]
+http://87.248.160.8/edge/smil:set/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="accent_tv.png",[COLOR orangered]Accent TV[/COLOR]
+http://87.248.160.8/edge/smil:accent/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="ren.png",[COLOR orangered]Ren TV[/COLOR]
+http://87.248.160.8/edge/smil:rentv/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="busuioc.png",[COLOR orangered]Busuioc tv[/COLOR]
+http://87.248.160.8/edge/smil:busuioc/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="canal_2_ro.png",[COLOR orangered]Canal 2[/COLOR]
+http://87.248.160.8/edge/smil:2plus/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="canal_3.png",[COLOR orangered]Canal 3 HD[/COLOR]
+http://87.248.160.8/edge/smil:canal3/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="0036.png",[COLOR orangered]Disney Channel[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:disney/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tv.png",[COLOR orangered]AXN[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:axn/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tv.png",[COLOR orangered]AXN Spin[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:axnspin/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tv.png",[COLOR orangered]AXN Black[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:axnscifi/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Romanian" tvg-logo="tv.png",[COLOR orangered]AXN White[/COLOR]
+http://178.21.120.198:1935/live3/_definst_/mp4:axncrime/playlist.m3u8
+#EXT-X-ENDLIST

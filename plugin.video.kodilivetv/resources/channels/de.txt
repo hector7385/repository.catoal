@@ -1,0 +1,76 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="3sat.de" group-title="Deutsch" tvg-logo="0013.png",[COLOR orange]3sat[/COLOR]
+http://zdf0910-lh.akamaihd.net/i/dach10_v1@392872/master.m3u8
+#EXTINF:-1 tvg-id="ARD.de" group-title="Deutsch" tvg-logo="0001.png",[COLOR orange]ARD[/COLOR]
+http://daserste_live-lh.akamaihd.net/i/daserste_de@91204/master.m3u8
+#EXTINF:-1 tvg-id="ARTE.de" group-title="Deutsch" tvg-logo="0011.png",[COLOR orange]Arte[/COLOR]
+http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8
+#EXTINF:-1 tvg-id="disneychannel.de" group-title="Deutsch" tvg-logo="0036.png",[COLOR orangered]Disney Channel[/COLOR]
+https://delivestream-lh.akamaihd.net/i/live_1@320996/master.m3u8
+#EXTINF:-1 tvg-id="Joiz.ch" group-title="Deutsch" tvg-logo="0042.png",[COLOR orangered]Joiz DE HD[/COLOR]
+http://ooyalahd2-f.akamaihd.net/i/joizgerm01_delivery@324125/index_2528_av-p.m3u8
+#EXTINF:-1 tvg-id="Joiz.ch" group-title="Deutsch" tvg-logo="0042.png",[COLOR orange]Joiz DE[/COLOR]
+http://ooyalahd2-f.akamaihd.net/i/joizgerm01_delivery@324125/index_1164_av-p.m3u8
+#EXTINF:-1 tvg-id="ndr.de" group-title="Deutsch" tvg-logo="0107.png",[COLOR orangered]NDR HD (2)[/COLOR]
+http://ndr_fs-lh.akamaihd.net/i/ndrfs_nds@119224/index_3776_av-b.m3u8
+#EXTINF:-1 tvg-id="ndr.de" group-title="Deutsch" tvg-logo="0106.png",[COLOR orange]NDR[/COLOR]
+http://ndr_fs-lh.akamaihd.net/i/ndrfs_mv@119226/index_1992_av-p.m3u8
+#EXTINF:-1 tvg-id="WDR.de" group-title="Deutsch" tvg-logo="0018.png",[COLOR orangered]WDR HD (2)[/COLOR]
+http://wdr_fs-lh.akamaihd.net/i/wdrfs_weltweit@112033/index_3776_av-b.m3u8
+#EXTINF:-1 tvg-id="hr.de" group-title="Deutsch" tvg-logo="0026.png",[COLOR orangered]hr HD[/COLOR]
+http://live1_hr-lh.akamaihd.net/i/hr_fernsehen@75910/index_3128_av-p.m3u8
+#EXTINF:-1 tvg-id="hr.de" group-title="Deutsch" tvg-logo="0025.png",[COLOR orange]hr[/COLOR]
+http://live1_hr-lh.akamaihd.net/i/hr_fernsehen@75910/index_1628_av-p.m3u8
+#EXTINF:-1 tvg-id="ServusHD.at" group-title="Deutsch" tvg-logo="0123.png",[COLOR orangered]Servus TV AT HD[/COLOR]
+http://hdiosstv-f.akamaihd.net/i/servustvhd_1@51229/master.m3u8
+#EXTINF:-1 tvg-id="ServusHD.de" group-title="Deutsch" tvg-logo="0123.png",[COLOR orangered]Servus TV DE HD[/COLOR]
+http://hdiosstv-f.akamaihd.net/i/servustvhdde_1@75540/master.m3u8
+#EXTINF:-1 tvg-id="ric.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]RIC[/COLOR]
+http://83.169.58.38/live/3fb1c9c9-09c8-404a-8c0f-56b27617ab89/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="Deutschewelle.de" group-title="Deutsch" tvg-logo="0068.png",[COLOR orange]Deutsche Welle[/COLOR]
+http://www.metafilegenerator.de/DWelle/tv/ios/master.m3u8
+#EXTINF:-1 tvg-id="n24.de" group-title="Deutsch" tvg-logo="0032.png",[COLOR orange]N24[/COLOR]
+http://n24-live.hls.adaptive.level3.net/hls-live/n24-pssimn24live/_definst_/live/stream2.m3u8
+#EXTINF:-1 tvg-id="tagesschau24.de" group-title="Deutsch" tvg-logo="0063.png",[COLOR orangered]Tagesschau24[/COLOR]
+http://tagesschau-lh.akamaihd.net/i/tagesschau_1@119231/master.m3u8
+#EXTINF:-1 tvg-id="munchen.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orangered]München TV[/COLOR]
+rtmp://muenchentv.iptv-playoutcenter.de/muenchentv/muenchentv.stream_1
+#EXTINF:-1 tvg-id="blizz.de" group-title="Deutsch" tvg-logo="0100.png",[COLOR orangered]blizz TV HD[/COLOR]
+https://sdn-global-live-http-cache.3qsdn.com/live/_definst_/smil:5726-mbr.smil/chunklist_b2500000.m3u8
+#EXTINF:-1 tvg-id="Austria24.at" group-title="Deutsch" tvg-logo="austria_24.png",[COLOR orange]Austria 24[/COLOR]
+rtmp://streaming.austria24.tv/live/stream_360p
+#EXTINF:-1 tvg-id="Tvaktuell.de" group-title="Deutsch" tvg-logo="aktuelle.png",[COLOR orangered]TV Aktuell[/COLOR]
+http://tvaktuellr.iptv-playoutcenter.de:1935/tvaktuellr/tvaktuellr.stream_1/playlist.m3u8
+#EXTINF:-1 tvg-id="Elbekanal.de" group-title="Deutsch" tvg-logo="elbe_kanal.png",[COLOR orange]Elbe Kanal[/COLOR]
+rtmp://62.113.210.250/medienasa-live/elbe_high
+#EXTINF:-1 tvg-id="Alex.de" group-title="Deutsch" tvg-logo="alex_berlin.png",[COLOR orangered]Alex Berlin[/COLOR]
+http://api.iptv.ink/pl.m3u8?ch=65304965
+#EXTINF:-1 tvg-id="Ausburg.de" group-title="Deutsch" tvg-logo="augsburg_Tv.png",[COLOR orangered]Augsburg TV[/COLOR]
+rtmp://augsburgtv.iptv-playoutcenter.de:1935/augsburgtv/augsburgtv.stream_1
+#EXTINF:-1 tvg-id="MelodieTV.at" group-title="Deutsch" tvg-logo="melodie_tv.png",[COLOR orange]Melodie TV[/COLOR]
+http://83.169.58.40:1935/live/_definst_/Melodie/playlist.m3u8
+#EXTINF:-1 tvg-id="sporttime2.tv" group-title="Deutsch" tvg-logo="sport_time_tv.png",[COLOR orange]Sport Time TV 2[/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel2_800
+#EXTINF:-1 tvg-id="DAF.tv" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]DAF[/COLOR]
+http://edge-h.daf.tmt.de/ios-live/daf-ios-live-livetv.stream/chunklist_w1422058425.m3u8
+#EXTINF:-1 tvg-id="Dresden.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Dresden TV[/COLOR]
+rtmp://video07.kanal8.de/dresdenfernsehenlive/myStream.sdp
+#EXTINF:-1 tvg-id="Halle.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Halle TV[/COLOR]
+rtmp://62.113.210.250/medienasa-live/tvhalle_high
+#EXTINF:-1 tvg-id="LeipzigTV.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Leipzig TV[/COLOR]
+rtmp://video61.kanal8.de/leipzigfernsehenlive/myStream.sdp
+#EXTINF:-1 tvg-id="OkDessau.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Ok Dessau[/COLOR]
+rtmp://62.113.210.250/medienasa-live/ok-dessau_high
+#EXTINF:-1 tvg-id="OkMagdeburg.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Ok Magdeburg[/COLOR]
+rtmp://62.113.210.250/medienasa-live/ok-magdeburg_high
+#EXTINF:-1 tvg-id="OkSalzwedel.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Ok Salzwedel[/COLOR]
+rtmp://62.113.210.250/medienasa-live/ok-salzwedel_high
+#EXTINF:-1 tvg-id="OkStendal.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Ok Stendal[/COLOR]
+rtmp://62.113.210.250/medienasa-live/ok-stendal_high
+#EXTINF:-1 tvg-id="OkWernigerode.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]Ok Wernigerode[/COLOR]
+rtmp://62.113.210.250/medienasa-live/ok-wernigerode_high
+#EXTINF:-1 tvg-id="RTLTeleLetzebourg.de" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]RTL Tele Letzebourg[/COLOR]
+rtmp://wowza01.newmedia.lu/channel1/live
+#EXTINF:-1 tvg-id="Telebarn.ch" group-title="Deutsch" tvg-logo="tv.png",[COLOR orange]TELEBÄRN[/COLOR]
+http://rtmp.infomaniak.ch/livecast/barntele/playlist.m3u8
+#EXT-X-ENDLIST
