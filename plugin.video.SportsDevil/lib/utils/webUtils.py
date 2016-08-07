@@ -34,7 +34,7 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36'})
         self.s.headers.update({'Accept-Language' : 'en-US,en;q=0.5'})
         self.url = ''
     
@@ -50,7 +50,10 @@ class BaseRequest(object):
 
     def load_cookies_from_lwp(self, filename):
         lwp_cookiejar = cookielib.LWPCookieJar()
-        lwp_cookiejar.load(filename, ignore_discard=True)
+        try:
+            lwp_cookiejar.load(filename, ignore_discard=True)
+        except:
+            pass
         return lwp_cookiejar
     
     def fixurl(self, url):
@@ -119,6 +122,26 @@ class BaseRequest(object):
             r.encoding = 'windows-1251'
             
         response  = r.text
+        
+        while ('answer this question' in response and 'streamlive.to' in urlparse.urlsplit(url).netloc):
+            import xbmcgui
+            dialog = xbmcgui.Dialog()
+            r = re.compile("Question:\s*([^<]+)<")
+            q_regex = r.findall(response)
+            if q_regex:
+                q_resp = dialog.input(q_regex[0])
+                if q_resp:
+                    form_data = 'captcha={0}'.format(q_resp)
+                    headers['Referer'] = url
+                    headers['Content-Type'] = 'application/x-www-form-urlencoded'
+                    headers['Content-Length'] = str(len(form_data))
+                    r = self.s.post(url, headers=headers, data=form_data, timeout=20)
+                    response  = r.text
+                else:
+                    break
+            else:
+                break
+        
         if len(response) > 10:
             if self.cookie_file:
                 self.save_cookies_lwp(self.s.cookies, self.cookie_file)
@@ -177,7 +200,7 @@ class CachedWebRequest(DemystifiedWebRequest):
         
 
     def getSource(self, url, form_data, referer='', xml=False, mobile=False, ignoreCache=False, demystify=False):
-        if 'live.xml' in url:
+        if 'tvone.xml' in url:
             self.cachedSourcePath = url
             data = self.__getCachedSource()
             return data
