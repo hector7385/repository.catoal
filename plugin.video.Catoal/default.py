@@ -29,7 +29,7 @@ except:
    pass
    
 tsdownloader=False
-resolve_url=['180upload.com', 'allmyvideos.net', 'bestreams.net', 'clicknupload.com', 'cloudzilla.to', 'movshare.net', 'novamov.com', 'nowvideo.sx', 'videoweed.es', 'daclips.in', 'datemule.com', 'fastvideo.in', 'faststream.in', 'filehoot.com', 'filenuke.com', 'sharesix.com',  'plus.google.com', 'picasaweb.google.com', 'gorillavid.com', 'gorillavid.in', 'grifthost.com', 'hugefiles.net', 'ipithos.to', 'ishared.eu', 'kingfiles.net', 'mail.ru', 'my.mail.ru', 'videoapi.my.mail.ru', 'mightyupload.com', 'mooshare.biz', 'movdivx.com', 'movpod.net', 'movpod.in', 'movreel.com', 'mrfile.me', 'nosvideo.com', 'openload.io', 'played.to', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'uploaded.net', 'primeshare.tv', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'uploaded.net', 'sharerepo.com', 'stagevu.com', 'streamcloud.eu', 'streamin.to', 'thefile.me', 'thevideo.me', 'tusfiles.net', 'uploadc.com', 'zalaa.com', 'uploadrocket.net', 'uptobox.com', 'v-vids.com', 'veehd.com', 'vidbull.com', 'videomega.tv', 'vidplay.net', 'vidspot.net', 'vidto.me', 'vidzi.tv', 'vimeo.com', 'vk.com', 'vodlocker.com', 'xfileload.com', 'xvidstage.com', 'zettahost.tv']
+resolve_url=['180upload.com', 'allmyvideos.net', 'bestreams.net', 'clicknupload.com', 'cloudzilla.to', 'movshare.net', 'novamov.com', 'nowvideo.sx', 'videoweed.es', 'daclips.in', 'datemule.com', 'fastvideo.in', 'faststream.in', 'filehoot.com', 'filenuke.com', 'sharesix.com',  'plus.google.com', 'picasaweb.google.com', 'gorillavid.com', 'gorillavid.in', 'grifthost.com', 'hugefiles.net', 'ipithos.to', 'ishared.eu', 'kingfiles.net', 'mail.ru', 'my.mail.ru', 'videoapi.my.mail.ru', 'mightyupload.com', 'mooshare.biz', 'movdivx.com', 'movpod.net', 'movpod.in', 'movreel.com', 'mrfile.me', 'nosvideo.com', 'openload.io', 'played.to', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'primeshare.tv', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'sharerepo.com', 'stagevu.com', 'streamcloud.eu', 'streamin.to', 'thefile.me', 'thevideo.me', 'tusfiles.net', 'uploadc.com', 'zalaa.com', 'uploadrocket.net', 'uptobox.com', 'v-vids.com', 'veehd.com', 'vidbull.com', 'videomega.tv', 'vidplay.net', 'vidspot.net', 'vidto.me', 'vidzi.tv', 'vimeo.com', 'vk.com', 'vodlocker.com', 'xfileload.com', 'xvidstage.com', 'zettahost.tv']
 g_ignoreSetResolved=['plugin.video.dramasonline','plugin.video.f4mTester','plugin.video.shahidmbcnet','plugin.video.SportsDevil','plugin.stream.vaughnlive.tv','plugin.video.ZemTV-shani']
 
 REMOTE_DBG=False;
@@ -77,7 +77,18 @@ def addon_log(string):
 def makeRequest(url, headers=None):
         try:
             if headers is None:
-                headers = {'User-agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0'}
+                headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0'}
+                
+            if '|' in url:
+                url,header_in_page=url.split('|')
+                header_in_page=header_in_page.split('&')
+                
+                for h in header_in_page:
+                    
+                    n,v=h.split('=')
+                    print n,v
+                    headers[n]=v
+                    
             req = urllib2.Request(url,None,headers)
             response = urllib2.urlopen(req)
             data = response.read()
@@ -942,6 +953,7 @@ def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCa
                     cookieJarParam=m['cookiejar']
                     if  '$doregex' in cookieJarParam:
                         cookieJar=getRegexParsed(regexs, m['cookiejar'],cookieJar,True, True,cachedPages)
+                        
                         cookieJarParam=True
                     else:
                         cookieJarParam=True
@@ -1192,6 +1204,13 @@ def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCa
                         else:
                             val=doEvalFunction(m['expres'],link,cookieJar,m)
                         if 'ActivateWindow' in m['expres']: return
+                        if forCookieJarOnly:
+                            return cookieJar# do nothing
+                        if 'listrepeat' in m:
+                            listrepeat=m['listrepeat']                            
+                            #ret=re.findall(m['expres'],link)
+                            #print 'ret',val
+                            return listrepeat,eval(val), m,regexs
 #                        print 'url k val',url,k,val
                         #print 'repr',repr(val)
                         
@@ -1201,7 +1220,12 @@ def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCa
                     else:
                         if 'listrepeat' in m:
                             listrepeat=m['listrepeat']
+                            #print 'listrepeat',m['expres']
+                            #print m['expres']
+                            #print 'aaaa'
+                            #print link
                             ret=re.findall(m['expres'],link)
+                            #print 'ret',ret
                             return listrepeat,ret, m,regexs
                              
                         val=''
@@ -1806,8 +1830,10 @@ def doEvalFunction(fun_call,page_data,Cookie_Jar,m):
     ret_val=''
     if functions_dir not in sys.path:
         sys.path.append(functions_dir)
-    f=open(functions_dir+"/LSProdynamicCode.py","w")
-    f.write(fun_call);
+    f=open(functions_dir+"/LSProdynamicCode.py","wb")
+    f.write("# -*- coding: utf-8 -*-\n")
+    f.write(fun_call.encode("utf-8"));
+    
     f.close()
     import LSProdynamicCode
     ret_val=LSProdynamicCode.GetLSProData(page_data,Cookie_Jar,m)
@@ -2158,29 +2184,52 @@ def play_playlist(name, mu_playlist,queueVideo=None):
         if addon.getSetting('ask_playlist_items') == 'true' and not queueVideo :
             import urlparse
             names = []
+            iloop=0
             for i in mu_playlist:
-                d_name=urlparse.urlparse(i).netloc
-                if d_name == '':
-                    names.append(name)
-                else:
+                if '$$lsname=' in i:
+                    d_name=i.split('$$lsname=')[1]
                     names.append(d_name)
+                    mu_playlist[iloop]=i.split('$$lsname=')[0]
+                else:
+                    d_name=urlparse.urlparse(i).netloc
+                    if d_name == '':
+                        names.append(name)
+                    else:
+                        names.append(d_name)
+                iloop+=1
             dialog = xbmcgui.Dialog()
             index = dialog.select('Choose a video source', names)
             if index >= 0:
+                playname=names[index]
+                print 'playname',playname
                 if "&mode=19" in mu_playlist[index]:
-                    #playsetresolved (urlsolver(mu_playlist[index].replace('&mode=19','')),name,iconimage,True)
-                    xbmc.Player().play(urlsolver(mu_playlist[index].replace('&mode=19','').replace(';','')))
+                        #playsetresolved (urlsolver(mu_playlist[index].replace('&mode=19','')),name,iconimage,True)
+                    liz = xbmcgui.ListItem(playname, iconImage=iconimage)
+                    liz.setInfo(type='Video', infoLabels={'Title':playname})
+                    liz.setProperty("IsPlayable","true")
+                    urltoplay=urlsolver(mu_playlist[index].replace('&mode=19','').replace(';',''))
+                    liz.setPath(urltoplay)
+                    xbmc.Player().play(urltoplay,liz)
                 elif "$doregex" in mu_playlist[index] :
 #                    print mu_playlist[index]
                     sepate = mu_playlist[index].split('&regexs=')
 #                    print sepate
                     url,setresolved = getRegexParsed(sepate[1], sepate[0])
                     url2 = url.replace(';','')
-                    xbmc.Player().play(url2)
+                    liz = xbmcgui.ListItem(playname, iconImage=iconimage)
+                    liz.setInfo(type='Video', infoLabels={'Title':playname})
+                    liz.setProperty("IsPlayable","true")
+                    liz.setPath(url2)
+                    xbmc.Player().play(url2,liz)
 
                 else:
                     url = mu_playlist[index]
-                    xbmc.Player().play(url)
+                    url=url.split('&regexs=')[0]
+                    liz = xbmcgui.ListItem(playname, iconImage=iconimage)
+                    liz.setInfo(type='Video', infoLabels={'Title':playname})
+                    liz.setProperty("IsPlayable","true")
+                    liz.setPath(url)
+                    xbmc.Player().play(url,liz)
         elif not queueVideo:
             #playlist = xbmc.PlayList(1) # 1 means video
             playlist.clear()
@@ -2249,7 +2298,13 @@ def _search(url,name):
 
 def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcontext=False,regexs=None,reg_url=None,allinfo={}):
 
-        u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&fanart="+urllib.quote_plus(fanart)
+
+
+        if regexs and len(regexs)>0:
+            u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&fanart="+urllib.quote_plus(fanart)+"&regexs="+regexs
+        else:
+            u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&fanart="+urllib.quote_plus(fanart)
+        
         ok=True
         if date == '':
             date = None
@@ -2451,11 +2506,12 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
         else:
             description += '\n\nDate: %s' %date
         liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        if len(allinfo) <1:
-            liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description, "Genre": genre, "dateadded": date })
+        if isFolder:
+            if len(allinfo) <1:
+                liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description, "Genre": genre, "dateadded": date })
 
-        else:
-            liz.setInfo(type="Video", infoLabels=allinfo)
+            else:
+                liz.setInfo(type="Video", infoLabels=allinfo)
         liz.setProperty("Fanart_Image", fanart)
         
         if (not play_list) and not any(x in url for x in g_ignoreSetResolved) and not '$PLAYERPROXY$=' in url:#  (not url.startswith('plugin://plugin.video.f4mTester')):
@@ -2676,12 +2732,19 @@ if mode==None:
 elif mode==1:
     addon_log("getData")
     data=None
-    if regexs:
-        data=getRegexParsed(regexs, url)
-        url=''
+    
+    if regexs and len(regexs)>0:
+        data,setresolved=getRegexParsed(regexs, url)
+        #print data
+        #url=''
+        if data.startswith('http') or data.startswith('smb') or data.startswith('nfs') or data.startswith('/'):
+            url=data
+            data=None
         #create xml here
+    
     getData(url,fanart,data)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
 
 elif mode==2:
     addon_log("getChannelItems")
@@ -2796,6 +2859,7 @@ elif mode==17 or mode==117:
         ln=''
         rnumber=0
         for obj in ret:
+            #print 'obj',obj
             try:
                 rnumber+=1
                 newcopy=copy.deepcopy(regexs)
@@ -2887,7 +2951,7 @@ elif mode==17 or mode==117:
 #            print newcopy
                 
 #            ln+='</item>'
-        #print 'ln',ln
+        
         addon_log(repr(ln))
         getData('','',ln)
         xbmcplugin.endOfDirectory(int(sys.argv[1]))

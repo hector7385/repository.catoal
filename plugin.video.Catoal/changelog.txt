@@ -1,4 +1,7 @@
-﻿Versión 5.3.4
+﻿Versión 5.3.5
+Mejorada toda la estructura del addon con nuevos scrips.
+
+Versión 5.3.4
 Mejorada la seguridad del addon para evitar robos de listas
 
 Versión 5.3.3
