@@ -90,6 +90,7 @@ class MyHandler(BaseHTTPRequestHandler):
                 fURL = sp[0]
                 headers = dict(urlparse.parse_qsl(sp[1]))
                 session.set_option("http-headers", headers)
+                session.set_option("http-ssl-verify",False)
         try:
             streams = session.streams(fURL)
         except:
