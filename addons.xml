@@ -87,7 +87,7 @@ Plugin to watch IPTV free worldwide
   </extension>
 </addon>
 
-<addon id="plugin.video.laliga" name="La Liga" version="0.0.1" provider-name="Topo">
+<addon id="plugin.video.laliga" name="La Liga" version="0.0.3" provider-name="Topo">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.beautifulsoup" version="3.2.1"/>

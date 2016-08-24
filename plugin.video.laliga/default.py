@@ -27,6 +27,12 @@ class info():
         self.icon = icon_path('logo.png')
         self.ico2 = icon_path('atm.png')
         self.icsg = icon_path('log2.png')
+        self.icpr = icon_path('premier.png')
+        self.icit = icon_path('italia.png')
+        self.ical = icon_path('bundes.png')
+        self.icfr = icon_path('french.png')
+        self.iccl = icon_path('ucl.png')
+        self.icel = icon_path('uel.png')
         self.categorized = False
         self.paginated = False
         self.multilink = True
@@ -123,10 +129,24 @@ class main():
                 atmb = 'ATLETICO DE MADRID'
                 lig = 'SPANISH LALIGA)'
                 lg2 = 'SPANISH LALIGA2'
-                ray = 'RAYO VALLECANO'
+                prm = 'PREMIER LEAGUE'
+                fra = 'FRENCH LIGUE1'
+                ale = 'BUNDESLIGA'
+                ita = 'ITALIA SERIE A'
+                ucl = 'UEFA CHAMPIONS LEAGUE'
+                uel = 'UEFA EUROPA LEAGUE'
                 title2 = title2.replace(atm,atmb)
+                primera = addon.get_setting('primera')
                 segunda = addon.get_setting('segunda')
-                if (title.find(atm)!=-1) or (title.find(atmb)!=-1):
+                premier = addon.get_setting('premier')
+                francia = addon.get_setting('francia')
+                italia = addon.get_setting('italia')
+                alemania = addon.get_setting('alemania')
+                champions = addon.get_setting('champions')
+                eurleague = addon.get_setting('eurleague')
+                if segunda=='false' and premier=='false' and francia=='false' and italia=='false' and alemania=='false':
+                    primera='true'
+                if (title.find(atm)!=-1 or title.find(atmb)!=-1) and (primera=='true'):
                     if date != date_old:
                         date_old = date
                         new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
@@ -134,7 +154,7 @@ class main():
                     title2 = title2.replace('[B]','[B][COLOR tomato]')
                     title2 = title2.replace('[/B]','[/COLOR][/B]')
                     new.append((url,title2, info().ico2))
-                elif title.find(lig)!=-1:
+                elif title.find(lig)!=-1 and primera=='true':
                     if date != date_old:
                         date_old = date
                         new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
@@ -146,6 +166,42 @@ class main():
                         new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
                     title = title.encode('utf-8')
                     new.append((url,title2, info().icsg))
+                elif title.find(prm)!=-1 and premier=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    title = title.encode('utf-8')
+                    new.append((url,title2, info().icpr))
+                elif title.find(fra)!=-1 and francia=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    title = title.encode('utf-8')
+                    new.append((url,title2, info().icfr))
+                elif title.find(ita)!=-1 and italia=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    title = title.encode('utf-8')
+                    new.append((url,title2, info().icit))
+                elif title.find(ale)!=-1 and alemania=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    title = title.encode('utf-8')
+                    new.append((url,title2, info().ical))
+                elif title.find(ucl)!=-1 and champions=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    title = title.encode('utf-8')
+                    new.append((url,title2, info().iccl))
+                elif title.find(uel)!=-1 and eurleague=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    title = title.encode('utf-8')
+                    new.append((url,title2, info().icel))
             except:
                 pass
         

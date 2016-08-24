@@ -15,7 +15,14 @@
 
     <setting id="link_precheck" type="bool" label="Filtrar links cuando sea posible (más lento)" default="false"/>
     
-    <setting id="segunda" type="bool" label="Mostrar partidos de Segunda" default="false"/>
+	<setting id="primera" type="bool" label="Mostrar partidos de La Liga" default="true"/>
+    <setting id="segunda" type="bool" label="Mostrar partidos de La Liga 2" default="true"/>
+	<setting id="premier" type="bool" label="Mostrar partidos de la Premier League" default="true"/>
+	<setting id="italia" type="bool" label="Mostrar partidos de la Italia Serie A" default="true"/>
+	<setting id="alemania" type="bool" label="Mostrar partidos de la Bundesliga" default="true"/>
+	<setting id="francia" type="bool" label="Mostrar partidos de la French Ligue 1" default="true"/>
+	<setting id="champions" type="bool" label="Mostrar partidos de la UEFA Champions League" default="true"/>
+	<setting id="eurleague" type="bool" label="Mostrar partidos de la UEFA Europa League" default="true"/>
 
     </category>
 
