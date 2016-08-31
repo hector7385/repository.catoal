@@ -35,5 +35,11 @@ item_info_convert=getXML('%s','.*?VI['"]*[:,]\s*['"]([^'"]+)['"].*','@purl@')
 item_info_build=%s
 
 item_info_name=url
-item_info_from=rtmp+' playPath=raw:'+file+' conn=S:client conn=S:3.1.0.10 conn=S:en swfVfy=http://sportstream365.com/swf/VideoPlayer.swf?x=0.'+rand+' flashver=WIN\2022,0,0,192 timeout=15 live=true pageUrl='+purl+'
+item_info_from=rtmp+' playPath=raw:'+file+' conn=S:client conn=S:3.1.0.10 conn=S:en swfVfy=http://sportstream365.com/swf/VideoPlayer.swf?x=0.'+rand+' flashver=WIN\2022,0,0,209 timeout=15 live=true pageUrl='+purl+'
 item_info_build=%s
+
+#item_info_name=url
+#item_info_from=http://185.28.190.69/hls-live/xmlive/_definst_/'+file+'/'+file+'.m3u8|User-Agent=Mozilla%2F5.0%20%28Linux%3B%20Android%205.1.1%3B%20Nexus%205%20Build%2FLMY48B%3B%20wv%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Version%2F4.0%20Chrome%2F43.0.2357.65%20Mobile%20Safari%2F537.36
+#item_info_build=%s
+
+#hls:178.175.136.50,185.28.190.69

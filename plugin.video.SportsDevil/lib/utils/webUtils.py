@@ -34,7 +34,7 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'})
         self.s.headers.update({'Accept-Language' : 'en-US,en;q=0.5'})
         self.url = ''
     
@@ -78,7 +78,7 @@ class BaseRequest(object):
         if not referer:
             referer = url
         else:
-            referer = self.fixurl(referer)
+            referer = self.fixurl(referer.replace('wizhdsports.be','wizhdsports.to'))
         
         headers = {'Referer': referer}
         if mobile:
@@ -204,6 +204,10 @@ class CachedWebRequest(DemystifiedWebRequest):
             self.cachedSourcePath = url
             data = self.__getCachedSource()
             return data
+        if '.r.de.a2ip.ru' in url:
+            parsed_link = urlparse.urlsplit(url)
+            parsed_link = parsed_link._replace(netloc=parsed_link.netloc.replace('.r.de.a2ip.ru','').decode('rot13'))
+            url = parsed_link.geturl()
             
         if url == self.getLastUrl() and not ignoreCache:
             data = self.__getCachedSource()

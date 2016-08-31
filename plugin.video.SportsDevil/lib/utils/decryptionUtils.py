@@ -74,7 +74,7 @@ def onetv(playpath):
                 '192.99.19.181',
                 '5.196.85.58',
                 '192.99.19.176']
-    time_stamp = str(int(time.time()) + 7200)
+    time_stamp = str(int(time.time()) + 14400)
     to_hash = "{0}{1}/hls/{2}".format(token,time_stamp,playpath)
     out_hash = b64encode(md5.new(to_hash).digest()).replace("+", "-").replace("/", "_").replace("=", "")
     server = random.choice(servers)
@@ -197,7 +197,16 @@ def doDemystify(data):
         gs = parseTextToGroups(data, ".*n98c4d2c\(''\).*?'(%[^']+)'.*")
         if gs != None and gs != []:
             data = data.replace(gs[0], jsF.n98c4d2c(gs[0]))
-
+            
+    if 'var enkripsi' in data:
+        r = re.compile(r"""enkripsi="([^"]+)""")
+        gs = r.findall(data)
+        if gs:
+            for g in gs:
+                s=''
+                for i in g:
+                    s+= chr(ord(i)^2)
+                data = data.replace("""enkripsi=\""""+g, urllib.unquote(s))
     # o61a2a8f
     if 'function o61a2a8f(' in data:
         gs = parseTextToGroups(data, ".*o61a2a8f\(''\).*?'(%[^']+)'.*")
@@ -237,7 +246,7 @@ def doDemystify(data):
                 data = data.replace(g, jsF.pbbfa0(g))
     
     if 'eval(function(' in data:
-        data = re.sub(r"""function\(\w\w\w\w,\w\w\w\w,\w\w\w\w,\w\w\w\w""",'function(p,a,c,k)',data)
+        data = re.sub(r"""function\(\w\w\w\w,\w\w\w\w,\w\w\w\w,\w\w\w\w""",'function(p,a,c,k)',data.replace('#','|'))
         data = re.sub(r"""\(\w\w\w\w\+0\)%\w\w\w\w""",'e%a',data)
         data = re.sub(r"""RegExp\(\w\w\w\w\(\w\w\w\w\)""",'RegExp(e(c)',data)
         
