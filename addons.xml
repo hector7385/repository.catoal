@@ -194,7 +194,7 @@ Plugin to watch IPTV free worldwide
 
 <addon
   id="plugin.video.SportsDevil"
-  version="31-08-2016"
+  version="2 (build 20160902)"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
