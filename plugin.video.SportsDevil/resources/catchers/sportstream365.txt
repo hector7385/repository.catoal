@@ -15,7 +15,7 @@ item_info_from=http://sportstream365.com/LiveFeed/GetGame?lng=ru&id='+game+'&par
 item_info_build=%s
 
 item_info_name=purl
-item_info_from=http://sportstream365.com/viewer/frame?game='+game+'&header=1&autoplay=1&width=700&height=480
+item_info_from=http://sportstream365.com/viewer?game='+game
 item_info_build=%s
 
 item_info_name=rtmp
@@ -35,7 +35,7 @@ item_info_convert=getXML('%s','.*?VI['"]*[:,]\s*['"]([^'"]+)['"].*','@purl@')
 item_info_build=%s
 
 item_info_name=url
-item_info_from=rtmp+' playPath=raw:'+file+' conn=S:client conn=S:3.1.0.10 conn=S:en swfVfy=http://sportstream365.com/swf/VideoPlayer.swf?x=0.'+rand+' flashver=WIN\2022,0,0,209 timeout=15 live=true pageUrl='+purl+'
+item_info_from=rtmp+' playPath=raw:'+file+' app=xlive conn=S:client conn=S:3.1.0.10 conn=S:en swfVfy=http://sportstream365.com/swf/VideoPlayer.swf?x=0.'+rand+' flashver=WIN\2022,0,0,209 live=true pageUrl='+purl+'
 item_info_build=%s
 
 #item_info_name=url
