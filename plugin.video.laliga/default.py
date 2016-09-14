@@ -12,7 +12,7 @@ if not os.path.exists(control.dataPath):
     os.mkdir(control.dataPath)
 
 AddonPath = addon.get_path()
-IconPath = os.path.join(AddonPath , "resources/media/")
+IconPath = os.path.join(AddonPath, "resources/media/")
 fanart = os.path.join(AddonPath + "/fanart.jpg")
 
 def icon_path(filename):
@@ -21,21 +21,21 @@ def icon_path(filename):
     return os.path.join(IconPath, filename)
 
 class info():
-    def __init__(self):
+    def __init__(self,ico=None):
         self.mode = 'laliga'
         self.name = 'La Liga'
-        self.icon = icon_path('logo.png')
-        self.ico2 = icon_path('atm.png')
-        self.icsg = icon_path('log2.png')
-        self.icpr = icon_path('premier.png')
-        self.icit = icon_path('italia.png')
-        self.ical = icon_path('bundes.png')
-        self.icfr = icon_path('french.png')
-        self.iccl = icon_path('ucl.png')
-        self.icel = icon_path('uel.png')
+        if ico==None:
+            self.icon = icon_path('logo.png')
+        else:
+            self.icon = icon_path(ico + '.png')
         self.categorized = False
         self.paginated = False
         self.multilink = True
+
+class mylang():
+    def __init__(self):
+        zh = addon.get_string(30000)[0:8]
+        self.spa = (zh == "Zona hor")
 
 class main():
     def __init__(self):
@@ -48,7 +48,6 @@ class main():
         return links
 
     def channels(self):
-        
         result = client.request('http://arenavision.in/agenda', headers=self.headers)
         table = client.parseDOM(result,'table',attrs={'style':'width: 100%; float: left'})[0]
         rows = client.parseDOM(table,'tr')
@@ -67,29 +66,20 @@ class main():
         timezona = control.setting('timezone_new')
         my_location = pytzimp.timezone(pytzimp.all_timezones[int(timezona)])
         convertido = d.astimezone(my_location)
-        fmt = "%A, %d de %B de %Y"
         fm2 = "%H:%M"
-        fch = convertido.strftime(fmt)
-        hor = convertido.strftime(fm2)
-        fch = fch.replace('January','Enero')
-        fch = fch.replace('February','Febrero')
-        fch = fch.replace('March','Marzo')
-        fch = fch.replace('April','Abril')
-        fch = fch.replace('May','Mayo')
-        fch = fch.replace('June','Junio')
-        fch = fch.replace('July','Julio')
-        fch = fch.replace('August','Agosto')
-        fch = fch.replace('September','Septiembre')
-        fch = fch.replace('October','Octubre')
-        fch = fch.replace('November','Noviembre')
-        fch = fch.replace('December','Diciembre')
-        fch = fch.replace('Monday','Lunes')
-        fch = fch.replace('Tuesday','Martes')
-        fch = fch.replace('Wednesday','Miércoles')
-        fch = fch.replace('Thursday','Jueves')
-        fch = fch.replace('Friday','Viernes')
-        fch = fch.replace('Saturday','Sábado')
-        fch = fch.replace('Sunday','Domingo')
+        if mylang().spa:
+            fmt = "%A, %d de %B de %Y"
+            fch = convertido.strftime(fmt)
+            hor = convertido.strftime(fm2)
+            dict_py = os.path.join(addon.get_path().decode('utf-8'), 'dict_py')
+            datos = open(dict_py).read()
+            src = re.findall("eng:'(.*?)',spa:'(.*?)'",datos)
+            for eng,spa in src:
+                fch = fch.replace(eng,spa)
+        else:
+            fmt = "%A, %B %d, %Y"
+            fch = convertido.strftime(fmt)
+            hor = convertido.strftime(fm2)
         return hor,fch
 
     def __prepare_events(self,events):
@@ -102,9 +92,7 @@ class main():
         for event in events:
             items = client.parseDOM(event,'td')
             i = 0
-            
             for item in items:
-
                 if i==0:
                     date = item
                 elif i==1:
@@ -117,94 +105,46 @@ class main():
                     event = webutils.remove_tags(item)
                 elif i==5:
                     url = item
-
                 i += 1
             try:
                 time, date = self.convert_time(time,date)
-                sport = '%s - %s'%(sport,competition)
-                event = re.sub('\s+',' ',event)
-                title = '[COLOR orange](%s)[/COLOR] (%s) [B]%s[/B]'%(time,sport,convert.unescape(event))
-                title2 = '[COLOR orange]%s[/COLOR]  [B]%s[/B]'%(time,convert.unescape(event))
-                atm = 'ATLETICO MADRID'
-                atmb = 'ATLETICO DE MADRID'
-                lig = 'SPANISH LALIGA)'
-                lg2 = 'SPANISH LALIGA2'
-                prm = 'PREMIER LEAGUE'
-                fra = 'FRENCH LIGUE1'
-                ale = 'BUNDESLIGA'
-                ita = 'ITALIA SERIE A'
-                ucl = 'UEFA CHAMPIONS LEAGUE'
-                uel = 'UEFA EUROPA LEAGUE'
-                title2 = title2.replace(atm,atmb)
-                primera = addon.get_setting('primera')
-                segunda = addon.get_setting('segunda')
-                premier = addon.get_setting('premier')
-                francia = addon.get_setting('francia')
-                italia = addon.get_setting('italia')
-                alemania = addon.get_setting('alemania')
-                champions = addon.get_setting('champions')
-                eurleague = addon.get_setting('eurleague')
-                if segunda=='false' and premier=='false' and francia=='false' and italia=='false' and alemania=='false':
-                    primera='true'
-                if (title.find(atm)!=-1 or title.find(atmb)!=-1) and (primera=='true'):
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    title2 = title2.replace('[B]','[B][COLOR tomato]')
-                    title2 = title2.replace('[/B]','[/COLOR][/B]')
-                    new.append((url,title2, info().ico2))
-                elif title.find(lig)!=-1 and primera=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().icon))
-                elif title.find(lg2)!=-1 and segunda=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().icsg))
-                elif title.find(prm)!=-1 and premier=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().icpr))
-                elif title.find(fra)!=-1 and francia=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().icfr))
-                elif title.find(ita)!=-1 and italia=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().icit))
-                elif title.find(ale)!=-1 and alemania=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().ical))
-                elif title.find(ucl)!=-1 and champions=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().iccl))
-                elif title.find(uel)!=-1 and eurleague=='true':
-                    if date != date_old:
-                        date_old = date
-                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
-                    title = title.encode('utf-8')
-                    new.append((url,title2, info().icel))
             except:
                 pass
-        
+            sport = '(%s - %s)'%(sport,competition)
+            event = re.sub('\s+',' ',event)
+            title = '[COLOR orange]%s[/COLOR]  [B]%s[/B]'%(time,convert.unescape(event))
+            atm1 = addon.get_setting('atm1')
+            atm2 = addon.get_setting('atm2')
+            if atm1 in title:
+                title = title.replace(atm1,atm2)
+            data_py = os.path.join(addon.get_path().decode('utf-8'), 'data_py')
+            datos = open(data_py).read()
+            src = re.findall("bus:'(.*?)',ico:'(.*?)',set:'(.*?)'",datos)
+            hay = False
+            first = ''
+            for bus,ico,stn in src:
+                if first == '':
+                    first = stn
+                if addon.get_setting(stn)=='true':
+                    hay = True
+                    break
+            if not hay:
+                addon.set_setting(first,'true')
+            for bus,ico,stn in src:
+                if bus in sport and addon.get_setting(stn)=='true':
+                    if date != date_old:
+                        date_old = date
+                        new.append(('x','[COLOR yellow]%s[/COLOR]'%date, info().icon))
+                    if mylang().spa:
+                        if atm2 in title:
+                            title = title.replace('[B]','[B][COLOR tomato]')
+                            title = title.replace('[/B]','[/COLOR][/B]')
+                            ico='atm'
+                        if title.find('SPAIN')!=-1:
+                            title = title.replace('SPAIN','[COLOR red]ES[COLOR yellow]PA[/COLOR]ÑA[/COLOR]'.decode('utf-8'))
+                    title = title.encode('utf-8')
+                    new.append((url,title,info(ico).icon))
+                    break
         return new
 
     def __prepare_links(self,links,tit):
@@ -218,7 +158,6 @@ class main():
             urls = link[0].split('-')
             for u in urls:
                 title = '[B]• AV%s[/B] [%s]'%(u.replace(' ',''),lang)
-                #title = " ".join(title.split())
                 url = 'http://arenavision.in/av' + u
                 if title.find('AVS')==-1:
                     new.append((url,title))
