@@ -61,6 +61,14 @@ class main():
         hour,minute = li[0],li[1]
         day,month,year = li2[0],li2[1],li2[2]
         import datetime
+        # --- Para intentar arreglar los errores de fecha de arenavisión
+        hoy = datetime.date.today()
+        if hoy.month != month:
+            fech = datetime.date(int(year), int(month), int(day))
+            diff = fech - hoy
+            if abs(diff.days) > 10:
+                month = hoy.month
+        # --- 
         from resources.lib.modules import pytzimp
         d = pytzimp.timezone(str(pytzimp.timezone('Europe/Ljubljana'))).localize(datetime.datetime(int(year), int(month), int(day), hour=int(hour), minute=int(minute)))
         timezona = control.setting('timezone_new')
@@ -106,10 +114,13 @@ class main():
                 elif i==5:
                     url = item
                 i += 1
+
             try:
+            #if time != '' and date !='' and 'Last update' not in date:
                 time, date = self.convert_time(time,date)
             except:
                 pass
+
             sport = '(%s - %s)'%(sport,competition)
             event = re.sub('\s+',' ',event)
             title = '[COLOR orange]%s[/COLOR]  [B]%s[/B]'%(time,convert.unescape(event))
