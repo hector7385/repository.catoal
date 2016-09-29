@@ -49,6 +49,7 @@ class main():
 
     def channels(self):
         result = client.request('http://arenavision.in/agenda', headers=self.headers)
+        result = result.replace('<tr></tr>','')
         table = client.parseDOM(result,'table',attrs={'style':'width: 100%; float: left'})[0]
         rows = client.parseDOM(table,'tr')
         events = self.__prepare_events(rows)
@@ -129,7 +130,9 @@ class main():
             if atm1 in title:
                 title = title.replace(atm1,atm2)
             data_py = os.path.join(addon.get_path().decode('utf-8'), 'data_py')
-            datos = open(data_py).read()
+            f = open(data_py,'r')
+            datos = f.read()
+            f.close()
             src = re.findall("bus:'(.*?)',ico:'(.*?)',set:'(.*?)'",datos)
             hay = False
             first = ''
@@ -163,7 +166,8 @@ class main():
         spc=[]
         ace=[]
         tit = re.sub('\[.+?\]','',tit)
-        ace.append(('x','[COLOR gold]' + tit[7:].replace('-',' [COLOR orange]vs[/COLOR] ') + '[/COLOR]'))
+        tit = '[COLOR gold]' + tit[7:].replace('-',' [COLOR orange]vs[/COLOR] ') + '[/COLOR]'
+        ace.append(('x',tit,''))
         for link in links:
             lang = link[1]
             urls = link[0].split('-')
@@ -171,14 +175,14 @@ class main():
                 title = '[B]• AV%s[/B] [%s]'%(u.replace(' ',''),lang)
                 url = 'http://arenavision.in/av' + u
                 if title.find('AVS')==-1:
-                    new.append((url,title))
+                    new.append((url,title,tit))
                 else:
-                    spc.append((url,title))
+                    spc.append((url,title,tit))
         if new!=[]:
-            ace.append(('x','[COLOR darkkhaki]AceStream[/COLOR]'))
+            ace.append(('x','[COLOR darkkhaki]AceStream[/COLOR]',''))
         new = ace + new
         if spc!=[]:
-            new.append(('x','[COLOR darkkhaki]Sopcast[/COLOR]'))
+            new.append(('x','[COLOR darkkhaki]Sopcast[/COLOR]',''))
             new = new + spc
         return new
 
@@ -208,12 +212,13 @@ elif mode[0]=='get_p2p_event':
         source = main()
         events = source.links(url,title)
         for event in events:
-            addon.add_video_item({'mode': 'play_p2p', 'url': event[0],'title':title, 'img': img, 'site':site}, {'title': event[1]}, img=img, fanart=fanart)
+            addon.add_video_item({'mode':'play_p2p', 'url':event[0],'title':title,'title2':event[2],'img':img,'site':site}, {'title': event[1]}, img=img, fanart=fanart)
         addon.end_of_directory()
 
 elif mode[0] == 'play_p2p':
     url = args['url'][0]
     title = args['title'][0]
+    tit = args['title2'][0]
     img = args['img'][0]
     site = args['site'][0]
     source = main()
@@ -221,8 +226,10 @@ elif mode[0] == 'play_p2p':
     li = xbmcgui.ListItem(title, path=resolved)
     li.setThumbnailImage(img)
     li.setLabel(title)
+    li.setInfo('video', {'title': tit})
     handle = int(sys.argv[1])
     if handle > -1:
         xbmcplugin.endOfDirectory(handle, True, False, False)
     xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, li)
+    li.setInfo('video', {'title': title})
 
