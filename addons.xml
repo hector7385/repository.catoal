@@ -185,7 +185,7 @@ Plugin to watch IPTV free worldwide
   </extension>
 </addon>
 
-<addon id="plugin.video.laliga" name="La Liga" version="0.0.13" provider-name="Topo">
+<addon id="plugin.video.laliga" name="La Liga" version="0.0.14" provider-name="Topo">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.liveresolver"  />
@@ -195,8 +195,10 @@ Plugin to watch IPTV free worldwide
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Liga Española: La mejor liga del mundo</summary>
-		<description lang="en">Liga Española</description>
-		<disclaimer lang="en">El autor no almacena ni distribuye ninguno de los contenidos que se muestran en este addon. El autor no tiene ninguna afiliación con el proveedor de contenidos.</disclaimer>
+		<description lang="en">Liga Española, Premier, Champions and much more</description>
+		<description lang="es">Liga Española, Premier, Champions y mucho más</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<disclaimer lang="es">El autor no almacena ni distribuye ninguno de los contenidos que se muestran en este addon. El autor no tiene ninguna afiliación con el proveedor de contenidos.</disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>

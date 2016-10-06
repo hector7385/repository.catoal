@@ -41,6 +41,7 @@ class main():
     def __init__(self):
         self.base = 'http://arenavision.in'
         self.headers = { "Cookie" : "beget=begetok; has_js=1;" }
+        self.rslt = ''
 
     def links(self,url,tit):
         links = re.findall('(\d+.+?)\[(.+?)\]',url)
@@ -50,8 +51,22 @@ class main():
     def channels(self):
         result = client.request('http://arenavision.in/agenda', headers=self.headers)
         result = result.replace('<tr></tr>','')
+        result = result.replace('<tr></tr>','')
+        result = result.replace('<br />\n',' ')
+        result = result.replace('\t','')
+        result = result.replace('</tr><td class="auto-style3"','</tr><tr><td class="auto-style3"')
+        result = result.replace('\n<tr><td class="auto-style3"','</tr><tr><td class="auto-style3"')
         table = client.parseDOM(result,'table',attrs={'style':'width: 100%; float: left'})[0]
         rows = client.parseDOM(table,'tr')
+
+#       zx=''
+#       for rw in rows:
+#           zx+=rw
+#           zx+='\n\n---------------------\n\n'
+#       f = open('C:/Users/Javier/AppData/Roaming/Kodi/addons/plugin.video.laliga/zRow.txt','w+')
+#       f.write(zx.encode('utf-8'))
+#       f.close()
+
         events = self.__prepare_events(rows)
         return events
 
@@ -191,6 +206,7 @@ class main():
         return liveresolver.resolve(url,cache_timeout=0)
 
     def doit(self):
+
         for event in self.channels():
             addon.add_item({'mode': 'get_p2p_event', 'url': event[0],'site':info().mode , 'title':event[1], 'img': event[2]}, {'title': event[1]}, img=event[2], fanart=fanart,is_folder=True)
 
