@@ -144,7 +144,6 @@ def parseText(item, params, src):
     variables = []
     if len(paramArr) > 2:
         variables = paramArr[2].split('|')
-    #common.log('JairoX2:' + text)
     return reg.parseText(text, regex, variables)
 
 
@@ -183,20 +182,13 @@ def getInfo(item, params, src, xml=False, mobile=False):
         pass
 
     common.log('Get Info from: "'+ paramPage + '" from "' + referer + '"')
-    #common.log('JairoX1:' + paramRegex)
     data = common.getHTML(paramPage, form_data, referer, xml, mobile, ignoreCache=False,demystify=True)
-    #common.log('JairoX2:' + data)
     return reg.parseText(data, paramRegex, variables)
 
 
 def decodeBase64(src):
     from base64 import b64decode
-    try:
-        ds = b64decode(src)
-        ds.encode('ascii', errors='strict') #jairox: test if result is ascii
-        return ds
-    except:
-        return ''
+    return b64decode(src)
 
 def encodeBase64(src):
     from base64 import b64encode
@@ -215,23 +207,25 @@ def resolve(src):
         if 'streamlive.to' in tmp_host[0]:
             servers = ['80.82.78.4',
                        '93.174.93.230',
-                       '95.211.210.69',
-                       '95.211.196.5',
-                       '184.173.85.91',
-                       '85.17.31.102',
-                       '169.54.85.69']
-                       #'62.210.139.136']
+                       #'212.117.188.22',
+                       #'95.211.210.69',
+                       #'95.211.196.5',
+                       #'184.173.85.91',
+                       #'85.17.31.102',
+                       #'169.54.85.69',
+                       '62.210.139.136'
+                       ]
             import random
             tmp_host[0] = random.choice(servers)
         elif tmp_host[0] == 'xlive.sportstream365.com':
-            servers = ["93.189.57.254",
-                       "185.56.139.162",
-                       "185.28.190.69",
-                       "46.28.205.96",
-                       "185.49.70.58",
-                       "93.189.62.10",
-                       "94.242.254.211",                    
-                       "85.114.135.215"]
+            servers = [ '93.189.57.254',
+                        '93.189.62.10',
+                        '185.49.70.58',
+                        '46.28.205.96',
+                        '178.17.168.90',
+                        '185.28.190.69',
+                        '85.114.135.215',
+                        '94.242.254.211']
             import random
             tmp_host[0] = random.choice(servers)
         elif tmp_host[0] == 'live.pub.stream':

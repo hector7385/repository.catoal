@@ -7,6 +7,8 @@ from javascriptUtils import JsFunctions, JsUnpacker, JsUnpackerV2, JsUnpacker95H
 from hivelogic import hivelogic
 try: import json
 except ImportError: import simplejson as json
+try: from Crypto.Cipher import AES
+except ImportError: import pyaes as AES
 
 def encryptDES_ECB(data, key):
     data = data.encode()
@@ -30,10 +32,29 @@ def cjsAesDec(data, key):
     ciphertext = 'Salted__' + enc_data['s'].decode('hex') + enc_data['ct'].decode('base-64')
     return json.loads(decrypt(key,ciphertext.encode('base-64')))
 
+def m3u8AesDec(data, key):
+    try:
+        _in = data.split('.')
+        unpad = lambda s : s[0:-ord(s[-1])]
+        aes = AES.new(key.decode('hex'), AES.MODE_CBC, _in[1].decode('hex'))
+        return unpad(aes.decrypt(_in[0].decode('hex')))
+    except: return data
+    
 def drenchDec(data, key):
     from drench import blowfish
     return blowfish(key).decrypt(data)
 
+def zdecode(data):
+    sym_re = (r",'(?=[\w|]+1935)(?=[\w|]+file)(?=[\w|]+streamer)([\w|]+)'\.split")
+    symtab = re.search(sym_re, data).groups()[0].split('|')
+    tab_re = (r""".*'(\d=[\W\d]+;(?!\\))'""")
+    tab = re.search(tab_re, data).groups()[0].decode('unicode-escape')
+
+    def lookup(match):
+        return symtab[int(match.group(0))] or str(match.group(0))
+
+    return re.sub(ur'\d+', lookup, tab)
+    
 def wdecode(data):
     from itertools import chain
     
@@ -60,20 +81,7 @@ def onetv(playpath):
     from base64 import b64encode
     user_agent = 'Mozilla%2F5.0%20%28Linux%3B%20Android%205.1.1%3B%20Nexus%205%20Build%2FLMY48B%3B%20wv%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Version%2F4.0%20Chrome%2F43.0.2357.65%20Mobile%20Safari%2F537.36'
     token = "65rSw"+"UzRad"
-    servers = [ '176.31.231.58',
-                '167.114.159.23',
-                '167.114.159.80',
-                '178.33.231.148',
-                '5.196.86.78',
-                '176.31.237.61',
-                '192.99.149.33',
-                '5.196.85.47',
-                '37.59.17.46',
-                '46.105.119.117',
-                '51.254.43.148',
-                '192.99.19.181',
-                '5.196.85.58',
-                '192.99.19.176']
+    servers = ['46.234.113.2','185.152.64.235', '185.59.222.232', '185.152.64.234']
     time_stamp = str(int(time.time()) + 14400)
     to_hash = "{0}{1}/hls/{2}".format(token,time_stamp,playpath)
     out_hash = b64encode(md5.new(to_hash).digest()).replace("+", "-").replace("/", "_").replace("=", "")
@@ -139,6 +147,12 @@ def doDemystify(data):
         for g in r.findall(data):
             quoted=g
             data = data.replace(quoted, urllib.unquote_plus(quoted))
+            
+    r = re.compile("""('%[\w%]{100,130}')""")
+    while r.findall(data):
+        for g in r.findall(data):
+            quoted=g
+            data = data.replace(quoted, "unescape({0})".format(urllib.unquote_plus(quoted)))
     
     r = re.compile('unescape\(\s*["\']((?=[^\'"]*\\u00)[^\'"]+)["\']')
     while r.findall(data):
@@ -178,7 +192,7 @@ def doDemystify(data):
                 data = data.replace(g, urllib.unquote(base64_data.decode('base-64')))
                 escape_again=True
     
-    r = re.compile('(eval\\(function\\((?!w)\w+,\w+,\w+,\w+.*?join\\(\'\'\\);*}\\(.*?\\))', flags=re.DOTALL)
+    r = re.compile('(eval\(function\((?!w)\w+,\w+,\w+,\w+\),\w+,\w+.*?\{\}\)\);)', flags=re.DOTALL)
     for g in r.findall(data):
         try:
             data = data.replace(g, wdecode(g))
@@ -186,12 +200,6 @@ def doDemystify(data):
         except:
             pass
 
-    if '"result2":"'in data:
-        r = re.compile(r""":("(?!http)[^\.]+\.m3u8")""")
-        gs = r.findall(data)
-        if gs:
-            for g in gs:
-                data = data.replace(g,json.dumps(decryptDES_ECB(json.loads(g)[:-5], '5333637233742600'.decode('hex'))))
     # n98c4d2c
     if 'function n98c4d2c(' in data:
         gs = parseTextToGroups(data, ".*n98c4d2c\(''\).*?'(%[^']+)'.*")
@@ -247,11 +255,16 @@ def doDemystify(data):
     
     if 'eval(function(' in data:
         data = re.sub(r"""function\(\w\w\w\w,\w\w\w\w,\w\w\w\w,\w\w\w\w""",'function(p,a,c,k)',data.replace('#','|'))
-        data = re.sub(r"""\(\w\w\w\w\+0\)%\w\w\w\w""",'e%a',data)
+        data = re.sub(r"""\(\w\w\w\w\)%\w\w\w\w""",'e%a',data)
         data = re.sub(r"""RegExp\(\w\w\w\w\(\w\w\w\w\)""",'RegExp(e(c)',data)
-        
+        r = re.compile(r"""\.split\('([^']+)'\)""")
+        gs = r.findall(data)
+        if gs:
+            for g in gs:
+                data = data.replace(g,'|')
+
     if """.replace(""" in data:
-        r = re.compile(r""".replace\(["']([^"']+)["'],\s*["']([^"']*)["']\)""")
+        r = re.compile(r""".replace\(["'](...[^"']+)["'],\s*["']([^"']*)["']\)""")
         gs = r.findall(data)
         if gs:
             for g in gs:
@@ -311,6 +324,8 @@ def doDemystify(data):
     if JsHive.contains_hivelogic(data):
         data = JsHive.unpack_hivelogic(data)
 
+    try: data = zdecode(data)
+    except: pass
     # unescape again
     if escape_again:
         data = doDemystify(data)

@@ -15,6 +15,7 @@ def findJS(data):
     jscript = regexUtils.findall(data, regex)
     if jscript:
         jscript = filter(lambda x: x[1].find('twitter') == -1, jscript)
+        jscript = filter(lambda x: x[1].find('pushpublish') == -1, jscript)
         return jscript
     
     return None
@@ -191,7 +192,7 @@ def findVideoFrameLink(page, data):
     if not frames:
         return None
     
-    iframes = regexUtils.findall(data, "((?:frame|FRAME)(?![^>]*cbox\.ws)(?![^>]*Publi)(?![^>]*dailymotion)(?![^>]*guide\.)(?![^>]*chat\d*\.\w+)(?![^>]*ad122m)(?![^>]*adshell)(?![^>]*capacanal)(?![^>]*waframedia)(?![^>]*Beba.tv/embed)(?![^>]*maxtags)(?![^>]*s/a1\.php)(?![^>]*right-sidebar)[^>]*\s(?:height|HEIGHT)\s*=\s*[\"']*([\%\d]+)(?:px)?[\"']*[^>]*>)")
+    iframes = regexUtils.findall(data, "((?:frame|FRAME)(?![^>]*cbox\.ws)(?![^>]*Publi)(?![^>]*dailymotion)(?![^>]*guide\.)(?![^>]*chat\d*\.\w+)(?![^>]*ad122m)(?![^>]*adshell)(?![^>]*capacanal)(?![^>]*waframedia)(?![^>]*banner)(?![^>]*maxtags)(?![^>]*s/a1\.php)(?![^>]*right-sidebar)[^>]*\s(?:height|HEIGHT)\s*=\s*[\"']*([\%\d]+)(?:px)?[\"']*[^>]*>)")
 
     if iframes:
         for iframe in iframes:
@@ -233,7 +234,7 @@ def findVideoFrameLink(page, data):
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
     
-    m = regexUtils.findall(data, r'playStream\(\'iframe\', \'[^\']*(https*:[^\']+)\'\)')
+    m = regexUtils.findall(data, r'playStream\(\'iframe\',\s*\'[^\']*(https*:[^\']+)\'\)')
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
     

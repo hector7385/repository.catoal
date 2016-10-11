@@ -289,7 +289,7 @@ Plugin to watch IPTV free worldwide
 
 <addon
   id="plugin.video.SportsDevil"
-  version="03092016"
+  version="2016-10-10"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -305,9 +305,6 @@ Plugin to watch IPTV free worldwide
     library="default.py">
    <provides>video</provides>
   </extension>
-  <extension
-      point="xbmc.python.script"
-      library="lib/livestreamerXBMCLocalProxy.py" />
   <extension point="xbmc.addon.metadata">
     <summary>Play videos of different sports streaming sites</summary>
     <description>Play videos of different sports streaming sites</description>
