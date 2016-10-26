@@ -8,7 +8,7 @@
   </category>
   
   <category label="Información Catoal">
-       	<setting type="lsep" label="[COLOR lime]Versión del Addon Actualizado 25/08/2016[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
+       	<setting type="lsep" label="[COLOR lime]Versión del Addon Actualizado 26/10/2016[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
         <setting type="lsep" label="[COLOR yellow]Facebook:[/COLOR] www.facebook.com/catoal.kodi" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
         <setting type="lsep" label="[COLOR yellow]Twitter:[/COLOR] @kodi_catoal" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
 		<setting type="lsep" label="[COLOR yellow]Email:[/COLOR] catoal.kodi@gmail.com" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
