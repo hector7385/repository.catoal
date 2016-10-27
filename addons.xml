@@ -141,57 +141,6 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.f4mTester" version="2.2.4" name="f4mTester" provider-name="Shani">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.2.3"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>f4mTester</summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-
-<addon id="plugin.video.kmediatorrent" name="KMediaTorrent" version="2.3.7" provider-name="jmarth">
-    <requires>
-        <import addon="xbmc.python" version="2.14.0"/>
-        <import addon="script.module.requests" version="2.3.5"/>
-        <import addon="script.module.html5lib" version="0.999.0" optional="false"/>
-        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary><![CDATA[Torrent streaming
-        for KODI/XBMC.]]></summary>
-        <description><![CDATA[Watch torrents directly from KODI/XBMC, without waiting.]]></description>
-    </extension>
-</addon>
-
-<addon id="plugin.video.kodilivetv" name="Kodi Live TV" version="1.4.9" provider-name="Vania Rupeni">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Kodi Live TV - downloaded for free from: http://kodilive.eu</summary>
-    <description lang="en">Kodi Live TV - downloaded for free from:
-http://kodilive.eu
-Plugin to watch IPTV free worldwide
-    </description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.laliga" name="La Liga" version="0.0.14" provider-name="Topo">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
