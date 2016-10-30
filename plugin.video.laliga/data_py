@@ -1,5 +1,7 @@
 bus:'SPANISH LALIGA)',ico:'logo',set:'primera'
+bus:'SPANISH LA LIGA)',ico:'logo',set:'primera'
 bus:'SPANISH LALIGA2',ico:'log2',set:'segunda'
+bus:'SPANISH LA LIGA2',ico:'log2',set:'segunda'
 bus:'PREMIER LEAGUE',ico:'premier',set:'premier'
 bus:'FRENCH LIGUE',ico:'french',set:'francia'
 bus:'BUNDESLIGA',ico:'bundes',set:'alemania'

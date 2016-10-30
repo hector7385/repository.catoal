@@ -149,6 +149,11 @@ class main():
             datos = f.read()
             f.close()
             src = re.findall("bus:'(.*?)',ico:'(.*?)',set:'(.*?)'",datos)
+
+          # f = open('C:/Users/Javier/AppData/Roaming/Kodi/addons/plugin.video.laliga/ztab.txt','w+')
+          # f.write(str(len(src)))
+          # f.close()
+
             hay = False
             first = ''
             for bus,ico,stn in src:
@@ -160,6 +165,12 @@ class main():
             if not hay:
                 addon.set_setting(first,'true')
             for bus,ico,stn in src:
+
+                import xbmc
+                xbmc.log('JJBUS: '+bus.encode('utf-8'))
+                xbmc.log('JJSPO: '+sport.encode('utf-8'))
+                xbmc.log('JJSTN: '+addon.get_setting(stn))
+
                 if bus in sport and addon.get_setting(stn)=='true':
                     if date != date_old:
                         date_old = date
@@ -206,7 +217,6 @@ class main():
         return liveresolver.resolve(url,cache_timeout=0)
 
     def doit(self):
-
         for event in self.channels():
             addon.add_item({'mode': 'get_p2p_event', 'url': event[0],'site':info().mode , 'title':event[1], 'img': event[2]}, {'title': event[1]}, img=event[2], fanart=fanart,is_folder=True)
 
