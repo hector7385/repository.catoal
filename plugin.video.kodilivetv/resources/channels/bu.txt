@@ -1,0 +1,64 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="bTV.bg" group-title="Bulgarian" tvg-logo="btv.png",[COLOR orange]bTV[/COLOR]
+http://www.iptvsaga.com/play/tv3/0210.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="bTV.bg" group-title="Bulgarian" tvg-logo="btv.png",[COLOR orange]bTV (2)[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.49:1234
+#EXTINF:-1 tvg-id="bTV.bg" group-title="Bulgarian" tvg-logo="btv.png",[COLOR orangered]bTV HD[/COLOR]
+http://www.iptvsaga.com/play/tv3/0236.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="NOVA.bg" group-title="Bulgarian" tvg-logo="nova.png",[COLOR orange]Nova[/COLOR]
+http://www.iptvsaga.com/play/tv3/0211.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="NOVASport.bg" group-title="Bulgarian" tvg-logo="nova.png",[COLOR orange]Nova Sport[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.18:1234
+#EXTINF:-1 tvg-id="Ring.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Ring[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.4:1234
+#EXTINF:-1 tvg-id="KinoNova.bg" group-title="Bulgarian" tvg-logo="kino_nova.png",[COLOR orange]Kino Nova[/COLOR]
+http://www.iptvsaga.com/play/tv3/0220.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="TV7.bg" group-title="Bulgarian" tvg-logo="tv7.png",[COLOR orange]TV 7[/COLOR]
+http://www.iptvsaga.com/play/tv3/0212.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="New7.bg" group-title="Bulgarian" tvg-logo="news7.png",[COLOR orange]News 7[/COLOR]
+http://www.iptvsaga.com/play/tv3/0213.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="Diema.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Diema[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.29:1234
+#EXTINF:-1 tvg-id="bTVComedy.bg" group-title="Bulgarian" tvg-logo="btv_comedy.png",[COLOR orange]bTV Comedy[/COLOR]
+http://www.iptvsaga.com/play/tv3/0214.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="bTVCinema.bg" group-title="Bulgarian" tvg-logo="btv_cinema.png",[COLOR orange]bTV Cinema[/COLOR]
+http://www.iptvsaga.com/play/tv3/0215.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="bTVAction.bg" group-title="Bulgarian" tvg-logo="btv_action.png",[COLOR orange]bTV Action[/COLOR]
+http://www.iptvsaga.com/play/tv3/0216.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="bTVLady.bg" group-title="Bulgarian" tvg-logo="btv_lady.png",[COLOR orange]bTV Lady[/COLOR]
+http://www.iptvsaga.com/play/tv3/0217.m3u8|User-agent=Lavf53.32.100
+#EXTINF:-1 tvg-id="Kanal3.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Kanal 3[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.13:1234
+#EXTINF:-1 tvg-id="Bnt1.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]BNT 1[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.8:1234
+#EXTINF:-1 tvg-id="24kitchen.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]24 kitchen[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.17:1234
+#EXTINF:-1 tvg-id="Fentv.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]FEN TV[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.10:1234
+#EXTINF:-1 tvg-id="CartonNetwork.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Carton Network[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.36:1234
+#EXTINF:-1 tvg-id="NationalGeografic.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]National Geografic[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.31:1234
+#EXTINF:-1 tvg-id="Fox.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Fox[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.32:1234
+#EXTINF:-1 tvg-id="Foxcrime.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Fox Crime[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.5:1234
+#EXTINF:-1 tvg-id="Foxlife.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Fox Life[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.6:1234
+#EXTINF:-1 tvg-id="FilmBoxPlus.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]FilmBox Plus[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.11:1234
+#EXTINF:-1 tvg-id="FilmBoxExtra.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]FilmBox Extra[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.14:1234
+#EXTINF:-1 tvg-id="DMSat.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]DM Sat[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.39:1234
+#EXTINF:-1 tvg-id="FiestaTV.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Fiesta TV[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.50:1234
+#EXTINF:-1 tvg-id="TheVoice.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]The Voice[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.28:1234
+#EXTINF:-1 tvg-id="PlanetaFolk-bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Planeta Folk[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.15:1234
+#EXTINF:-1 tvg-id="Citytv.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]CITY TV[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.43:1234
+#EXTINF:-1 tvg-id="Folklortv.bg" group-title="Bulgarian" tvg-logo="tv.png",[COLOR orange]Folklor TV[/COLOR]
+http://77.76.140.251:22637/udp/231.1.2.7:1234
+#EXT-X-ENDLIST

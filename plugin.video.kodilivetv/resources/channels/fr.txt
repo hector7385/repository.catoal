@@ -1,0 +1,66 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="ARTE.fr" group-title="French" tvg-logo="0214.png",[COLOR orange]Arte FR[/COLOR]
+http://frlive.artestras.cshls.lldns.net/artestras/contrib/frlive/frlive_925.m3u8
+#EXTINF:-1 tvg-id="RMCDecouverte.fr" group-title="French" tvg-logo="0231.png",[COLOR orange]RMC Decouverte[/COLOR]
+http://streaming-hub.com/stream/rmc.m3u8
+#EXTINF:-1 tvg-id="Latelex.fr" group-title="French" tvg-logo="0244.png",[COLOR orange]La télé X[/COLOR]
+http://rtmp.infomaniak.ch/livecast/latele/.m3u8
+#EXTINF:-1 tvg-id="Sixter.fr" group-title="French" tvg-logo="0229.png",[COLOR orange]6TER[/COLOR]
+https://sslhls.m6tv.cdn.sfr.net/hls-live/livepkgr/_definst_/six_ter_hls_aes/six_ter_hls_aes_1256.m3u8
+#EXTINF:-1 tvg-id="W9.fr" group-title="French" tvg-logo="0217.png",[COLOR orange]W9[/COLOR]
+http://sslhls.m6tv.cdn.sfr.net/hls-live/livepkgr/_definst_/w9_hls_aes/w9_hls_aes_1256.m3u8
+#EXTINF:-1 tvg-id="M6.fr" group-title="French" tvg-logo="0208.png",[COLOR orange]M6[/COLOR]
+http://sslhls.m6tv.cdn.sfr.net/hls-live/livepkgr/_definst_/m6_hls_aes/m6_hls_aes_1256.m3u8
+#EXTINF:-1 tvg-id="Itele.fr" group-title="French" tvg-logo="0223.png",[COLOR orangered]I Télé[/COLOR]
+http://hls-live-m6-l3.canal-plus.com/live/hls/itele-clair-hd-andr7/and-hd-clair/index.m3u8
+#EXTINF:-1 tvg-id="Tebeo.fr" group-title="French" tvg-logo="tebeo.png",[COLOR orangered]Tébéo[/COLOR]
+http://live1.awedia.com/hls/tebeo.m3u8
+#EXTINF:-1 tvg-id="Rtc.fr" group-title="French" tvg-logo="rtc.png",[COLOR orangered]RTC[/COLOR]
+http://media.webtvlive.eu/rtc/_definst_/mp4:live_720p.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="Njrtv.fr" group-title="French" tvg-logo="nrj_tv.png",[COLOR orange]NRJ TV[/COLOR]
+rtmp://rtmp.infomaniak.ch:1935/livecast/energytv
+#EXTINF:-1 tvg-id="Actv.fr" group-title="French" tvg-logo="antenne_centre.png",[COLOR orange]Antenne Centre TV[/COLOR]
+http://vm109.imust.org:1935/live/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="AntenneReunion.fr" group-title="French" tvg-logo="antenne_reunion.png",[COLOR orange]Antenne Réunion[/COLOR]
+http://41.213.128.117:1935/antennelive/smil:antennereunion.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="Enormetv.fr" group-title="French" tvg-logo="enorme_tv.png",[COLOR orange]Enorme TV[/COLOR]
+http://ec.playmedia.fr/enorme-tv/live/playlist.m3u8
+#EXTINF:-1 tvg-id="Rire.fr" group-title="French" tvg-logo="rire.png",[COLOR orange]Rire TV[/COLOR]
+http://tvclub.fr/ch11.ts
+#EXTINF:-1 tvg-id="Tva.ca" group-title="French" tvg-logo="tva.png",[COLOR orange]TVA MONTREAL[/COLOR]
+http://tva_chaine_uls-lh.akamaihd.net/i/chaine_tva_1@125892/master.m3u8
+#EXTINF:-1 tvg-id="" group-title="French" tvg-logo="bfm_tv.png",[COLOR orange]BFMTV[/COLOR]
+http://bfmlive2-i.akamaihd.net/hls/live/214427/bfmtv/04.m3u8
+#EXTINF:-1 tvg-id="Eurosport1.fr" group-title="French" tvg-logo="es1.png",[COLOR orange]Eurosport 1 France[/COLOR]
+http://esioslive6-i.akamaihd.net/hls/live/202892/AL_P_ESP1_FR_FRA/playlist_1800.m3u8
+#EXTINF:-1 tvg-id="Lux.be" group-title="French" tvg-logo="luxe_tv.png",[COLOR orangered]Lux TV[/COLOR]
+http://wowza.tvlux.imust.org:1935/live/tvlux-live/chunklist_w179584825.m3u8
+#EXTINF:-1 tvg-id="Nontele.be" group-title="French" tvg-logo="notele.png",[COLOR orange]NOtélé[/COLOR]
+http://streaming06.axeweb.be/live//direct.stream/chunklist_w1993793147.m3u8
+#EXTINF:-1 tvg-id="Matele.be" group-title="French" tvg-logo="matele.png",[COLOR orange]MATELE[/COLOR]
+http://streaming06.axeweb.be:1935/matele_live/_definst_/live.stream/media_w366261202.m3u8
+#EXTINF:-1 tvg-id="Telesambre.be" group-title="French" tvg-logo="telesambre.png",[COLOR orange]Telesambre[/COLOR]
+http://vm109.imust.org:1935/live/telesambre-live/playlist.m3u8
+#EXTINF:-1 tvg-id="Dobbit.be" group-title="French" tvg-logo="dobbit.png",[COLOR orangered]Dobbit TV[/COLOR]
+http://193.110.252.20:1935/live/dobbittv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="Lachainenormande.fr" group-title="French" tvg-logo="la_chaine_normande.png",[COLOR orange]LA CHAÎNE NORMANDE[/COLOR]
+rtmp://live.lachainenormande.fr:80/live/lcn/livestream
+#EXTINF:-1 tvg-id="Gong.fr" group-title="French" tvg-logo="gong.png",[COLOR orange]GONG[/COLOR]
+rtsp://ec.playmedia.fr:1935/gong-base/live
+#EXTINF:-1 tvg-id="equipe21.fr" group-title="French" tvg-logo="equipe_21.png",[COLOR orange]L'equipe 21[/COLOR]
+http://streaming-hub.com/stream/lequipe21.m3u8
+#EXTINF:-1 tvg-id="Rire.fr" group-title="French" tvg-logo="weo_tv.png",[COLOR orange]Weo[/COLOR]
+rtmp://str81.creacast.com:80/weo/high
+#EXTINF:-1 tvg-id="Canal2 Info.fr" group-title="French" tvg-logo="canal_2.png",[COLOR orange]Canal 2 Info[/COLOR]
+http://canal2-p.cdn.hexaglobe.net/streaming/canal2_c2info/canal2info_fre_480p.sdp.m3u8
+#EXTINF:-1 tvg-id="CanalC.fr" group-title="French" tvg-logo="canal_c.png",[COLOR orange]Canal C[/COLOR]
+http://streaming06.axeweb.be:1935/canalc_live/live.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="TVPI.fr" group-title="French" tvg-logo="tvpi.png",[COLOR orange]TVPI Bayonne[/COLOR]
+rtmp://streamcast.oc3n.net:1935/TVPI/myStream700.sdp
+#EXTINF:-1 tvg-id="Alsace20.fr" group-title="French" tvg-logo="alsace_20.png",[COLOR orange]Alsace 20[/COLOR]
+http://live.alsace20.fr/live/alsace20/ngrp:alsace20_all/playlist.m3u8
+#EXTINF:-1 tvg-id="BFM.fr" group-title="French" tvg-logo="bfm_tv.png",[COLOR orange]BFM TV (2)[/COLOR]
+http://bfmlive2-i.akamaihd.net/hls/live/214427/bfmtv/04.m3u8
+#EXTINF:-1 tvg-id="BFMbusiness.fr" group-title="French" tvg-logo="bfm_bussiness.png",[COLOR orange]BFM business[/COLOR]
+http://bfmlive-i.akamaihd.net/hls/live/214272/bfmbusiness/04.m3u8
+#EXT-X-ENDLIST

@@ -1,0 +1,44 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ert1.png",[COLOR orange]ERT1[/COLOR]
+http://nerit1-lh.akamaihd.net/i/nerit_1@120689/index_1200_av-b.m3u8?sd=10&rebase=on&hdntl=
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ert2.png",[COLOR orange]ERT2[/COLOR]
+http://nerit2-lh.akamaihd.net/i/neritplus_1@121149/index_800_av-p.m3u8?sd=10&rebase=on&hdntl=
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ert3.png",[COLOR orange]ERT3[/COLOR]
+http://ert3-lh.akamaihd.net/i/live_1@329807/index_800_av-b.m3u8?sd=10&rebase=on&hdntl=
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ert.png",[COLOR orange]ERT Promo[/COLOR]
+http://nerit3-lh.akamaihd.net/i/prosexos_1@48667/index_1200_av-p.m3u8?sd=10&rebase=on&hdntl=
+#EXTINF:-1 tvg-id="ant1.gr" group-title="Greek" tvg-logo="ant.png",[COLOR orange]ANT1[/COLOR]
+http://antennatv-lh.akamaihd.net/i/live_1@329667/index_1000_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-id="mega.gr" group-title="Greek" tvg-logo="mega.png",[COLOR orange]MEGA[/COLOR]
+http://megahdlive1-f.akamaihd.net/i/live_1@105260/index_600_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="tv.png",[COLOR orange]Tilesport[/COLOR]
+http://tv1.streampulse.eu:1935/tilesport/movie1/live.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="nta.png",[COLOR orange]Nea TV[/COLOR]
+http://srv.viiideo.gr:1935/neatv/live/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ktv.png",[COLOR orange]KRHTH TV[/COLOR]
+rtmp://live.cretetv.gr/cretetv/myStream
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="kontra.png",[COLOR orange]Kontra TV[/COLOR]
+rtmp://flashcloud.mediacdn.com:1935/live/kontratv
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="gextra.png",[COLOR orange]Extra Channel[/COLOR]
+http://213.16.167.186:1935/live/mpegts_256.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="e_tv.png",[COLOR orange]E TV[/COLOR]
+http://mgrouphdlive4-f.akamaihd.net/i/live_1@324569/index_1000_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="blue_sky.png",[COLOR orange]Blue Sky[/COLOR]
+http://88.198.238.44:1935/live/bluesky/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="astra_tv.png",[COLOR orange]Astra TV[/COLOR]
+http://www.astratv.gr:8090/hls/livestream.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="4E.png",[COLOR orange]4E[/COLOR]
+http://mail.tv4e.gr:1935/live/myStream.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="omega.png",[COLOR orange]Omega[/COLOR]
+http://stream2.omegatv.net/hls-live/livepkgr/_definst_/liveevent/omegatv.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="messinia.png",[COLOR orange]Messinia[/COLOR]
+rtmp://176.9.123.140:1935/messinia/messinia
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="thrakinet.png",[COLOR orange]Thrakinet[/COLOR]
+rtmp://hls.onestreaming.com:1935/live/thrakinettv
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="mad.png",[COLOR orange]Mad TV[/COLOR]
+rtmp://144.76.2.213:1935/live/livestream
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ebs.png",[COLOR orange]EBS[/COLOR]
+http://ott.ec.streamcloud.be/live/disk1/EBS/hls_el/EBS-audio_AACL_ell_66400_207=66400-video=800000.m3u8
+#EXTINF:-1 tvg-id="" group-title="Greek" tvg-logo="ebs.png",[COLOR orange]EBS Plus[/COLOR]
+http://ott.ec.streamcloud.be/live/disk1/EBSplus/hls_el/EBSplus-audio_AACL_ell_66400_407=66400-video=800000.m3u8
+#EXT-X-ENDLIST

@@ -1,0 +1,58 @@
+#EXTINF:-1 tvg-id="BBC1.uk" group-title="English" tvg-logo="0402.png",[COLOR FFFF00FF]BBC1 HD[/COLOR]
+http://c001.p103.edgesuite.net/i/c001/bbc1hd_1@97412/master.m3u8
+#EXTINF:-1 tvg-id="BBC1.uk" group-title="English" tvg-logo="0401.png",[COLOR FFDC54D3]BBC1[/COLOR]
+http://c001.p109.edgesuite.net/i/c001/bbc1_1@97471/master.m3u8
+#EXTINF:-1 tvg-id="BBC2.uk" group-title="English" tvg-logo="0404.png",[COLOR FFFF00FF]BBC2 HD[/COLOR]
+http://c001.p109.edgesuite.net/i/c001/bbc2hd_1@97435/master.m3u8
+#EXTINF:-1 tvg-id="BBC2.uk" group-title="English" tvg-logo="0403.png",[COLOR FFDC54D3]BBC2[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/bbc2_1@137786/master.m3u8
+#EXTINF:-1 tvg-id="BBC3.uk" group-title="English" tvg-logo="0406.png",[COLOR FFFF00FF]BBC3 HD[/COLOR]
+http://c001.p126.edgesuite.net/i/c001/bbc3_hd_1@180212/master.m3u8
+#EXTINF:-1 tvg-id="BBC3.uk" group-title="English" tvg-logo="0405.png",[COLOR FFDC54D3]BBC3[/COLOR]
+http://c001.p113.edgesuite.net/i/c001/bbc3_1@97575/master.m3u8
+#EXTINF:-1 tvg-id="BBC4.uk" group-title="English" tvg-logo="0408.png",[COLOR FFFF00FF]BBC4 HD[/COLOR]
+http://c001.p126.edgesuite.net/i/c001/bbc4_hd_1@180211/master.m3u8
+#EXTINF:-1 tvg-id="BBC4.uk" group-title="English" tvg-logo="0407.png",[COLOR FFDC54D3]BBC4[/COLOR]
+http://c001.p123.edgesuite.net/i/c001/bbc4_1@137784/master.m3u8
+#EXTINF:-1 tvg-id="ITV1London.uk" group-title="English" tvg-logo="0410.png",[COLOR FFFF00FF]ITV1 HD[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/itvhd_1@97442/master.m3u8
+#EXTINF:-1 tvg-id="ITV1London.uk" group-title="English" tvg-logo="0409.png",[COLOR FFDC54D3]ITV1[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/itv1_1@137791/master.m3u8
+#EXTINF:-1 tvg-id="ITV2.uk" group-title="English" tvg-logo="0411.png",[COLOR FFDC54D3]ITV2[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/itv2_1@137792/master.m3u8
+#EXTINF:-1 tvg-id="ITV3.uk" group-title="English" tvg-logo="0412.png",[COLOR FFDC54D3]ITV3[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/itv3_1@97494/master.m3u8
+#EXTINF:-1 tvg-id="ITV4.uk" group-title="English" tvg-logo="0413.png",[COLOR FFDC54D3]ITV4[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/itv4_1@97503/master.m3u8
+#EXTINF:-1 tvg-id="Channel4.uk" group-title="English" tvg-logo="0414.png",[COLOR FFFF00FF]Channel 4 HD[/COLOR]
+http://c001.p111.edgesuite.net/i/c001/channel4hd_1@97441/master.m3u8
+#EXTINF:-1 tvg-id="Channel5.uk" group-title="English" tvg-logo="0416.png",[COLOR FFDC54D3]Channel 5[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/channel5_1@137787/master.m3u8
+#EXTINF:-1 tvg-id="More4.uk" group-title="English" tvg-logo="0417.png",[COLOR FFDC54D3]More 4[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/more4_1@137795/master.m3u8
+#EXTINF:-1 tvg-id="Travelchannel.uk" group-title="English" tvg-logo="0420.png",[COLOR FFDC54D3]Travel Channel[/COLOR]
+http://c001.p113.edgesuite.net/i/c001/travelchannel_1@97576/master.m3u8
+#EXTINF:-1 tvg-id="E4.uk" group-title="English" tvg-logo="0418.png",[COLOR FFDC54D3]E4[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/e4_1@137789/master.m3u8
+#EXTINF:-1 tvg-id="Film4.uk" group-title="English" tvg-logo="0415.png",[COLOR FFDC54D3]Film 4[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/film4_1@137790/master.m3u8
+#EXTINF:-1 tvg-id="CNN.nws" group-title="English" tvg-logo="0423.png",[COLOR FFDC54D3]CNN[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/cnn_1@97501/master.m3u8
+#EXTINF:-1 tvg-id="BBCWorldNews.nws" group-title="English" tvg-logo="0422.png",[COLOR FFDC54D3]BBC World News[/COLOR]
+http://c001.p105.edgesuite.net/i/c001/bbcworld_1@97498/master.m3u8
+#EXTINF:-1 tvg-id="FashionTV.uk" group-title="English" tvg-logo="0419.png",[COLOR FFDC54D3]Fashion TV[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/fashiontv_1@97512/master.m3u8
+#EXTINF:-1 tvg-id="CCTV.uk" group-title="English" tvg-logo="0424.png",[COLOR FFDC54D3]CCTV[/COLOR]
+http://c001.p101.edgesuite.net/i/c001/cctvnews_1@97342/master.m3u8
+#EXTINF:-1 tvg-id="AlJazeera.uk" group-title="English" tvg-logo="0425.png",[COLOR FFDC54D3]Al Jazeera[/COLOR]
+http://c001.p123.edgesuite.net/i/c001/aljazeera_1@137783/master.m3u8
+#EXTINF:-1 tvg-id="Bloomberg.uk" group-title="English" tvg-logo="0426.png",[COLOR FFDC54D3]Bloomberg[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/bloomberg_1@137785/master.m3u8
+#EXTINF:-1 tvg-id="CNBC.uk" group-title="English" tvg-logo="0427.png",[COLOR FFDC54D3]CNBC[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/cnbc_1@137788/master.m3u8
+#EXTINF:-1 tvg-id="Nhk.jp" group-title="English" tvg-logo="nhk_world.png",[COLOR FFDC54D3]NHK World[/COLOR]
+http://c001.p124.edgesuite.net/i/c001/nhkw_1@137796/master.m3u8
+#EXTINF:-1 tvg-id="RussiaToday.uk" group-title="Spanish" tvg-logo="russia_today.png",[COLOR FFDC54D3]Russia Today EN[/COLOR]
+http://c001.p125.edgesuite.net/i/c001/russia_1@137797/master.m3u8
+#EXTINF:-1 tvg-id="Skynews.uk" group-title="English" tvg-logo="0430.png",[COLOR FFDC54D3]SKY News[/COLOR]
+http://c001.p106.edgesuite.net/i/c001/skynews_1@97511/master.m3u8

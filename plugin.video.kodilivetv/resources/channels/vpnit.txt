@@ -1,0 +1,23 @@
+#EXTM3U 
+#EXTINF:-1 tvg-logo="0619.png",[COLOR orange]Rete 4[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH03HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="0614.png",[COLOR orange]Canale 5[/COLOR]
+http://live1.msf.ticdn.it/Content/HLS/Live/Channel(CH01HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="0615.png",[COLOR orange]Italia 1[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH02HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="la5.png",[COLOR orange]La5[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH04HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="iris.png",[COLOR orange]Iris[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH06HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="topcrime.png",[COLOR orange]Top Crime[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH07HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="extra.png",[COLOR orange]Mediaset Extra[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH09HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="italia2.png",[COLOR orange]Italia 2[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH05HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="tgcom.png",[COLOR orange]Tgcom24[/COLOR]
+http://live3.msf.ticdn.it/Content/HLS/Live/Channel(CH10HA)/Stream(04)/index.m3u8
+#EXTINF:-1 tvg-logo="0620.png",[COLOR orange]Cielo[/COLOR]
+http://skyianywhere2-i.akamaihd.net/hls/live/216865/cielo/playlist.m3u8
+#EXTINF:-1 tvg-logo="sportitalia.png",[COLOR orange]Sport Italia[/COLOR]
+rtmp://spi.hystream.com:1935/spilive/spistream_480

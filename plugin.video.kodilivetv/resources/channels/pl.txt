@@ -1,0 +1,32 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tvp_info.png",[COLOR orangered]TVP INFO[/COLOR]
+http://195.245.213.230/live/szczecin.isml/szczecin.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="lech_tv.png",[COLOR orange]Lech TV[/COLOR]
+http://wtk.live-ext.e96-jw.insyscd.net/lechtv.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="asta.png",[COLOR orangered]TV Asta[/COLOR]
+http://xeon.asta-net.pl/trans.isml/manifest(format=m3u8-aapl).m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="trwam.png",[COLOR orange]TV TRWAM[/COLOR]
+http://trwamtv.live.e96-jw.insyscd.net/trwamtv.smil/chunklist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="amazing.png",[COLOR orange]Amazing[/COLOR]
+http://redir.atmcdn.pl/hls/mm/multimedia/live/amazing/live.livx/playlist.m3u8?sessionId=ABA74CBC0702307FF0B559F938FC9B21.node1&stream=2
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tv.png",[COLOR orange]Telewizja CTV[/COLOR]
+rtmp://wowza.artcom.pl/tv/DlaCiebieTv800.stream
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="twoja.png",[COLOR orange]Twoja TV[/COLOR]
+http://94.246.169.19/ttv_hls/live_270p/index.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="wtk.png",[COLOR orange]WTK[/COLOR]
+http://wtk.live-ext.e96-jw.insyscd.net/wtk.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="4fun.png",[COLOR orange]4fun TV[/COLOR]
+rtmp://edge4.popler.tv:1935/publishlive?play=123452/4funtv live=1 swfUrl=http://images.popler.tv/player/flowplayer.commercial.swf pageUrl=http://www.popler.tv/live/4funtv
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="czworka.png",[COLOR orange]Czworka Polskie Radio[/COLOR]
+rtmp://stream85.polskieradio.pl/video/czworka.sdp
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tvp_katowice.png",[COLOR orange]TVP Katowice[/COLOR]
+http://195.245.213.230/live/katowice.isml/katowice-audio%3D96000-video%3D120000.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tvp_kielce.png",[COLOR orange]TVP Kielce[/COLOR]
+http://195.245.213.230/live/kielce.isml/kielce-audio%3D96000-video%3D120000.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tvp_krakow.png",[COLOR orange]TVP Krakow[/COLOR]
+http://195.245.213.230/live/krakow.isml/krakow-audio%3D96000-video%3D120000.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tvp_wroclaw.png",[COLOR orange]TVP Wroclaw[/COLOR]
+http://195.245.213.230/live/wroclaw.isml/wroclaw-audio%3D96000-video%3D120000.m3u8
+#EXTINF:-1 tvg-id="" group-title="Polish" tvg-logo="tva_lublin.png",[COLOR orange]TVP Lublin[/COLOR]
+http://195.245.213.230/live/lublin.isml/lublin-audio%3D96000-video%3D120000.m3u8
+#EXT-X-ENDLIST
