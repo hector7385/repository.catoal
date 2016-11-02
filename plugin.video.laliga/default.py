@@ -49,7 +49,7 @@ class main():
         return links
 
     def channels(self):
-        result = client.request('http://arenavision.in/agenda', headers=self.headers)
+        result = client.request('http://arenavision.in/schedule', headers=self.headers)
         result = result.replace('<tr></tr>','')
         result = result.replace('<tr></tr>','')
         result = result.replace('<br />\n',' ')
