@@ -56,6 +56,7 @@ class main():
         result = result.replace('\t','')
         result = result.replace('</tr><td class="auto-style3"','</tr><tr><td class="auto-style3"')
         result = result.replace('\n<tr><td class="auto-style3"','</tr><tr><td class="auto-style3"')
+
         table = client.parseDOM(result,'table',attrs={'style':'width: 100%; float: left'})[0]
         rows = client.parseDOM(table,'tr')
 
