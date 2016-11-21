@@ -1,0 +1,5 @@
+<settings>
+<category label="Settings">
+	<setting id="secstore" type="text"label="secstore" default="AF" visible="false"/>
+</category>
+</settings>
