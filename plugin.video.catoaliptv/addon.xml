@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.livemix" name="[COLOR blue]Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR][COLOR lime] IPTV[/COLOR]" version="2.1.0" provider-name="Catoal">
+<addon id="plugin.video.catoaliptv" name="[COLOR blue]Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR][COLOR lime] IPTV[/COLOR]" version="2.1.0" provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.addon.common" version="2.0.0" />

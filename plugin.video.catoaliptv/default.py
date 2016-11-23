@@ -3,7 +3,7 @@ import pyxbmct . addonwindow as pyxbmct
 from addon . common . addon import Addon
 if 64 - 64: i11iIiiIii
 net = net . Net ( )
-KKmkm = 'plugin.video.livemix'
+KKmkm = 'plugin.video.catoaliptv'
 KmmkKmm = xbmcaddon . Addon ( id = KKmkm )
 KmkKmkKKmkKmkKmk = '/resources/Blue'
 iiiii = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + KKmkm , 'icon.png' ) )

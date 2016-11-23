@@ -15,7 +15,7 @@ import xbmc
 import xbmcgui
 from xbmcaddon import Addon
 
-_images = os.path.join(Addon('plugin.video.livemix').getAddonInfo('path'),'pyxbmct', 'textures', 'default')
+_images = os.path.join(Addon('plugin.video.catoaliptv').getAddonInfo('path'),'pyxbmct', 'textures', 'default')
 
 # Text alighnment constants. Mixed variants are obtained by bit OR (|)
 ALIGN_LEFT = 0
