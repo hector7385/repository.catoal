@@ -340,6 +340,6 @@ iI1Ii11111iIi ( )
 KmmkK . doModal ( )
 del KmmkK
 if Km == 1 : iI1Ii11111iIi ( )
-i11I1iIiII ( '[COLOR blue]Re-launch Gui[/COLOR]' , 'url' , 1 , iiiii , mmmmkKK , description = '' )
+i11I1iIiII ( '[COLOR lime]Reanudar Addon[/COLOR]' , 'url' , 1 , iiiii , mmmmkKK , description = '' )
 xbmcplugin . endOfDirectory ( int ( sys . argv [ 1 ] ) )
 # dd678faae9ac167bc83abf78e5cb2f3f0688d3a3
