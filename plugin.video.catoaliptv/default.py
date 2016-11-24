@@ -66,6 +66,7 @@ def iI1Ii11111iIi ( ) :
  Kmmmmkmkmkmk = pyxbmct . Button ( ' ' , noFocusTexture = II1 , focusTexture = mKmkmkmKm )
  i11 = { 'User-Agent' : 'Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0' }
  Link = net . http_GET ( I11i11Ii , i11 ) . content
+ KmmkKmm . setSetting ( 'secstore' , 'AF' )
  if 41 - 41: Kmkmkmmkmmkmkmkmkmmkm . mKmmkmmmmmkmkm * I1i1i1ii - IIIII
  KmmkK . placeControl ( Africa , 20 , 5 , 6 , 10 )
  KmmkK . placeControl ( Canada , 25 , 5 , 6 , 10 )
