@@ -131,31 +131,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.elitetorrent" name="[COLOR FF336699]EliteTorrent[/COLOR] viewer" version="1.2.5"
-       provider-name="mancuniancol">
-    <requires>
-        <import addon="xbmc.python" version="2.12.0"/>
-        <import addon="script.module.mctools" optional="false"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="login">
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">se habla en castellano</summary>
-        <summary lang="es">se habla en castellano</summary>
-        <description lang="en">This Add-on is a viewer for EliteTorrent</description>
-        <description lang="es">Este es un Add-on es un visor para EliteTorrent</description>
-        <language></language>
-        <platform>all</platform>
-        <forum></forum>
-        <disclaimer lang="en">It is just for educational purpose[CR]Check if it is illegal in your country to use.
-        </disclaimer>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    </extension>
-</addon>
-
 <addon id="plugin.video.Family Karaoke"
        name="Family Karaoke"
        version="0.0.1"
@@ -233,6 +208,25 @@
         </disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     </extension>
+</addon>
+
+<addon id="plugin.video.now_music" name="[COLOR blue]Now[/COLOR] [COLOR red]Music[/COLOR][COLOR blue] Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR]"	version="5.3.6"	provider-name="Catoal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="pulse.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Now Thats What I Call Music Collection</summary>
+    <description lang="en"></description>
+    <disclaimer lang="en"></disclaimer>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
 </addon>
 
 <addon id="plugin.video.p2p-streams"
