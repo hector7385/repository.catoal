@@ -2,14 +2,14 @@
 <addons>
 <addon id="plugin.program.advancedsettings"
        name="Easy Advanced Settings"
-       version="0.8.8"
+       version="0.8.9"
        provider-name="kinkin">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource"
                	library="default.py">
-        <provides>video executable</provides>
+        <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
@@ -116,17 +116,19 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.catoaliptv" name="[COLOR blue]Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR][COLOR lime] IPTV[/COLOR]" version="2.1.5" provider-name="Catoal">
+<addon id="plugin.video.CatoalWizard"
+	   name="Catoal[COLOR blue] WI[/COLOR][COLOR yellow] ZA[/COLOR][COLOR red] RD[/COLOR]"
+	   version="1.0.1"
+	   provider-name="Catoal, RonnieHD">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.addon.common" version="2.0.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
+        <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en"></summary>
-    <description lang="en"></description>
+    <summary>Catoal Wizard</summary>
+    <description>Instalador inteligente que ayuda a configurar tu Kodi correctamente</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -210,7 +212,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.now_music" name="[COLOR blue]Now[/COLOR] [COLOR red]Music[/COLOR][COLOR blue] Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR]"	version="5.3.6"	provider-name="Catoal">
+<addon id="plugin.video.now_music" name="[COLOR blue]Now[/COLOR] [COLOR red]Music[/COLOR][COLOR blue] Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR]"	version="5.3.6a"	provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.addon.common" version="2.0.0"/>

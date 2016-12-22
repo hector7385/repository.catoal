@@ -155,6 +155,10 @@ YOUTUBE_CHANNEL_ID_130 = "PLKfO_IEZedrhfX21ih0rSRzLKPMFnsPcx"
 YOUTUBE_CHANNEL_ID_131 = "PLC9uHuoWKsDwFs_bLjU1Xf9kK032tIukr"
 YOUTUBE_CHANNEL_ID_132 = "PLsdPA0A_fKLlogBKy9a0UsGUngUm2Nu7O"
 YOUTUBE_CHANNEL_ID_133 = "PL_34_m4eTlaMExaWbVfv24i5O5Q5ZBZXU"
+YOUTUBE_CHANNEL_ID_134 = "PL_34_m4eTlaNf6TSaM9IfLd13R1lKaoYd"
+YOUTUBE_CHANNEL_ID_135 = "PL_34_m4eTlaMYv6z-uHidbtQ199xd1EK1"
+YOUTUBE_CHANNEL_ID_136 = "PL_34_m4eTlaPnat1HtGrigGFXywxRscUK"
+YOUTUBE_CHANNEL_ID_137 = "PL_34_m4eTlaMnlJjHHCOyEK0jDM7_dHQ5"
 # Entry point
 def run():
     plugintools.log("docu.run")
@@ -841,6 +845,13 @@ def main_list(params):
 		
     plugintools.add_item( 
         #action="", 
+        title="Now Christmas",
+        url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_134+"/",
+        thumbnail="http://cdn.smehost.net/nowmusiccom-ukprod/wp-content/uploads/20150814114319/Christmas_Hi_Res-1024x901.jpg",
+        folder=True )
+		
+    plugintools.add_item( 
+        #action="", 
         title="Now DriveTime",
         url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_131+"/",
         thumbnail="http://cdn.smehost.net/nowmusiccom-ukprod/wp-content/uploads/NOW-DRIVE-1500X1500-1024x1024.jpg",
@@ -1033,6 +1044,27 @@ def main_list(params):
         title="Now 21st Century",
         url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_119+"/",
         thumbnail="http://dhgkpqsiufwl2.cloudfront.net/media/ArticleSharedImage/image250/.f7e16dUU/ArticleSharedImage-28286.png",
+        folder=True )
+
+    plugintools.add_item( 
+        #action="", 
+        title="Now Sing",
+        url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_135+"/",
+        thumbnail="http://midlifegamer.net/wp-content/uploads/2015/10/NTWICS.jpg",
+        folder=True )
+
+    plugintools.add_item( 
+        #action="", 
+        title="Now Party",
+        url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_136+"/",
+        thumbnail="http://cdn.smehost.net/nowmusiccom-ukprod/wp-content/uploads/Now-Party-1024x1024.jpg",
+        folder=True )		
+		
+    plugintools.add_item( 
+        #action="", 
+        title="Now Rock Ballads",
+        url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_137+"/",
+        thumbnail="https://images-na.ssl-images-amazon.com/images/I/618hAw24%2BRL._SY300_.jpg",
         folder=True )
 
     plugintools.add_item( 
