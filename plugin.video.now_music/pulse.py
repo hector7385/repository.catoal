@@ -159,6 +159,7 @@ YOUTUBE_CHANNEL_ID_134 = "PL_34_m4eTlaNf6TSaM9IfLd13R1lKaoYd"
 YOUTUBE_CHANNEL_ID_135 = "PL_34_m4eTlaMYv6z-uHidbtQ199xd1EK1"
 YOUTUBE_CHANNEL_ID_136 = "PL_34_m4eTlaPnat1HtGrigGFXywxRscUK"
 YOUTUBE_CHANNEL_ID_137 = "PL_34_m4eTlaMnlJjHHCOyEK0jDM7_dHQ5"
+YOUTUBE_CHANNEL_ID_138 = "PL-PXKb5jSjwZT2QzeJCIlYSqs0cZvy808"
 # Entry point
 def run():
     plugintools.log("docu.run")
@@ -178,6 +179,14 @@ def run():
 def main_list(params):
     plugintools.log("docu.main_list "+repr(params))
 	
+    plugintools.add_item( 
+        #action="", 
+        title="Now Los Éxitos Del Año 2016",
+        url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_138+"/",
+        thumbnail="http://www.fonodisco.es/227689-thickbox_default/now-2016-varios-2-cds-cd-.jpg",
+        folder=True )
+	
+
     plugintools.add_item( 
         #action="", 
         title="Now 95",
