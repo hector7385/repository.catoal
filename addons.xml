@@ -169,6 +169,27 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.JustForLaughs"
+	name="Just For Laughs [COLOR blue]Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR]"
+	version="0.0.1"
+	provider-name="Catoal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="es">Kodi</summary>
+    <description lang="es">Camaras Ocultas</description>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
+</addon>
+
 <addon id="plugin.video.laliga" name="La Liga" version="0.0.18" provider-name="Topo">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
