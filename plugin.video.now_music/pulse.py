@@ -160,6 +160,7 @@ YOUTUBE_CHANNEL_ID_135 = "PL_34_m4eTlaMYv6z-uHidbtQ199xd1EK1"
 YOUTUBE_CHANNEL_ID_136 = "PL_34_m4eTlaPnat1HtGrigGFXywxRscUK"
 YOUTUBE_CHANNEL_ID_137 = "PL_34_m4eTlaMnlJjHHCOyEK0jDM7_dHQ5"
 YOUTUBE_CHANNEL_ID_138 = "PL-PXKb5jSjwZT2QzeJCIlYSqs0cZvy808"
+YOUTUBE_CHANNEL_ID_139 = "UCfJPtULqanZ3K7trqtupvtQ"
 # Entry point
 def run():
     plugintools.log("docu.run")
@@ -181,7 +182,15 @@ def main_list(params):
 	
     plugintools.add_item( 
         #action="", 
-        title="Now Los Éxitos Del Año 2016",
+        title="Now Karaoke Ed.España",
+        url="plugin://plugin.video.youtube/channel/"+YOUTUBE_CHANNEL_ID_139+"/",
+        thumbnail="http://i.imgur.com/1Jieu64.png",
+        folder=True )
+		
+	
+    plugintools.add_item( 
+        #action="", 
+        title="Now Los Exitos Del Año 2016",
         url="plugin://plugin.video.youtube/playlist/"+YOUTUBE_CHANNEL_ID_138+"/",
         thumbnail="http://www.fonodisco.es/227689-thickbox_default/now-2016-varios-2-cds-cd-.jpg",
         folder=True )

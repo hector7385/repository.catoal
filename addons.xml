@@ -233,7 +233,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.now_music" name="[COLOR blue]Now[/COLOR] [COLOR red]Music[/COLOR][COLOR blue] Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR]"	version="5.3.6b"	provider-name="Catoal">
+<addon id="plugin.video.now_music" name="[COLOR blue]Now[/COLOR] [COLOR red]Music[/COLOR][COLOR blue] Ca[/COLOR][COLOR yellow]to[/COLOR][COLOR red]al[/COLOR]"	version="5.3.6c"	provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.addon.common" version="2.0.0"/>
