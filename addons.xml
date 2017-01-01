@@ -331,7 +331,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="20112016"
+  version="31122016"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -340,7 +340,6 @@
    <import addon="script.module.six" />
    <import addon="script.module.requests" />
    <import addon="script.module.livestreamer" />
-   <import addon="script.module.pydevd" version="4.4.0" optional="true"/>
   </requires>
   <extension
     point="xbmc.python.pluginsource"
