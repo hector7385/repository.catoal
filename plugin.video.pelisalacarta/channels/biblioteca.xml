@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<channel>
+	<id>libreria</id>
+	<name>Biblioteca</name>
+
+	<active>false</active>
+	<adult>false</adult>
+	<language>es</language>
+
+	<fanart></fanart>
+	<thumbnail></thumbnail>
+	<bannermenu></bannermenu>
+
+	<update_url>https://raw.githubusercontent.com/tvalacarta/pelisalacarta/master/python/main-classic/channels/</update_url>
+	<version>3</version>
+
+	<changes>
+		<change>
+			<date>01/07/16</date>
+			<autor>SeiTaN</autor>
+			<description>Eliminado código innecesario.</description>
+		</change>
+		<change>
+			<date>30/04/2016</date>
+			<autor>Seitan</autor>
+			<description>Version inicial</description>
+		</change>
+	</changes>
+
+	<include_in_global_search>disabled</include_in_global_search>
+
+
+	<settings>
+		<id>updatelibrary</id>
+		<type>list</type>
+		<label>Actualizar la biblioteca</label>
+		<default>1</default>
+		<visible>true</visible>
+		<lvalues>Nunca</lvalues>
+		<lvalues>Al iniciar Kodi</lvalues>
+		<lvalues>Cada día</lvalues>
+	</settings>
+	<settings>
+		<id>updatelibrary_wait</id>
+		<type>list</type>
+		<label>    Esperar antes de actualizar</label>
+		<default>0</default>
+		<enabled>eq(-1,Al iniciar Kodi)</enabled>
+		<visible>true</visible>
+		<lvalues>No</lvalues>
+		<lvalues>10 seg</lvalues>
+		<lvalues>20 seg</lvalues>
+		<lvalues>30 seg</lvalues>
+		<lvalues>60 seg</lvalues>
+	</settings>
+	<settings>
+		<id>updatetvshows_interval</id>
+		<type>list</type>
+		<label>    Buscar nuevos episodios en las series activas</label>
+		<default>0</default>
+		<enabled>!eq(-2,Nunca)</enabled>
+		<visible>true</visible>
+		<lvalues>Siempre</lvalues>
+		<lvalues>Según su emisión</lvalues>
+	</settings>
+
+	<settings>
+		<id>library_mode</id>
+		<type>list</type>
+		<label>Ubicación de Base de datos</label>
+		<default>0</default>
+		<enabled>true</enabled>
+		<visible>true</visible>
+		<lvalues>Local</lvalues>
+		<lvalues>Remota</lvalues>
+	</settings>
+	<settings>
+		<id>xbmc_host</id>
+		<type>text</type>
+		<label>    Nombre Servidor</label>
+		<enabled>eq(-1,Remota)</enabled>
+		<visible>true</visible>
+		<default></default>
+	</settings>
+	<settings>
+		<id>xbmc_puerto</id>
+		<type>text</type>
+		<label>    Puerto Servidor</label>
+		<enabled>!eq(-1,'')</enabled>
+		<visible>true</visible>
+		<default></default>
+	</settings>
+
+	<settings>
+		<id>mark_as_watched</id>
+		<type>bool</type>
+		<label>Marcar automáticamente como visto</label>
+		<default>true</default>
+		<enabled>true</enabled>
+		<visible>true</visible>
+	</settings>
+	<settings>
+		<id>watched_setting</id>
+		<type>list</type>
+		<label>    Tiempo necesario del video</label>
+		<default>3</default>
+		<enabled>eq(-1,true)</enabled>
+		<visible>true</visible>
+		<lvalues>5 Min</lvalues>
+		<lvalues>30%</lvalues>
+		<lvalues>50%</lvalues>
+		<lvalues>80%</lvalues>
+	</settings>
+	<settings>
+		<id>show_all_seasons</id>
+		<type>bool</type>
+		<label>Mostrar la opción "Todas las temporadas"</label>
+		<default>true</default>
+	</settings>
+	<settings>
+		<id>no_pile_on_seasons</id>
+		<type>list</type>
+		<label>No apilar temporadas de series</label>
+		<default>1</default>
+		<lvalues>Nunca</lvalues>
+		<lvalues>Sólo si hay una temporada</lvalues>
+		<lvalues>Siempre</lvalues>
+	</settings>
+	<settings>
+		<id>ask_channel</id>
+		<type>bool</type>
+		<label>Mostrar cuadro de selección de canales</label>
+		<default>false</default>
+	</settings>
+	<settings>
+		<id>original_title_folder</id>
+		<type>list</type>
+		<label>Crear directorios en el sistema usando</label>
+		<default>0</default>
+		<lvalues>Título localizado</lvalues>
+		<lvalues>Título original</lvalues>
+	</settings>
+</channel>

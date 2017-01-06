@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<channel>
+	<id>pasateatorrent</id>
+	<name>PasateaTorrent</name>
+	<active>true</active>
+	<adult>false</adult>
+	<language>es</language>
+    
+    <fanart></fanart>
+    <thumbnail>http://imgur.com/iLeISt0.png</thumbnail>
+    <bannermenu></bannermenu>
+    
+    
+    <update_url></update_url>
+    <version>1</version>
+    <date>06/12/2016</date>
+    <changes>Releasec</changes>
+   
+    <categories>
+        <category>torrent</category>
+        <category>movie</category>
+        <category>serie</category>
+    </categories>
+    
+    <settings>
+        <id>include_in_global_search</id>
+        <type>bool</type>
+        <label>Incluir en busqueda global</label>
+        <default>true</default>
+        <enabled>true</enabled>
+        <visible>true</visible>
+    </settings>
+    
+</channel>
