@@ -147,7 +147,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.Family Karaoke"
+<addon id="plugin.video.FamilyKaraoke"
        name="Family Karaoke"
        version="0.0.2"
        provider-name="Catoal">
