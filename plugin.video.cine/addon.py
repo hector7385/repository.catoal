@@ -53,6 +53,7 @@ def get_categories():
     categories.append({'title':'Temas',               'action':'tema'  , 'ico':'tem'})
     categories.append({'title':'Años',                'action':'anno'  , 'ico':'ann'})
     categories.append({'title':'Grupos',              'action':'grupo' , 'ico':'gru'})
+    categories.append({'title':'Países',              'action':'pais'  , 'ico':'gru'})
     categories.append({'title':'Buscar por título',   'action':'bustit', 'ico':'bus'})
     categories.append({'title':'Buscar por director', 'action':'busdir', 'ico':'bus'})
     categories.append({'title':'Buscar por actor',    'action':'busact', 'ico':'bus'})
@@ -60,6 +61,8 @@ def get_categories():
     categories.append({'title':'Ver peli recomendada','action':'pelrec', 'ico':'bus'})
     categories.append({'title':'Últimas 100 nuevas',  'action':'ultim',  'ico':'bus'})
     categories.append({'title':'Últimas 100 viejas',  'action':'ultim2', 'ico':'bus'})
+    categories.append({'title':'Últimas 100 HD',      'action':'ulthd',  'ico':'bus'})
+    categories.append({'title':'Las 100 más vistas',  'action':'mvtas',  'ico':'bus'})
     return categories
 
 def list_categories():
@@ -251,6 +254,25 @@ def list_grupo():
     xbmcplugin.addDirectoryItems(_handle, listing, len(listing))
     xbmcplugin.endOfDirectory(_handle)
 
+def list_pais():
+    conn = sqlite3.connect(base)
+    cur = conn.cursor()
+    cur.execute("SELECT pais, Count(id) FROM pelis group by pais order by pais;")
+    rows = cur.fetchall()
+    conn.close()
+    listing = []
+    for row in rows:
+        pai = row[0]
+        cnt = row[1]
+        paiz = base64.urlsafe_b64encode(pai.encode('utf-8'))
+        title = '[COLOR gold]%s[/COLOR] (%s)' %(pai,cnt)
+        list_item = xbmcgui.ListItem(label=title, iconImage='')
+        url = '{0}?action=pais2&pais={1}'.format(_url, paiz)
+        is_folder = True
+        listing.append((url, list_item, is_folder))
+    xbmcplugin.addDirectoryItems(_handle, listing, len(listing))
+    xbmcplugin.endOfDirectory(_handle)
+
 def busca_por_grupo():
     texto = inputtext()
     if texto:
@@ -278,6 +300,15 @@ def list_grupo2(idgru):
     conn = sqlite3.connect(base)
     cur = conn.cursor()
     cur.execute("SELECT * FROM pelis INNER JOIN pelgru ON pelis.ID = pelgru.idpel WHERE pelgru.idgru=? ORDER BY pelis.anno, pelis.grupo, pelis.hd, pelis.id;", (idgru,))
+    rows = cur.fetchall()
+    conn.close()
+    dolist(rows,True)
+
+def list_pais2(pais):
+    pais = base64.b64decode(pais).decode('utf-8')
+    conn = sqlite3.connect(base)
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM pelis WHERE pais=? ORDER BY pelis.anno, pelis.grupo, pelis.hd, pelis.id;", (pais,))
     rows = cur.fetchall()
     conn.close()
     dolist(rows,True)
@@ -373,6 +404,22 @@ def ultimas2():
     cur = conn.cursor()
    #cur.execute("SELECT * FROM pelis where anno<? order by id DESC, hd LIMIT(100);", (anno-1,))
     cur.execute("SELECT * FROM pelis where gb is not null and anno<? order by gb, HD LIMIT(100);", (anno-1,))
+    rows = cur.fetchall()
+    conn.close()
+    dolist(rows,False)
+
+def masvistas():
+    conn = sqlite3.connect(base)
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM pelis order by vta DESC LIMIT(100);")
+    rows = cur.fetchall()
+    conn.close()
+    dolist(rows,False)
+
+def ultimasHD():
+    conn = sqlite3.connect(base)
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM pelis where HD='S' order by id DESC LIMIT(100);")
     rows = cur.fetchall()
     conn.close()
     dolist(rows,False)
@@ -495,6 +542,10 @@ def router(paramstring):
             list_grupo()
         elif params['action'] == 'grupo2':
             list_grupo2(params['idgru'])
+        elif params['action'] == 'pais':
+            list_pais()
+        elif params['action'] == 'pais2':
+            list_pais2(params['pais'])
         elif params['action'] == 'bustit':
             busca_por_titulo()
         elif params['action'] == 'busdir':
@@ -511,6 +562,10 @@ def router(paramstring):
             ultimas()
         elif params['action'] == 'ultim2':
             ultimas2()
+        elif params['action'] == 'ulthd':
+            ultimasHD()
+        elif params['action'] == 'mvtas':
+            masvistas()
         elif params['action'] == 'pelrec':
             peli_recomendada()
         elif params['action'] == 'pelrec2':
