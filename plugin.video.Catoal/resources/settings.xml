@@ -1,14 +1,6 @@
-﻿<settings>
-
-    <category label="Add Source">
-    <setting id="new_url_source" type="text" label="Add URL" default="&#104;&#116;&#116;&#112;&#115;://&#114;&#097;&#119;&#046;&#103;&#105;&#116;&#104;&#117;&#098;&#117;&#115;&#101;&#114;&#099;&#111;&#110;&#116;&#101;&#110;&#116;&#046;&#099;&#111;&#109;/&#067;&#097;&#114;&#108;&#101;&#115;&#116;&#111;/&#076;&#105;&#115;&#116;&#097;&#115;/&#109;&#097;&#115;&#116;&#101;&#114;/&#099;&#097;&#114;&#105;&#110;&#100;&#101;&#120;" visible="eq(-2,1)"/>
-    <setting type="sep" />
-    <setting type="action" label="[COLOR yellow]Bienvenido a mi Addon[/COLOR] [COLOR lime][B]* CARGA LA LISTA *[/COLOR][/B] [COLOR yellow] Para disfrutar de su contenido.[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
-    <setting type="sep" />  
-  </category>
-  
+﻿<settings>		
   <category label="Información Catoal">
-       	<setting type="lsep" label="[COLOR lime]Versión del Addon Actualizado 26/10/2016[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
+       	<setting type="lsep" label="[COLOR lime]Versión del Addon Actualizado 11/01/2017[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
         <setting type="lsep" label="[COLOR yellow]Facebook:[/COLOR] www.facebook.com/catoal.kodi" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
         <setting type="lsep" label="[COLOR yellow]Twitter:[/COLOR] @kodi_catoal" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
 		<setting type="lsep" label="[COLOR yellow]Email:[/COLOR] catoal.kodi@gmail.com" option="close" action="RunPlugin(plugin://plugin.video.Catoal/?mode=7)" />
@@ -27,3 +19,5 @@
         <setting id="donotshowbychannels" label="Ocultar Canales" type="bool" default="false" visible="false"/>
   </category>
   </settings>
+
+

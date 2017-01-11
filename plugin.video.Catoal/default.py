@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-#88776-00973 3315 4645 #jehangir
 import urllib
 import urllib2
 import re
@@ -61,7 +60,7 @@ history = os.path.join(profile, 'history')
 REV = os.path.join(profile, 'list_revision')
 icon = os.path.join(home, 'icon.png')
 FANART = os.path.join(home, 'fanart.jpg')
-source_file = os.path.join(profile, 'source_file')
+source_file = os.path.join(home, base64.b64decode('c291cmNlX2ZpbGU='))
 functions_dir = profile
 
 communityfiles = os.path.join(profile, 'LivewebTV')
@@ -77,7 +76,7 @@ else: SOURCES = []
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.Catoal-%s]: %s" %(addon_version, string))
+        xbmc.log("[addon.live.Catoal-%s]: %s" %(addon_version, string))
 
 
 def makeRequest(url, headers=None):
