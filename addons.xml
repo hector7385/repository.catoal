@@ -108,7 +108,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.cine" name="Cine" version="1.0.11" provider-name="Topo">
+<addon id="plugin.video.cine" name="Cine" version="1.0.14" provider-name="Topo">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -178,7 +178,7 @@
 
   <extension point="xbmc.addon.metadata">
     <summary>Creado por Catoal Basandose en el LivestreamPro</summary>
-    <description>Â© Catoal 2016</description>
+    <description>© Catoal 2016</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -213,11 +213,11 @@
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Liga EspaÃ±ola: La mejor liga del mundo</summary>
-		<description lang="en">Liga EspaÃ±ola, Premier, Champions and much more</description>
-		<description lang="es">Liga EspaÃ±ola, Premier, Champions y mucho mÃ¡s</description>
+		<summary lang="en">Liga Española: La mejor liga del mundo</summary>
+		<description lang="en">Liga Española, Premier, Champions and much more</description>
+		<description lang="es">Liga Española, Premier, Champions y mucho más</description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<disclaimer lang="es">El autor no almacena ni distribuye ninguno de los contenidos que se muestran en este addon. El autor no tiene ninguna afiliaciÃ³n con el proveedor de contenidos.</disclaimer>
+		<disclaimer lang="es">El autor no almacena ni distribuye ninguno de los contenidos que se muestran en este addon. El autor no tiene ninguna afiliación con el proveedor de contenidos.</disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
@@ -235,7 +235,7 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Movies and Tv Shows</summary>
-        <summary lang="es">PelÃ­culas y series`</summary>
+        <summary lang="es">Películas y series`</summary>
         <description lang="en">Add-on is for NewPCT1</description>
         <description lang="es">Add-on es De NewPCT1</description>
         <language></language>
@@ -285,13 +285,13 @@
   <extension point="xbmc.addon.metadata">
     <summary>SopCast and AceStream</summary>
     <description lang="en">AceStream and Sopcast in your favourite media center! Watch peer-to-peer streams in Kodi without the need for external players. Project page: https://github.com/enen92/P2P-Streams-Kodi</description>
-    <description lang="pt">AceStream e Sopcast no seu Media-Center de eleiÃ§Ã£o! Assista a streams peer-to-peer no Kodi sem a necessidade de players externos. PÃ¡gina do projecto: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="pt">AceStream e Sopcast no seu Media-Center de eleição! Assista a streams peer-to-peer no Kodi sem a necessidade de players externos. Página do projecto: https://github.com/enen92/P2P-Streams-Kodi</description>
     <description lang="nl">Acestream en Sopcast in jouw favoriete media center. Kijk peer-to-peer streams in Kodi zonder de noodzaak voor externe spelers. Project pagina: https://github.com/enen92/P2P-Streams-Kodi/</description>
-    <description lang="it">AceStream e SopCast nel tuo Media Center preferito! Guarda i canali peer-to-peer in Kodi senza la necessitÃ  di player esterni. Pagina del progetto: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <description lang="it">AceStream e SopCast nel tuo Media Center preferito! Guarda i canali peer-to-peer in Kodi senza la necessità di player esterni. Pagina del progetto: https://github.com/enen92/P2P-Streams-Kodi/</description>
     <disclaimer lang="en">The authors does not host nor distribute any of the content you may watch using this addon. The authors have no affiliation with any of the content providers. This addon does not track its users.</disclaimer>
-    <disclaimer lang="pt">Os autores nÃ£o alojam nem distribuem nenhum do conteÃºdo acessÃ­vel a partir deste addon. Os autores nÃ£o tÃªm qualquer afiliaÃ§Ã£o com nenhum dos sites utilizados por este addon. O addon nÃ£o contem nenhuma ferramenta de tracking.</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo acessível a partir deste addon. Os autores não têm qualquer afiliação com nenhum dos sites utilizados por este addon. O addon não contem nenhuma ferramenta de tracking.</disclaimer>
     <disclaimer lang="nl">De auteurs houden of delen niets van de inhoud die u kunt bekijken met behulp van deze addon. De auteurs hebben geen banden met welke leverancier van inhoud dan ook. Deze addon houdt geen gegevens bij van zijn gebruikers.</disclaimer>
-    <disclaimer lang="it">L'autore non detiene o distribuisce alcun contenuto fruibile tramite l'utilizzo di questo addon. L'autore non Ã¨ affiliato con nessun fornitore dei contenuti. Questo addon non traccia i suoi utenti.</disclaimer>
+    <disclaimer lang="it">L'autore non detiene o distribuisce alcun contenuto fruibile tramite l'utilizzo di questo addon. L'autore non è affiliato con nessun fornitore dei contenuti. Questo addon non traccia i suoi utenti.</disclaimer>
     <forum>http://forum.kodi.tv/showthread.php?tid=201894</forum>
     <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
     <website>https://code.google.com/p/p2p-strm/</website>
@@ -398,9 +398,9 @@
   <extension point="xbmc.addon.metadata">
     <summary>SopCast and AceStream for Kodi</summary>
     <description lang="en">Plexus - Any complex structure containing an intricate network of parts. Plexus brings native peer-to-peer support (AceStream and SopCast) for Kodi Entertainment Center for several platforms.[CR][CR]Documentation: (missing)</description>
-    <description lang="pt">Plexus - Uma estrutura complexa constituÃ­da por uma rede de partes. O Plexus adiciona suporte peer-to-peer nativo (AceStream e Sopcast) ao Kodi Entertainment Center para vÃ¡rias plataformas.[CR][CR]DocumentaÃ§Ã£o: (em falta)</description>
+    <description lang="pt">Plexus - Uma estrutura complexa constituída por uma rede de partes. O Plexus adiciona suporte peer-to-peer nativo (AceStream e Sopcast) ao Kodi Entertainment Center para várias plataformas.[CR][CR]Documentação: (em falta)</description>
     <disclaimer lang="en">The author does not host nor distribute any of the content you may watch using this addon. The author has no part in the development of any included technologies. When seeking help in Kodi's forum please respect rules (http://kodi.wiki/view/Forum_rules).</disclaimer>
-    <disclaimer lang="pt">Os autores nÃ£o alojam nem distribuem nenhum do conteÃºdo que poderÃ¡ ser reproduzido a partir deste addon. Os autores nÃ£o tÃªm qualquer parte no desenvolvimento de qualquer uma das tecnologias. Se procurar ajuda no fÃ³rum oficial do Kodi por favor respeite as regras do fÃ³rum (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo que poderá ser reproduzido a partir deste addon. Os autores não têm qualquer parte no desenvolvimento de qualquer uma das tecnologias. Se procurar ajuda no fórum oficial do Kodi por favor respeite as regras do fórum (http://kodi.wiki/view/Forum_rules).</disclaimer>
     <forum>http://forums.tvaddons.ag</forum>
     <platform>all</platform>
   </extension>
@@ -416,6 +416,20 @@
 		<summary>Catoal Addon</summary>
 		<description>Repositorio con todo lo necesario para instalar sin problemas Catoal.</description>
 		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.myshows.me" name="MyShows.me Kodi Repo" version="1.0.5" provider-name="DiMartino">
+	<extension point="xbmc.addon.repository" name="MyShows.me Kodi Repo">
+		<info compressed="false">http://api.bitbucket.org/1.0/repositories/DiMartino/myshows.me-kodi-repo/raw/default/addons.xml</info>
+		<checksum>http://api.bitbucket.org/1.0/repositories/DiMartino/myshows.me-kodi-repo/raw/default/addons.xml.md5</checksum>
+		<datadir zip="true">http://api.bitbucket.org/1.0/repositories/DiMartino/myshows.me-kodi-repo/raw/default/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Устанавливайте дополнения из репозитория MyShows.me</summary>
+		<description>Дополнения для Kodi</description>
+		<disclaimer>DiMartino</disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
