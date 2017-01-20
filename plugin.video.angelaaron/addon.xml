@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.angelaaron" name="plugin.video.angelaaron" version="0.0.1" provider-name="Angelaaron">
+    <requires>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Disfruta de mi addon</summary>
+        <description>Listas IPTV</description>
+    </extension>
+</addon>
