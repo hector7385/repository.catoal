@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.angelaaron" name="plugin.video.angelaaron" version="0.0.2" provider-name="Angelaaron">
+<addon id="plugin.video.angelaaron" name="PVRIPTV" version="0.0.3" provider-name="Angelaaron">
     <requires>
     </requires>
     <extension point="xbmc.python.pluginsource"
@@ -8,7 +8,7 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary>Disfruta de mi addon</summary>
-        <description>Listas IPTV</description>
+        <summary>Gracias por usar mi addon</summary>
+        <description>Carga listas de forma sencilla</description>
     </extension>
 </addon>

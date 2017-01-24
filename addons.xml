@@ -26,7 +26,7 @@
 
 </addon>
 
-<addon id="plugin.video.angelaaron" name="plugin.video.angelaaron" version="0.0.2" provider-name="Angelaaron">
+<addon id="plugin.video.angelaaron" name="PVRIPTV" version="0.0.3" provider-name="Angelaaron">
     <requires>
     </requires>
     <extension point="xbmc.python.pluginsource"
@@ -35,8 +35,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary>Disfruta de mi addon</summary>
-        <description>Listas IPTV</description>
+        <summary>Gracias por usar mi addon</summary>
+        <description>Carga listas de forma sencilla</description>
     </extension>
 </addon>
 
@@ -341,7 +341,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="Catoal.01"
+  version="Catoal.02"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -365,34 +365,6 @@
     <description>Play videos of different sports streaming sites</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.streamztv" name=" [B][COLOR lime]StreamZ
-[/COLOR][COLOR white]TV[/COLOR][/B]"
-       version="1.1.0"
-       provider-name="streamZ.tv">
-  <requires>
-    <import addon="script.module.requests" version="2.9.1"/>
-	<import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.urlresolver" version="1.0.0"/>
-    <import addon="plugin.video.youtube" version="5.3.6"/>
-    <import addon="script.module.urlresolver"  version="2.1.2"/>
-    <import addon="script.module.liveresolver" version="0.1.24"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>streamZ TV on Kodi</summary>
-    <description>This plugin fetches video sources freely available on the internet and plays on Kodi compatible devices. Its all inspiration and adaptation base code by MK
-
-[B]Follow us on twitter @AndroidstreamZ[/B]</description>
-<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon or have any affiliation with any website owners</disclaimer>
-    <platform>all</platform>
-	<forum lang="en">http://streamz.tv</forum>
-    <website lang="en">https://twitter.com/Androidstreamz</website>
   </extension>
 </addon>
 
