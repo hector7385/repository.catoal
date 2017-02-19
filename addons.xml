@@ -360,7 +360,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="Catoal.03"
+  version="Catoal.04"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
