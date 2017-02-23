@@ -387,6 +387,28 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.yatp"
+  version="3.3.1"
+  name="Yet Another Torrent Player"
+  provider-name="Roman V.M.">
+<requires>
+  <import addon="xbmc.python" version="2.19.0"/>
+  <import addon="script.module.requests" version="2.6.0"/>
+  <import addon="script.module.simpleplugin" version="1.10.0"/>
+  <import addon="script.module.libtorrent" version="1.0.9"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.service" library="server.py" start="[login|startup]"/>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Yet Another Torrent Player</summary>
+  <description lang="en">A torrent client that allows to play video torrents
+    while downloading them in the background.</description>
+  <platform>all</platform>
+</extension>
+</addon>
+
 <addon id="program.plexus"
        name="Plexus"
        version="0.1.6.a"
@@ -526,6 +548,26 @@
     <source></source>
     <forum></forum>
     <website></website>
+  </extension>
+</addon>
+
+<addon id="script.module.simpleplugin"
+   name="SimplePlugin"
+   version="2.1.0"
+   provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">SimplePlugin micro-framework</summary>
+    <description lang="en">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>
+    <license>GNU GPL v.3</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=237532</forum>
+    <website>http://romanvm.github.io/script.module.simpleplugin</website>
+    <email>romanvm@yandex.ua</email>
+    <source>https://github.com/romanvm/script.module.simpleplugin</source>
   </extension>
 </addon>
 </addons>
