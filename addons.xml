@@ -360,9 +360,9 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="Catoal.07"
+  version="Catoal.08"
   name="SportsDevil"
-  provider-name="MaxMustermann, Al101, Hubbab3, Jairox, Sattekop">
+  provider-name="SportsDevil">
   <requires>
    <import addon="xbmc.python" version="2.14.0"/>
    <import addon="script.module.dateutil" />
