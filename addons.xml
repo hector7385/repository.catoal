@@ -358,6 +358,27 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.series" name="[COLOR gold]Series[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="0.0.13" provider-name="Iego-Catoal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Series</summary>
+    <description>Podrás ver las series de ahora y antes, asi como las series animadas (dibujos)</description>
+    <disclaimer></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website>http://catoalkodi.com</website>
+    <email>catoal.kodi@gmail.com</email>
+    <source>http://catoal.org</source>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.SportsDevil"
   version="Catoal.09"
