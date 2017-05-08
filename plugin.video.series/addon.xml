@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.series" name="[COLOR gold]Series[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="0.0.15" provider-name="Iego-Catoal">
+<addon id="plugin.video.series" name="[COLOR gold]Series[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="0.0.20" provider-name="Iego-Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
