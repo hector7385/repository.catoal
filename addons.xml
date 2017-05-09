@@ -70,8 +70,8 @@
 </addon>
 
 <addon id="plugin.video.Catoal"
-       name="Catoal[COLOR blue] 5[/COLOR].[COLOR yellow]3[/COLOR].[COLOR red]9[/COLOR]"
-       version="5.3.9"
+       name="[COLOR gold]Catoal[/COLOR][COLOR blue] 5[/COLOR].[COLOR yellow]4[/COLOR].[COLOR red]0[/COLOR]"
+       version="5.4.0"
        provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -358,7 +358,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.series" name="[COLOR gold]Series[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="0.0.20" provider-name="Iego-Catoal">
+<addon id="plugin.video.series" name="[COLOR gold]Series[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="0.0.23" provider-name="Iego-Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
