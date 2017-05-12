@@ -70,7 +70,7 @@
 </addon>
 
 <addon id="plugin.video.Catoal"
-       name="Catoal[COLOR gold] 5[/COLOR].[COLOR yellow]4[/COLOR].[COLOR red]0[/COLOR]"
+       name="[COLOR gold]Catoal[/COLOR][COLOR blue] 5[/COLOR].[COLOR yellow]4[/COLOR].[COLOR red]0[/COLOR]"
        version="5.4.0"
        provider-name="Catoal">
   <requires>
