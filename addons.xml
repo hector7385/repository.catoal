@@ -548,8 +548,8 @@
 </addon>
 
 <addon id="script.limpiarkodi"
-       name="[COLOR gold]Limpia Tu Kodi[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]"
-       version="0.0.4"
+       name="[COLOR blue]Limpia[/COLOR][COLOR yellow] Tu[/COLOR][COLOR red] Kodi[/COLOR]"
+       version="0.0.5"
        provider-name="Catoal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
