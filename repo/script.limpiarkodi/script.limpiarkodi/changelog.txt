@@ -1,5 +1,0 @@
-﻿0.0.1
-- Versión inicial
-
-0.0.2
-- Corrección de algunas traducciones

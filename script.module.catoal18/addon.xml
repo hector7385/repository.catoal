@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.catoal18" 
        name="[COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR] [COLOR lime]18[/COLOR]" 
-	   version="5.3.8" 
+	   version="5.3.9" 
 	   provider-name="[COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
