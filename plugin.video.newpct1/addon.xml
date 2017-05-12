@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.newpct1" name="[COLOR gold]NewPCT1[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="5.3.9"
+<addon id="plugin.video.newpct1" name="[COLOR gold]NewPCT1[/COLOR] [COLOR blue]CA[/COLOR][COLOR yellow]TO[/COLOR][COLOR red]AL[/COLOR]" version="5.4.0"
        provider-name="Catoal">
     <requires>
         <import addon="xbmc.python" version="2.12.0"/>
